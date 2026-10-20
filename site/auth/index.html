@@ -6,6 +6,7 @@
     <title>Sign in · Health Supplements</title>
     <meta name="description" content="Sign in with Google to manage your orders and subscriptions." />
     <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -33,6 +34,7 @@
             Guest checkout stays available. By continuing you agree to our
             <a href="#">Terms</a> and <a href="#">Privacy Policy</a>. For adults 18+.
           </p>
+          <a class="back" href="/">← Back to store</a>
         </div>
 
         <!-- Signed in -->
@@ -44,7 +46,8 @@
             <div><dt>Provider</dt><dd id="user-provider"></dd></div>
             <div><dt>User ID</dt><dd id="user-uid" class="mono"></dd></div>
           </dl>
-          <button id="signout-btn" class="btn btn-ghost" type="button">Sign out</button>
+          <a class="btn btn-primary" href="/">Continue to store</a>
+          <button id="signout-btn" class="btn btn-ghost" type="button" style="margin-top:8px">Sign out</button>
         </div>
       </section>
 

@@ -101,7 +101,8 @@ els.googleBtn.addEventListener("click", async () => {
   setBusy(true);
   try {
     const result = await signInWithPopup(auth, provider);
-    setStatus(`Signed in as ${result.user.email ?? result.user.displayName}.`, "info");
+    setStatus(`Signed in as ${result.user.email ?? result.user.displayName}. Taking you to the store…`, "info");
+    setTimeout(() => window.location.assign("/"), 700);
   } catch (error) {
     setStatus(ERROR_COPY[error?.code] ?? `Sign-in failed (${error?.code ?? "unknown"}). Please try again.`);
     console.error("[auth]", error?.code, error?.message);
