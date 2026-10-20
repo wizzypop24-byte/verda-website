@@ -1,0 +1,40 @@
+✔ TC-AUTH-01: Section 17 exists with all ten sub-sections (5.6285ms)
+✔ TC-AUTH-02: 22 requirements with sequential, unique IDs (2.1853ms)
+✔ TC-AUTH-03: every requirement has a valid priority (2.5842ms)
+✔ TC-AUTH-04: guest checkout is allowed and marked Must (0.5464ms)
+✔ TC-AUTH-05: OTP rules are quantified (expiry, resend, attempts, lock) (0.5112ms)
+✔ TC-AUTH-06: password rules are explicit (0.4764ms)
+✔ TC-AUTH-07: password reset link is expiring and single-use (0.4171ms)
+✔ TC-AUTH-08: duplicate accounts are resolved, never duplicated (0.4262ms)
+✔ TC-AUTH-09: no user enumeration is required (0.5665ms)
+✔ TC-AUTH-10: rate limits are quantified per phone and per IP (1.05ms)
+✔ TC-AUTH-11: session lifetime and global logout are specified (0.6049ms)
+✔ TC-AUTH-12: all seven auth flows are documented (0.4096ms)
+✔ TC-AUTH-13: guest order claim uses the same identity (0.7935ms)
+✔ TC-AUTH-14: five screens are specified (0.6083ms)
+✔ TC-AUTH-15: error copy covers the six critical failure cases (0.6328ms)
+✔ TC-AUTH-16: accessibility is required on every auth screen (0.4827ms)
+✔ TC-AUTH-17: mobile-first at 360 px is required (0.2144ms)
+✔ TC-AUTH-18: transport, password hashing and OTP storage are specified (0.3444ms)
+✔ TC-AUTH-19: session cookies and CSRF protection are specified (0.2639ms)
+✔ TC-AUTH-20: bot protection and audit logging are specified (0.2674ms)
+✔ TC-AUTH-21: marketing consent is separate and unticked by default (0.2811ms)
+✔ TC-AUTH-22: privacy policy is linked at the point of collection (0.2292ms)
+✔ TC-AUTH-23: account deletion and export have a 30-day SLA (0.3128ms)
+✔ TC-AUTH-24: grievance officer contact is required (0.1935ms)
+✔ TC-AUTH-25: age gate (18+) is required (0.2029ms)
+✔ TC-AUTH-26: eight auth events are defined (0.2227ms)
+✔ TC-AUTH-27: auth events do not replace the purchase / KPI events (0.3399ms)
+✔ TC-AUTH-28: unresolved integration note is recorded (0.2136ms)
+✔ TC-AUTH-29: acceptance checklist has at least 12 checks (0.2724ms)
+✔ TC-AUTH-30: out-of-scope list is explicit (0.2011ms)
+✔ TC-AUTH-31: duplicate-account copy never leaks account existence before verification (0.4046ms)
+﹣ TC-AUTH-32: live auth page check (0.1472ms) # set AUTH_URL to run against a deployed login page
+ℹ tests 32
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 293.8141

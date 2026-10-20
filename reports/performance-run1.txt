@@ -1,0 +1,91 @@
+✔ TC-PERF-01: the core seven budget rows exist (5.8012ms)
+✔ TC-PERF-02: LCP / INP / CLS values match the model (0.6886ms)
+✔ TC-PERF-03: JS budget is 200 KB gzipped (0.9202ms)
+✔ TC-PERF-04: hero image budget and formats (0.4859ms)
+✔ TC-PERF-05: font rules are complete (1.7426ms)
+✔ TC-PERF-06: third-party scripts are capped and deferred (0.3583ms)
+✔ TC-PERF-07: supporting delivery rules are stated (0.5037ms)
+✖ TC-PERF-08: TTFB has a budget (LCP depends on it) (2.7494ms)
+✔ TC-PERF-09: CSS has its own budget (0.5749ms)
+✖ TC-PERF-10: the "4G" profile is reproducible (1.5099ms)
+✔ TC-PERF-11: a healthy page passes every budget (0.6224ms)
+✔ TC-PERF-12: LCP passes at 2500 and fails at 2501 (2.4976ms)
+✔ TC-PERF-13: INP passes at 200 and fails at 201 (1.052ms)
+✔ TC-PERF-14: CLS passes at 0.1 and fails at 0.11 (0.4412ms)
+✔ TC-PERF-15: TTFB passes at 800 and fails at 801 (0.8747ms)
+✔ TC-PERF-16: JS passes at 200 KB and fails one byte over (0.4617ms)
+✔ TC-PERF-17: CSS passes at 50 KB and fails above (0.3803ms)
+✔ TC-PERF-18: hero image passes at 180 KB and fails above (0.2636ms)
+✔ TC-PERF-19: a third font family fails (0.2379ms)
+✔ TC-PERF-20: a fifth font file fails (0.1886ms)
+✔ TC-PERF-21: font-display and self-hosting are enforced (0.2117ms)
+✔ TC-PERF-22: seven third-party scripts fail, six pass (0.1979ms)
+✔ TC-PERF-23: blocking third-party scripts fail even under the cap (0.1802ms)
+✔ TC-PERF-24: multiple breaches are all reported (0.2098ms)
+✔ TC-PERF-25: a compliant delivery setup passes (0.3765ms)
+✔ TC-PERF-26: below-the-fold images must lazy-load (0.2192ms)
+✔ TC-PERF-27: the hero must not be lazy-loaded (0.1795ms)
+✔ TC-PERF-28: images need explicit dimensions (0.1864ms)
+✔ TC-PERF-29: critical CSS must be inlined (0.1873ms)
+✔ TC-PERF-30: combined audit reports performance and delivery issues together (0.2876ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 28
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 294.0174
+
+✖ failing tests:
+
+test at tests\performance.test.mjs:108:1
+✖ TC-PERF-08: TTFB has a budget (LCP depends on it) (2.7494ms)
+  AssertionError [ERR_ASSERTION]: no TTFB budget: backend regressions would be invisible
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/performance.test.mjs:109:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n| Metric | Budget |\n|---|---|\n| LCP (mobile, 4G) | ≤ 2.5 s |\n| INP | ≤ 200 ms |\n| CLS | ≤ 0.1 |\n| Total JS (initial) | ≤ 200 KB gzipped |\n| Hero image | ≤ 180 KB (AVIF/WebP) |\n| Fonts | ≤ 2 families, ≤ 4 files, `font-display: swap`, self-hosted |\n| Third-party scripts | ≤ 6, all deferred |\n\nRequirements: lazy-load everything below the fold, explicit width/height on all images, no layout-shifting banners, critical CSS inlined.\n',
+    expected: /TTFB/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\performance.test.mjs:118:1
+✖ TC-PERF-10: the "4G" profile is reproducible (1.5099ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /1\.6 Mbps/i. Input:
+  
+  '\n' +
+    '\n' +
+    '| Metric | Budget |\n' +
+    '|---|---|\n' +
+    '| LCP (mobile, 4G) | ≤ 2.5 s |\n' +
+    '| INP | ≤ 200 ms |\n' +
+    '| CLS | ≤ 0.1 |\n' +
+    '| Total JS (initial) | ≤ 200 KB gzipped |\n' +
+    '| Hero image | ≤ 180 KB (AVIF/WebP) |\n' +
+    '| Fonts | ≤ 2 families, ≤ 4 files, `font-display: swap`, self-hosted |\n' +
+    '| Third-party scripts | ≤ 6, all deferred |\n' +
+    '\n' +
+    'Requirements: lazy-load everything below the fold, explicit width/height on all images, no layout-shifting banners, critical CSS inlined.\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/performance.test.mjs:119:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n| Metric | Budget |\n|---|---|\n| LCP (mobile, 4G) | ≤ 2.5 s |\n| INP | ≤ 200 ms |\n| CLS | ≤ 0.1 |\n| Total JS (initial) | ≤ 200 KB gzipped |\n| Hero image | ≤ 180 KB (AVIF/WebP) |\n| Fonts | ≤ 2 families, ≤ 4 files, `font-display: swap`, self-hosted |\n| Third-party scripts | ≤ 6, all deferred |\n\nRequirements: lazy-load everything below the fold, explicit width/height on all images, no layout-shifting banners, critical CSS inlined.\n',
+    expected: /1\.6 Mbps/i,
+    operator: 'match',
+    diff: 'simple'
+  }

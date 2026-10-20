@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Raw downloaded images (not part of the site build)
+site_images/
+
+# Old duplicate of the auth page (live version lives in site/auth)
+/auth/
+
+# Tooling / local state
+.playwright-cli/
+.firebase/
+*.log
+.env
+.env.*
+Thumbs.db
+.DS_Store

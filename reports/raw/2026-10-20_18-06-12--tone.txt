@@ -1,0 +1,42 @@
+✔ TC-TONE-01: Section 3 defines all five brand dimensions (6.3305ms)
+✔ TC-TONE-02: tone is stated as a position, not a vibe (0.6104ms)
+✔ TC-TONE-03: the avoid-list covers all five risk categories (1.8847ms)
+✔ TC-TONE-04: every banned word in the document is enforced by the linter (0.5291ms)
+✔ TC-TONE-05: visual direction is specific enough to art-direct (0.453ms)
+✔ TC-TONE-06: typography is quantified (0.4008ms)
+✔ TC-TONE-07: a good AND a bad voice example are both present (0.3331ms)
+✔ TC-TONE-08: the approved voice example passes the linter (4.215ms)
+✔ TC-TONE-09: the anti-example is caught by the linter (4.4561ms)
+✔ TC-TONE-10: "cure" is an error, not a warning (1.8247ms)
+✔ TC-TONE-11: "miracle" is blocked (0.4787ms)
+✔ TC-TONE-12: "guaranteed" is blocked (0.3803ms)
+✔ TC-TONE-13: "clinically proven" raises a warning for evidence (0.4938ms)
+✔ TC-TONE-14: unprovable absolute-safety claims are errors (0.5903ms)
+✔ TC-TONE-15: medical framing ("treats") is blocked (0.3186ms)
+✔ TC-TONE-16: fake scarcity is blocked (0.4652ms)
+✔ TC-TONE-17: urgency vocabulary is blocked (0.6541ms)
+✔ TC-TONE-18: manufactured social proof is blocked (0.2766ms)
+✔ TC-TONE-19: before/after framing is blocked (0.3435ms)
+✔ TC-TONE-20: weight-loss promises are blocked (0.2569ms)
+✔ TC-TONE-21: uncited comparative claims are blocked (0.249ms)
+✔ TC-TONE-22: compliant, specific copy stays clean (0.2867ms)
+✔ TC-TONE-23: matching is case-insensitive (0.2707ms)
+✔ TC-TONE-24: no false positives inside ordinary words (0.3111ms)
+✔ TC-TONE-25: exclamation stacking is flagged as hype (0.3243ms)
+✔ TC-TONE-26: all-caps shouting is flagged (0.3405ms)
+✔ TC-TONE-27: empty copy is not an error (0.2557ms)
+✔ TC-TONE-28: violations explain themselves (reason + suggestion) (0.3019ms)
+✔ TC-TONE-29: the mandatory legal disclaimer is allowed to say "treat" and "cure" (0.3978ms)
+✔ TC-TONE-30: the same words outside the disclaimer are still blocked (0.2861ms)
+✔ TC-TONE-31: disclaimer stripping can be disabled for auditing (0.2961ms)
+✔ TC-TONE-32: two families with two weights each is valid (0.4112ms)
+✔ TC-TONE-33: a third font family is rejected (0.2802ms)
+✔ TC-TONE-34: a third weight on one family is rejected (0.2959ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 287.3177

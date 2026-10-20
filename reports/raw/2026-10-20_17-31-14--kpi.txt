@@ -1,0 +1,44 @@
+✔ TC-SPEC-01: all five KPIs from Section 1.1 are defined (3.622ms)
+✔ TC-SPEC-02: every KPI has a numeric target (0.9739ms)
+✔ TC-SPEC-03: KPI engine targets match the document values (1.314ms)
+✔ TC-SPEC-04: every KPI is backed by tracked events listed in Section 12 (1.8819ms)
+✔ TC-SPEC-05: measurement window and owner are stated (0.4471ms)
+✔ TC-SPEC-06: targets are internally consistent (funnel sanity) (0.5743ms)
+✔ TC-SPEC-07: guard against impossible or duplicate targets (0.4853ms)
+✔ TC-SPEC-08: quick-add exclusion and G6 diagnostic are documented (0.6006ms)
+✔ TC-G1-01: home -> PDP CTR counts sessions that view a PDP page (16.4136ms)
+✔ TC-G1-02: repeated PDP views in one session count once (0.9959ms)
+✔ TC-G1-03: click alone is not enough; destination page decides (0.5614ms)
+✔ TC-G1-04: quick-add never inflates PDP CTR (decision regression) (0.4784ms)
+✔ TC-G2-01: conversion rate counts orders once per session (0.6384ms)
+✔ TC-G2-02: guests and COD orders are included (0.6272ms)
+✔ TC-G3-01: signup rate includes email and WhatsApp channels (0.3662ms)
+✔ TC-G4-01: bounce = single page view, <10s, no engagement (0.4638ms)
+✔ TC-G4-02: a 60%+ scroll is engagement, 25% is not (0.4346ms)
+✔ TC-G5-01: LCP p75 is computed in seconds (2.4586ms)
+✔ TC-G5-02: non-LCP vitals (CLS, INP) are ignored (0.5383ms)
+✔ TC-THR-01: on-target values respect comparator semantics (1.8569ms)
+✔ TC-THR-02: below-target values FAIL and are reported (0.3325ms)
+✔ TC-THR-03: healthy traffic meets or beats all five targets (5.2869ms)
+✔ TC-SAFE-01: zero sessions produces zeros, not NaN (0.5403ms)
+✔ TC-SAFE-02: bot traffic is excluded from all KPIs (0.5143ms)
+✔ TC-SAFE-03: malformed events do not corrupt the math (0.4522ms)
+✔ TC-SIM-01: 10k simulated sessions reproduce known probabilities (63.572ms)
+✔ TC-SIM-02: the same seed always yields the same numbers (49.6059ms)
+✔ TC-SIM-03: simulated LCP p75 stays within budget (12.7873ms)
+✔ TC-REPORT-01: funnel projection is ordered and adds up (5.2133ms)
+✔ TC-REPORT-02: formatting is human readable (0.2042ms)
+✔ TC-SESSION-01: session grouping is stable across interleaved events (0.1886ms)
+✔ TC-G6-01: quick-add rate is computed independently of G1 (0.2269ms)
+✔ TC-G6-02: diagnostic band classification (14.8359ms)
+✔ TC-G6-03: G6 never enters the launch gate (17.6774ms)
+✔ TC-REPORT-03: quick-add purchase can exceed PDP visits without breaking metrics (0.3358ms)
+﹣ TC-LIVE-01: live home page measurement (0.1909ms) # set HOME_URL to run against a deployed page
+ℹ tests 36
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 481.845

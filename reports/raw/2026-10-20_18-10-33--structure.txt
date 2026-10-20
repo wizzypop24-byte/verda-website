@@ -1,0 +1,36 @@
+✔ TC-STRUCT-01: the document defines exactly 16 sections (2.6626ms)
+✔ TC-STRUCT-02: section ids are sequential and unique (5.0017ms)
+✔ TC-STRUCT-03: the model matches the document (ids, names, count) (1.1942ms)
+✔ TC-STRUCT-04: render order follows the mobile flow diagram (1.1327ms)
+✔ TC-STRUCT-05: every section has at least two concrete rules (2.2611ms)
+✔ TC-STRUCT-06: component names are unique (0.3642ms)
+✔ TC-HM01: announcement bar is quantified and dismissible (0.5585ms)
+✔ TC-HM02: header nav, mega-menu and drawer behaviour are defined (0.4408ms)
+✔ TC-HM03: hero requires H1, two CTAs, trust line and LCP rules (0.467ms)
+✔ TC-HM04: trust strip is static, verifiable and import-safe (0.6091ms)
+✔ TC-HM05: concern grid size, destination and interaction are specified (0.3852ms)
+✔ TC-HM06: bestsellers rail defines layout, card data and quick-add states (1.0006ms)
+✔ TC-HM07: differentiation shows 3-4 props and links lab reports (0.4671ms)
+✔ TC-HM08: ingredient table exposes dose, form and evidence (0.3379ms)
+✔ TC-HM09: reviews show aggregate proof and are moderation-safe (0.3695ms)
+✔ TC-HM10: quiz captures email only after results (2.1633ms)
+✔ TC-HM11: bundles and subscription terms are explicit (0.8944ms)
+✔ TC-HM12: expert block requires qualification and a real bio (0.7403ms)
+✔ TC-HM13: blog teaser is capped at three posts and cannot bury the CTA (0.8894ms)
+✔ TC-HM14: FAQ size, topics and schema parity are defined (0.4243ms)
+✔ TC-HM15: newsletter has consent, double opt-in and honest incentive (0.3164ms)
+✔ TC-HM16: footer carries the legal importer block (0.3465ms)
+✔ TC-STRUCT-07: mega-menu and concern grid share one taxonomy (0.2779ms)
+✔ TC-STRUCT-08: every core section between hero and expert is present (0.2377ms)
+✔ TC-STRUCT-09: validator rejects duplicate ids (0.2147ms)
+✔ TC-STRUCT-10: validator rejects out-of-order sections (0.3479ms)
+✔ TC-STRUCT-11: validator rejects sections without required elements (0.2242ms)
+✔ TC-STRUCT-12: validator detects model/document drift (0.2824ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 300.4676

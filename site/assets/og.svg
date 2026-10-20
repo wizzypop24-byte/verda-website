@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Verda — lab-tested supplements">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7f1e9"/>
+      <stop offset="1" stop-color="#c3dbcd"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17724a"/>
+      <stop offset="1" stop-color="#0f5136"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="110" r="120" fill="#ffffff" opacity="0.35"/>
+  <circle cx="140" cy="540" r="150" fill="#ffffff" opacity="0.25"/>
+  <rect x="120" y="250" width="230" height="300" rx="34" fill="url(#bottle)"/>
+  <rect x="170" y="196" width="130" height="64" rx="16" fill="#0f5136"/>
+  <rect x="120" y="330" width="230" height="110" fill="#f6f7f4" opacity="0.95"/>
+  <rect x="150" y="360" width="160" height="12" rx="6" fill="#17724a" opacity="0.9"/>
+  <rect x="150" y="386" width="110" height="9" rx="4" fill="#16211a" opacity="0.35"/>
+  <text x="440" y="330" font-family="Manrope, Arial, sans-serif" font-size="96" font-weight="800" fill="#16211a" letter-spacing="-3">verda</text>
+  <text x="444" y="392" font-family="Arial, sans-serif" font-size="30" fill="#17724a" font-weight="700">Lab-backed. Not hype-backed.</text>
+  <text x="444" y="446" font-family="Arial, sans-serif" font-size="26" fill="#5d6b62">Third-party tested · FSSAI licensed · Free shipping over ₹999</text>
+</svg>

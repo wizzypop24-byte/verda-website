@@ -1,0 +1,41 @@
+✔ TC-ANLT-01: the event plan documents at least 17 events (6.7182ms)
+✔ TC-ANLT-02: every event row has a trigger and params (0.8377ms)
+✔ TC-ANLT-03: event names follow snake_case (2.4859ms)
+✔ TC-ANLT-04: page_type enum covers home, collection, pdp and cart (0.6368ms)
+✔ TC-ANLT-05: purchase params allow attribution and payment analysis (0.5359ms)
+✔ TC-ANLT-06: web_vitals records metric, value and page (0.4911ms)
+✔ TC-ANLT-07: consent gating is stated (0.7773ms)
+✔ TC-ANLT-08: server-side tracking is considered (0.4784ms)
+✔ TC-ANLT-09: the plan forbids personal data in params (0.8396ms)
+✔ TC-ANLT-10: search is measurable (0.8354ms)
+✔ TC-ANLT-11: PDP add-to-cart is measurable (0.4545ms)
+✔ TC-ANLT-12: a valid purchase event passes (1.5398ms)
+✔ TC-ANLT-13: unknown events are rejected (0.3783ms)
+✔ TC-ANLT-14: missing required params are reported per param (0.3763ms)
+✔ TC-ANLT-15: invalid enum values are rejected (0.4677ms)
+✔ TC-ANLT-16: value must be numeric (0.6296ms)
+✔ TC-ANLT-17: currency must be INR (0.5101ms)
+✔ TC-ANLT-18: scroll_depth only accepts 25/50/75/100 (2.562ms)
+✔ TC-ANLT-19: web_vitals metric enum is enforced (0.5653ms)
+✔ TC-ANLT-20: PII is detected in params and nested objects (0.902ms)
+✔ TC-ANLT-21: a hashed user id is allowed (2.7308ms)
+✔ TC-ANLT-22: PII in an otherwise valid event fails validation (0.3123ms)
+✔ TC-ANLT-23: newsletter channel is email or whatsapp (0.2043ms)
+✔ TC-ANLT-24: no analytics consent means the event is dropped (0.3468ms)
+✔ TC-ANLT-25: analytics consent sends the event (0.2817ms)
+✔ TC-ANLT-26: ads destinations need marketing consent specifically (0.4159ms)
+✔ TC-ANLT-27: invalid events are dropped even with consent (0.2519ms)
+✔ TC-ANLT-28: batch audit separates accepted and dropped events (0.6942ms)
+✔ TC-ANLT-29: a fully valid batch is clean (0.2887ms)
+✔ TC-ANLT-30: every KPI input event exists in the plan (0.326ms)
+✔ TC-ANLT-31: every persona signal exists in the plan (0.2183ms)
+✔ TC-ANLT-32: the plan and the validator share one registry (0.2248ms)
+✔ TC-ANLT-33: unknown names are surfaced by the integration helper (0.1652ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 315.721

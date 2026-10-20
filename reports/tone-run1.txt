@@ -1,0 +1,356 @@
+✔ TC-TONE-01: Section 3 defines all five brand dimensions (4.3167ms)
+✔ TC-TONE-02: tone is stated as a position, not a vibe (1.035ms)
+✔ TC-TONE-03: the avoid-list covers all five risk categories (1.6232ms)
+✔ TC-TONE-04: every banned word in the document is enforced by the linter (0.9475ms)
+✔ TC-TONE-05: visual direction is specific enough to art-direct (2.5198ms)
+✔ TC-TONE-06: typography is quantified (0.5671ms)
+✔ TC-TONE-07: a good AND a bad voice example are both present (0.5183ms)
+✖ TC-TONE-08: the approved voice example passes the linter (3.4561ms)
+✖ TC-TONE-09: the anti-example is caught by the linter (1.3569ms)
+✖ TC-TONE-10: "cure" is an error, not a warning (0.6658ms)
+✖ TC-TONE-11: "miracle" is blocked (0.348ms)
+✖ TC-TONE-12: "guaranteed" is blocked (0.2913ms)
+✖ TC-TONE-13: "clinically proven" raises a warning for evidence (0.3101ms)
+✖ TC-TONE-14: unprovable absolute-safety claims are errors (0.3788ms)
+✖ TC-TONE-15: medical framing ("treats") is blocked (0.3866ms)
+✖ TC-TONE-16: fake scarcity is blocked (0.356ms)
+✖ TC-TONE-17: urgency vocabulary is blocked (0.3353ms)
+✖ TC-TONE-18: manufactured social proof is blocked (0.2678ms)
+✖ TC-TONE-19: before/after framing is blocked (0.3134ms)
+✖ TC-TONE-20: weight-loss promises are blocked (0.4087ms)
+✖ TC-TONE-21: uncited comparative claims are blocked (0.3392ms)
+✖ TC-TONE-22: compliant, specific copy stays clean (0.3697ms)
+✖ TC-TONE-23: matching is case-insensitive (0.2633ms)
+✖ TC-TONE-24: no false positives inside ordinary words (0.2681ms)
+✖ TC-TONE-25: exclamation stacking is flagged as hype (0.2608ms)
+✖ TC-TONE-26: all-caps shouting is flagged (0.3831ms)
+✖ TC-TONE-27: empty copy is not an error (0.2835ms)
+✖ TC-TONE-28: violations explain themselves (reason + suggestion) (0.2864ms)
+✖ TC-TONE-29: the mandatory legal disclaimer is allowed to say "treat" and "cure" (0.4262ms)
+✖ TC-TONE-30: the same words outside the disclaimer are still blocked (0.261ms)
+✖ TC-TONE-31: disclaimer stripping can be disabled for auditing (0.2615ms)
+✔ TC-TONE-32: two families with two weights each is valid (0.8109ms)
+✔ TC-TONE-33: a third font family is rejected (0.3288ms)
+✔ TC-TONE-34: a third weight on one family is rejected (0.2703ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 10
+ℹ fail 24
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 384.492
+
+✖ failing tests:
+
+test at tests\tone.test.mjs:99:1
+✖ TC-TONE-08: the approved voice example passes the linter (3.4561ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:100:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:105:1
+✖ TC-TONE-09: the anti-example is caught by the linter (1.3569ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:106:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:114:1
+✖ TC-TONE-10: "cure" is an error, not a warning (0.6658ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:115:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:120:1
+✖ TC-TONE-11: "miracle" is blocked (0.348ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:121:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:125:1
+✖ TC-TONE-12: "guaranteed" is blocked (0.2913ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:126:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:130:1
+✖ TC-TONE-13: "clinically proven" raises a warning for evidence (0.3101ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:131:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:137:1
+✖ TC-TONE-14: unprovable absolute-safety claims are errors (0.3788ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:139:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:143:1
+✖ TC-TONE-15: medical framing ("treats") is blocked (0.3866ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:144:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:149:1
+✖ TC-TONE-16: fake scarcity is blocked (0.356ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:150:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:155:1
+✖ TC-TONE-17: urgency vocabulary is blocked (0.3353ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:157:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:161:1
+✖ TC-TONE-18: manufactured social proof is blocked (0.2678ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:162:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:165:1
+✖ TC-TONE-19: before/after framing is blocked (0.3134ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:166:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:170:1
+✖ TC-TONE-20: weight-loss promises are blocked (0.4087ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:171:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:174:1
+✖ TC-TONE-21: uncited comparative claims are blocked (0.3392ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:175:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:180:1
+✖ TC-TONE-22: compliant, specific copy stays clean (0.3697ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:183:20)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:186:1
+✖ TC-TONE-23: matching is case-insensitive (0.2633ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:187:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:190:1
+✖ TC-TONE-24: no false positives inside ordinary words (0.2681ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:191:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:196:1
+✖ TC-TONE-25: exclamation stacking is flagged as hype (0.2608ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:197:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:201:1
+✖ TC-TONE-26: all-caps shouting is flagged (0.3831ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:202:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:206:1
+✖ TC-TONE-27: empty copy is not an error (0.2835ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:207:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:212:1
+✖ TC-TONE-28: violations explain themselves (reason + suggestion) (0.2864ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:213:21)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:219:1
+✖ TC-TONE-29: the mandatory legal disclaimer is allowed to say "treat" and "cure" (0.4262ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:221:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:225:1
+✖ TC-TONE-30: the same words outside the disclaimer are still blocked (0.261ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:227:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at tests\tone.test.mjs:230:1
+✖ TC-TONE-31: disclaimer stripping can be disabled for auditing (0.2615ms)
+  TypeError: String.prototype.matchAll called with a non-global RegExp argument
+      at String.matchAll (<anonymous>)
+      at lintCopy (file:///C:/Users/dell/Desktop/again%20folder/lib/tone.mjs:124:30)
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/tone.test.mjs:231:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)

@@ -1,0 +1,38 @@
+✔ TC-ACPT-01: twelve checklist items are present (2.7409ms)
+✔ TC-ACPT-02: every item is a checkbox, i.e. verifiable (0.3427ms)
+✔ TC-ACPT-03: render item covers all five breakpoints (1.7967ms)
+✔ TC-ACPT-04: Lighthouse thresholds match the gate (0.759ms)
+✔ TC-ACPT-05: the vitals item covers LCP, CLS and INP (0.5222ms)
+✔ TC-ACPT-06: footer item requires disclaimer and FSSAI (0.4662ms)
+✔ TC-ACPT-07: consent gate is part of acceptance (1.9882ms)
+✔ TC-ACPT-08: structured data validation is part of acceptance (3.7721ms)
+✔ TC-ACPT-09: screen-reader item covers labels and heading order (0.927ms)
+✔ TC-ACPT-10: CMS editability is measured without a developer (0.7616ms)
+✔ TC-ACPT-11: no 404s and every claim sourced (0.577ms)
+✔ TC-ACPT-12: a fully passing run is approved (0.8215ms)
+✔ TC-ACPT-13: one missing section at one breakpoint blocks release (0.4787ms)
+✔ TC-ACPT-14: horizontal scroll blocks release (0.2667ms)
+✔ TC-ACPT-15: Lighthouse boundaries — 85/95 pass, one point below fails (0.6745ms)
+✔ TC-ACPT-16: LCP 2500 passes, 2501 fails (0.3274ms)
+✔ TC-ACPT-17: CLS 0.1 passes, 0.11 fails (0.3004ms)
+✔ TC-ACPT-18: INP 200 passes, 201 fails (0.215ms)
+✔ TC-ACPT-19: cart badge or keyboard drawer failure blocks release (0.2255ms)
+✔ TC-ACPT-20: a broken link blocks release and is named (0.2392ms)
+✔ TC-ACPT-21: an unsourced claim blocks release (0.19ms)
+✔ TC-ACPT-22: missing disclaimer or FSSAI blocks release (0.2075ms)
+✔ TC-ACPT-23: analytics firing before consent blocks release (0.1742ms)
+✔ TC-ACPT-24: invalid structured data blocks release (0.1731ms)
+✔ TC-ACPT-25: unlabeled buttons or broken heading order block release (0.2019ms)
+✔ TC-ACPT-26: fewer than five CMS blocks blocks release (0.2128ms)
+✔ TC-ACPT-27: unhealthy defaults fail closed (0.2699ms)
+✔ TC-ACPT-28: multiple failures are all reported (0.319ms)
+✔ TC-ACPT-29: passed list and summary are accurate (0.2377ms)
+✔ TC-ACPT-30: every failure names a criterion and a measurement (0.3844ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 275.7308

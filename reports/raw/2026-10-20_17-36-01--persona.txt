@@ -1,0 +1,34 @@
+✔ TC-AUD-01: exactly three personas are defined (7.1214ms)
+✔ TC-AUD-02: every persona has a valid, realistic age band (0.4826ms)
+✔ TC-AUD-03: every persona lists at least three specific needs (0.3445ms)
+✔ TC-AUD-04: Section 2.1 maps every persona to home-page sections (0.3581ms)
+✔ TC-AUD-05: every mapped section exists in Section 4 (1.9258ms)
+✔ TC-AUD-06: every persona need is covered by a section it actually gets (0.4195ms)
+✔ TC-AUD-07: each persona has one unique primary entry, one click from home (0.303ms)
+✔ TC-AUD-08: each persona has at least two tracked signals, all documented (0.3034ms)
+✔ TC-AUD-09: each persona is owned by a defined KPI (0.4814ms)
+✔ TC-AUD-10: document mapping matches the audience model (1.0655ms)
+✔ TC-AUD-11: validator rejects a persona with no needs (1.1073ms)
+✔ TC-AUD-12: validator rejects unknown sections and events (0.3828ms)
+✔ TC-AUD-13: every core section is justified by at least one persona (0.4151ms)
+✔ TC-AUD-14: no persona depends on a single section (0.2856ms)
+✔ TC-AUD-15: personas are distinct in id, name and primary path (0.2989ms)
+✔ TC-AUD-16: India-first market assumptions are documented (0.3481ms)
+✔ TC-AUD-17: mobile-first assumption is stated with evidence (0.7221ms)
+✔ TC-AUD-18: persona trigger text is traceable to Section 2 (1.3947ms)
+✔ TC-AUD-19: persona need keywords appear in their document row (0.7246ms)
+✔ TC-AUD-20: section load is balanced (no section serves all personas) (28.7167ms)
+✔ TC-AUD-21: document naming is stable (no duplicate persona rows) (0.2447ms)
+✔ TC-AUD-22: market decision is locked with import model and launch scale (0.3297ms)
+✔ TC-AUD-23: Gifter COD need is backed by an enforceable COD policy (0.4979ms)
+✔ TC-AUD-24: Gifter returns need is backed by a returns rule and footer policy (2.9198ms)
+✔ TC-AUD-25: no persona relies on a claim the importer cannot make (0.5939ms)
+✔ TC-AUD-26: Optimizer subscription need is backed by subscription terms (1.0021ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 311.5812

@@ -1,0 +1,42 @@
+✔ TC-COMP-01: claims policy covers all six prohibitions (3.912ms)
+✔ TC-COMP-02: FSSAI number and status link are required in the footer (0.6226ms)
+✔ TC-COMP-03: the exact disclaimer is written in the document (0.2699ms)
+✔ TC-COMP-04: product pages must show ingredients, allergens, dosage and storage (0.3554ms)
+✔ TC-COMP-05: testimonials are labelled as individual experiences (0.3266ms)
+✔ TC-COMP-06: privacy requirements name DPDP and consent (0.4076ms)
+✔ TC-COMP-07: importer checklist has ten sequential items (5.0924ms)
+✔ TC-COMP-08: every importer item explains why it matters (1.2586ms)
+✔ TC-COMP-09: the label spec includes batch number and best-before (0.3844ms)
+✔ TC-COMP-10: marketing consent requires stored proof (0.773ms)
+✔ TC-COMP-11: the licence type is Central (importer), not State (0.3712ms)
+✔ TC-COMP-12: shelf-life threshold is 60% or 3 months (0.3192ms)
+✔ TC-COMP-13: the full disclaimer passes (0.6411ms)
+✔ TC-COMP-14: a partial disclaimer fails on each missing clause (0.4979ms)
+✔ TC-COMP-15: a complete label passes (0.3509ms)
+✔ TC-COMP-16: every missing label field is reported (0.4102ms)
+✔ TC-COMP-17: licence number must be 14 digits (0.2203ms)
+✔ TC-COMP-18: shelf life passes at 60% or at 3 months (0.2619ms)
+✔ TC-COMP-19: shelf life fails below both thresholds (0.2515ms)
+✔ TC-COMP-20: supplier clause must promise 18 months (0.3562ms)
+✔ TC-COMP-21: only designated ports are accepted (0.2406ms)
+✔ TC-COMP-22: PIF needs all five documents (0.2997ms)
+✔ TC-COMP-23: GST must be 5% (0.2618ms)
+✔ TC-COMP-24: origin must say Imported, never Made in India (0.4357ms)
+✔ TC-COMP-25: testimonials need the individual-experience label (0.332ms)
+✔ TC-COMP-26: incentivized reviews must disclose the incentive (0.207ms)
+✔ TC-COMP-27: age gate requires 18+ (0.2201ms)
+✔ TC-COMP-28: product page must show all four safety blocks (0.3013ms)
+✔ TC-COMP-29: privacy needs banner, policy, DPDP basis and proven opt-in (0.2492ms)
+✔ TC-COMP-30: footer importer block requires six legal facts (0.3768ms)
+✔ TC-COMP-31: a fully compliant page passes the combined audit (0.5109ms)
+✔ TC-COMP-32: the combined audit surfaces every breach at once (0.2708ms)
+✔ TC-COMP-33: every banned claim in this section is blocked by the copy linter (8.4251ms)
+✔ TC-COMP-34: compliant structure-function copy passes the linter (0.3992ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 288.1416

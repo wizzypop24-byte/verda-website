@@ -1,0 +1,85 @@
+✔ TC-AUD-01: exactly three personas are defined (12.5229ms)
+✔ TC-AUD-02: every persona has a valid, realistic age band (0.4974ms)
+✔ TC-AUD-03: every persona lists at least three specific needs (0.3348ms)
+✖ TC-AUD-04: Section 2.1 maps every persona to home-page sections (2.3096ms)
+✔ TC-AUD-05: every mapped section exists in Section 4 (0.3655ms)
+✔ TC-AUD-06: every persona need is covered by a section it actually gets (0.4846ms)
+✔ TC-AUD-07: each persona has one unique primary entry, one click from home (0.4253ms)
+✖ TC-AUD-08: each persona has at least two tracked signals, all documented (0.4362ms)
+✔ TC-AUD-09: each persona is owned by a defined KPI (0.3794ms)
+✖ TC-AUD-10: document mapping matches the audience model (2.0933ms)
+✔ TC-AUD-11: validator rejects a persona with no needs (4.3182ms)
+✔ TC-AUD-12: validator rejects unknown sections and events (0.9589ms)
+✔ TC-AUD-13: every core section is justified by at least one persona (1.1465ms)
+✔ TC-AUD-14: no persona depends on a single section (1.2129ms)
+✔ TC-AUD-15: personas are distinct in id, name and primary path (0.6488ms)
+✔ TC-AUD-16: India-first market assumptions are documented (0.3833ms)
+✔ TC-AUD-17: mobile-first assumption is stated with evidence (0.5833ms)
+✔ TC-AUD-18: persona trigger text is traceable to Section 2 (0.3079ms)
+✔ TC-AUD-19: persona need keywords appear in their document row (0.3663ms)
+✔ TC-AUD-20: section load is balanced (no section serves all personas) (85.2963ms)
+✔ TC-AUD-21: document naming is stable (no duplicate persona rows) (0.4162ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 18
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 469.6386
+
+✖ failing tests:
+
+test at tests\persona.test.mjs:100:1
+✖ TC-AUD-04: Section 2.1 maps every persona to home-page sections (2.3096ms)
+  AssertionError [ERR_ASSERTION]: missing "### 2.1" persona -> section mapping table
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/persona.test.mjs:101:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\persona.test.mjs:143:1
+✖ TC-AUD-08: each persona has at least two tracked signals, all documented (0.4362ms)
+  AssertionError [ERR_ASSERTION]: The Fixer: "lab_report_click" is not in Section 12
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/persona.test.mjs:148:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\persona.test.mjs:160:1
+✖ TC-AUD-10: document mapping matches the audience model (2.0933ms)
+  AssertionError [ERR_ASSERTION]: The Fixer: mapping row missing
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/persona.test.mjs:163:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

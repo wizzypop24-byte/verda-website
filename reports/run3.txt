@@ -1,0 +1,38 @@
+✔ TC-SPEC-01: all five KPIs from Section 1.1 are defined (2.8414ms)
+✔ TC-SPEC-02: every KPI has a numeric target (0.7986ms)
+✔ TC-SPEC-03: KPI engine targets match the document values (0.8053ms)
+✔ TC-SPEC-04: every KPI is backed by tracked events listed in Section 12 (1.4067ms)
+✔ TC-SPEC-05: measurement window and owner are stated (0.3601ms)
+✔ TC-SPEC-06: targets are internally consistent (funnel sanity) (0.4389ms)
+✔ TC-SPEC-07: guard against impossible or duplicate targets (0.3195ms)
+✔ TC-G1-01: home -> PDP CTR is unique sessions with a product click / sessions (15.398ms)
+✔ TC-G1-02: repeated clicks in one session count once (0.7912ms)
+✔ TC-G1-03: every PDP entry point counts, quick-add does not (0.9786ms)
+✔ TC-G2-01: conversion rate counts orders once per session (0.4768ms)
+✔ TC-G2-02: guests and COD orders are included (4.722ms)
+✔ TC-G3-01: signup rate includes email and WhatsApp channels (0.3612ms)
+✔ TC-G4-01: bounce = single page view, <10s, no engagement (0.3933ms)
+✔ TC-G4-02: a 60%+ scroll is engagement, 25% is not (0.3476ms)
+✔ TC-G5-01: LCP p75 is computed in seconds (0.6049ms)
+✔ TC-G5-02: non-LCP vitals (CLS, INP) are ignored (0.2614ms)
+✔ TC-THR-01: on-target values respect comparator semantics (0.8553ms)
+✔ TC-THR-02: below-target values FAIL and are reported (0.3378ms)
+✔ TC-THR-03: healthy traffic meets or beats all five targets (6.4474ms)
+✔ TC-SAFE-01: zero sessions produces zeros, not NaN (0.514ms)
+✔ TC-SAFE-02: bot traffic is excluded from all KPIs (4.4909ms)
+✔ TC-SAFE-03: malformed events do not corrupt the math (0.5639ms)
+✔ TC-SIM-01: 10k simulated sessions reproduce known probabilities (58.0952ms)
+✔ TC-SIM-02: the same seed always yields the same numbers (47.6816ms)
+✔ TC-SIM-03: simulated LCP p75 stays within budget (16.4982ms)
+✔ TC-REPORT-01: funnel projection is ordered and adds up (15.0796ms)
+✔ TC-REPORT-02: formatting is human readable (0.3456ms)
+✔ TC-SESSION-01: session grouping is stable across interleaved events (0.4107ms)
+﹣ TC-LIVE-01: live home page measurement (0.2617ms) # set HOME_URL to run against a deployed page
+ℹ tests 30
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 448.8257

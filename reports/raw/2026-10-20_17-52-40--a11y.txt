@@ -1,0 +1,42 @@
+✔ TC-A11Y-01: WCAG 2.2 AA scope is declared (2.6229ms)
+✔ TC-A11Y-02: keyboard navigation and focus indicators are required (1.9588ms)
+✔ TC-A11Y-03: skip-to-content link is required (3.1733ms)
+✔ TC-A11Y-04: icon-only buttons need ARIA labels (0.4131ms)
+✔ TC-A11Y-05: carousel rules are complete (0.4696ms)
+✔ TC-A11Y-06: form errors must be announced (0.2576ms)
+✔ TC-A11Y-07: video captions, transcript and flash limits (0.4115ms)
+✔ TC-A11Y-08: screen-reader testing on mobile and desktop (0.3167ms)
+✔ TC-A11Y-09: page language is declared (0.3517ms)
+✔ TC-A11Y-10: focus cannot be hidden behind the sticky header (0.9429ms)
+✔ TC-A11Y-11: accessible names come from text, label or aria-labelledby (0.4396ms)
+✔ TC-A11Y-12: icon-only buttons without a name fail (0.6987ms)
+✔ TC-A11Y-13: labelled icon buttons pass (0.222ms)
+✔ TC-A11Y-14: positive tabindex is rejected (0.2503ms)
+✔ TC-A11Y-15: missing focus indicator is rejected (0.3147ms)
+✔ TC-A11Y-16: skip link must target main and be first (0.3379ms)
+✔ TC-A11Y-17: skip link must be visible on focus (0.1661ms)
+✔ TC-A11Y-18: carousel at 5000ms passes, 5001ms fails (0.2811ms)
+✔ TC-A11Y-19: auto-advancing carousel without pause fails (0.1781ms)
+✔ TC-A11Y-20: static carousel needs no pause control (0.1514ms)
+✔ TC-A11Y-21: carousel without keyboard controls fails (0.1504ms)
+✔ TC-A11Y-22: form errors require aria-live and aria-describedby (0.3484ms)
+✔ TC-A11Y-23: a fix suggestion is a warning, not a blocker (0.175ms)
+✔ TC-A11Y-24: video requires captions and a transcript (0.2632ms)
+✔ TC-A11Y-25: flashing above 3 per second fails (0.1672ms)
+✔ TC-A11Y-26: autoplay with sound is rejected (0.1607ms)
+✔ TC-A11Y-27: all four landmarks are required (0.2895ms)
+✔ TC-A11Y-28: lang and title are validated (0.3741ms)
+✔ TC-A11Y-29: sticky header must reserve scroll padding (0.2759ms)
+✔ TC-A11Y-30: duplicate ids are detected (3.2621ms)
+✔ TC-A11Y-31: a compliant page passes with zero violations (1.4071ms)
+✔ TC-A11Y-32: a broken page reports every category (1.0186ms)
+✔ TC-A11Y-33: warnings alone do not block (0.5112ms)
+✔ TC-A11Y-34: empty audit is valid (0.2681ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 277.1249

@@ -1,0 +1,88 @@
+✔ TC-AUTH-01: Section 17 exists with all ten sub-sections (4.6513ms)
+✔ TC-AUTH-02: 22 requirements with sequential, unique IDs (6.8575ms)
+✔ TC-AUTH-03: every requirement has a valid priority (1.4236ms)
+✔ TC-AUTH-04: guest checkout is allowed and marked Must (0.5273ms)
+✔ TC-AUTH-05: OTP rules are quantified (expiry, resend, attempts, lock) (0.4589ms)
+✔ TC-AUTH-06: password rules are explicit (1.1845ms)
+✔ TC-AUTH-07: password reset link is expiring and single-use (0.5599ms)
+✔ TC-AUTH-08: duplicate accounts are resolved, never duplicated (0.3989ms)
+✔ TC-AUTH-09: no user enumeration is required (0.8423ms)
+✔ TC-AUTH-10: rate limits are quantified per phone and per IP (0.8576ms)
+✔ TC-AUTH-11: session lifetime and global logout are specified (0.4268ms)
+✔ TC-AUTH-12: all seven auth flows are documented (0.3522ms)
+✔ TC-AUTH-13: guest order claim uses the same identity (0.4337ms)
+✔ TC-AUTH-14: five screens are specified (0.2715ms)
+✔ TC-AUTH-15: error copy covers the six critical failure cases (0.2779ms)
+✔ TC-AUTH-16: accessibility is required on every auth screen (2.5085ms)
+✔ TC-AUTH-17: mobile-first at 360 px is required (0.431ms)
+✔ TC-AUTH-18: transport, password hashing and OTP storage are specified (1.4882ms)
+✔ TC-AUTH-19: session cookies and CSRF protection are specified (0.4884ms)
+✔ TC-AUTH-20: bot protection and audit logging are specified (0.2807ms)
+✖ TC-AUTH-21: marketing consent is separate and unticked by default (1.9344ms)
+✔ TC-AUTH-22: privacy policy is linked at the point of collection (0.2464ms)
+✔ TC-AUTH-23: account deletion and export have a 30-day SLA (0.3102ms)
+✔ TC-AUTH-24: grievance officer contact is required (0.1992ms)
+✔ TC-AUTH-25: age gate (18+) is required (0.2055ms)
+✔ TC-AUTH-26: eight auth events are defined (0.2076ms)
+✔ TC-AUTH-27: auth events do not replace the purchase / KPI events (0.3658ms)
+✔ TC-AUTH-28: unresolved integration note is recorded (0.2267ms)
+✔ TC-AUTH-29: acceptance checklist has at least 12 checks (0.2898ms)
+✔ TC-AUTH-30: out-of-scope list is explicit (0.1913ms)
+✖ TC-AUTH-31: duplicate-account copy never leaks account existence before verification (0.5758ms)
+﹣ TC-AUTH-32: live auth page check (0.7627ms) # set AUTH_URL to run against a deployed login page
+ℹ tests 32
+ℹ suites 0
+ℹ pass 29
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 390.5726
+
+✖ failing tests:
+
+test at tests\auth.test.mjs:219:1
+✖ TC-AUTH-21: marketing consent is separate and unticked by default (1.9344ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /unticked|not pre-ticked/i. Input:
+  
+  ' (DPDP Act 2023)\n' +
+    '\n' +
+    '- Consent screen lists purpose: order fulfilment / marketing / analytics — separate toggles.\n' +
+    '- Privacy policy linked at the point of collection, not only in footer.\n' +
+    '- Data minimisation: phone + address only; no gender/DOB unless needed.\n' +
+    '- Grievance officer contact in footer and account page.\n' +
+    '- Deletion/export request flow (AUTH-13) with SLA.\n' +
+    '- No dark patterns: "Skip" and "Not now" have equal visual weight to "Save".\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/auth.test.mjs:222:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: ' (DPDP Act 2023)\n\n- Consent screen lists purpose: order fulfilment / marketing / analytics — separate toggles.\n- Privacy policy linked at the point of collection, not only in footer.\n- Data minimisation: phone + address only; no gender/DOB unless needed.\n- Grievance officer contact in footer and account page.\n- Deletion/export request flow (AUTH-13) with SLA.\n- No dark patterns: "Skip" and "Not now" have equal visual weight to "Save".\n',
+    expected: /unticked|not pre-ticked/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\auth.test.mjs:288:1
+✖ TC-AUTH-31: duplicate-account copy never leaks account existence before verification (0.5758ms)
+  AssertionError [ERR_ASSERTION]: duplicate copy reveals existence before verification: ""This number already has an account. Log in instead?""
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/auth.test.mjs:292:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '"This number already has an account. Log in instead?"',
+    expected: /after (otp )?verification|verified|welcome back/i,
+    operator: 'match',
+    diff: 'simple'
+  }

@@ -1,0 +1,40 @@
+✔ TC-SEO-01: all seven SEO rule groups are present (2.4895ms)
+✔ TC-SEO-02: title, description and canonical limits (0.5906ms)
+✔ TC-SEO-03: canonical rules are complete (absolute, self, no params) (0.4183ms)
+✔ TC-SEO-04: all five structured-data types are listed (0.3119ms)
+✔ TC-SEO-05: Product schema fields are specified (0.4898ms)
+✔ TC-SEO-06: structured data format is JSON-LD (0.3406ms)
+✔ TC-SEO-07: robots and sitemap requirements are stated (0.4619ms)
+✔ TC-SEO-08: non-indexable URL patterns are named (0.4015ms)
+✔ TC-SEO-09: alt-text policy distinguishes content and decorative (3.5915ms)
+✔ TC-SEO-10: title passes at 60 chars and fails at 61 (1.0453ms)
+✔ TC-SEO-11: empty title is rejected (0.4138ms)
+✔ TC-SEO-12: description passes at 155 and fails at 156 (0.4224ms)
+✔ TC-SEO-13: one H1 with a clean hierarchy passes (0.3898ms)
+✔ TC-SEO-14: zero or two H1 tags fail (0.2399ms)
+✔ TC-SEO-15: skipped heading levels fail (0.26ms)
+✔ TC-SEO-16: complete Open Graph tags pass (0.5212ms)
+✔ TC-SEO-17: missing or relative OG image fails (0.2661ms)
+✔ TC-SEO-18: Twitter card must be a large image card (0.3025ms)
+✔ TC-SEO-19: canonical must be absolute, clean and self-referencing (0.4844ms)
+✔ TC-SEO-20: all required schema blocks pass (0.4241ms)
+✔ TC-SEO-21: missing schema types are reported (0.3259ms)
+✔ TC-SEO-22: incomplete Product schema is rejected (0.3617ms)
+✔ TC-SEO-23: non-JSON-LD blocks are rejected (0.2197ms)
+✔ TC-SEO-24: FAQ parity passes when visible and schema match (0.4043ms)
+✔ TC-SEO-25: FAQ parity fails on count or content mismatch (0.2007ms)
+✔ TC-SEO-26: a correct robots.txt passes (0.5178ms)
+✔ TC-SEO-27: robots.txt must block cart, search, filters and link the sitemap (0.6216ms)
+✔ TC-SEO-28: sitemap must include the home page with absolute URLs (0.3877ms)
+✔ TC-SEO-29: cart, checkout and search are not indexable (0.3818ms)
+✔ TC-SEO-30: filtered collections are not indexable, clean ones are (0.2082ms)
+✔ TC-SEO-31: home and product pages are indexable (0.1602ms)
+✔ TC-SEO-32: alt-text policy works both ways (0.2808ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 257.2303

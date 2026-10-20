@@ -1,0 +1,91 @@
+✔ TC-DSGN-01: all eight design rules are present (2.643ms)
+✔ TC-DSGN-02: breakpoint list matches the model (1.6971ms)
+✔ TC-DSGN-03: grid columns are defined per device (0.345ms)
+✔ TC-DSGN-04: gutters are 24 / 16 / 16 (0.3576ms)
+✔ TC-DSGN-05: max content width is 1280px (0.4042ms)
+✔ TC-DSGN-06: type scale is quantified (0.4749ms)
+✔ TC-DSGN-07: tap target is at least 44x44 (0.2881ms)
+✖ TC-DSGN-08: contrast covers body text AND large text / UI (1.3652ms)
+✔ TC-DSGN-09: motion duration and reduced-motion support are stated (0.3623ms)
+✖ TC-DSGN-10: no-text-in-images applies to every image (0.6796ms)
+✔ TC-DSGN-11: breakpoint mapping at the boundaries (5.2772ms)
+✔ TC-DSGN-12: columns follow the device (0.8037ms)
+✔ TC-DSGN-13: container is capped at 1280 but never overflows small screens (0.7301ms)
+✔ TC-DSGN-14: invalid viewports are rejected (0.9324ms)
+✔ TC-DSGN-15: tap targets pass at 44x44 and fail at 43 (0.2878ms)
+✔ TC-DSGN-16: motion durations inside the window pass, outside fail (0.3473ms)
+✔ TC-DSGN-17: contrast maths is correct at the extremes (1.7789ms)
+✔ TC-DSGN-18: brand ink on white passes body-text contrast (0.3449ms)
+✔ TC-DSGN-19: light grey on white fails body-text contrast (0.2464ms)
+✖ TC-DSGN-20: large text uses a 3:1 threshold (11.7746ms)
+✔ TC-DSGN-21: invalid hex colours are rejected (0.4566ms)
+✔ TC-DSGN-22: baked-in text is rejected (0.3286ms)
+✔ TC-DSGN-23: content images require alt text (0.1907ms)
+✔ TC-DSGN-24: decorative images must use empty alt (0.1831ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 21
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 280.7288
+
+✖ failing tests:
+
+test at tests\design.test.mjs:96:1
+✖ TC-DSGN-08: contrast covers body text AND large text / UI (1.3652ms)
+  AssertionError [ERR_ASSERTION]: large text and UI contrast (WCAG 1.4.3 / 1.4.11) not stated
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/design.test.mjs:98:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n- **Breakpoints:** 360 / 768 / 1024 / 1280 / 1440 px.\n- **Grid:** 12-col desktop, 8-col tablet, 4-col mobile; gutter 24 / 16 / 16 px.\n- **Max content width:** 1280 px.\n- **Type scale:** mobile base 16 px; desktop base 16–18 px; H1 clamp(32px → 56px).\n- **Tap targets:** ≥ 44×44 px.\n- **Contrast:** body text ≥ 4.5:1.\n- **Motion:** 150–250 ms ease-out; respect `prefers-reduced-motion`.\n- **No text inside images** for headings/CTAs.\n',
+    expected: /3:1/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\design.test.mjs:111:1
+✖ TC-DSGN-10: no-text-in-images applies to every image (0.6796ms)
+  AssertionError [ERR_ASSERTION]: rule is limited to headings/CTAs; it must cover every image
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/design.test.mjs:113:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n- **Breakpoints:** 360 / 768 / 1024 / 1280 / 1440 px.\n- **Grid:** 12-col desktop, 8-col tablet, 4-col mobile; gutter 24 / 16 / 16 px.\n- **Max content width:** 1280 px.\n- **Type scale:** mobile base 16 px; desktop base 16–18 px; H1 clamp(32px → 56px).\n- **Tap targets:** ≥ 44×44 px.\n- **Contrast:** body text ≥ 4.5:1.\n- **Motion:** 150–250 ms ease-out; respect `prefers-reduced-motion`.\n- **No text inside images** for headings/CTAs.\n',
+    expected: /every image|all images/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\design.test.mjs:176:1
+✖ TC-DSGN-20: large text uses a 3:1 threshold (11.7746ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(ratio < 4.5 && ratio >= 3)
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/design.test.mjs:178:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

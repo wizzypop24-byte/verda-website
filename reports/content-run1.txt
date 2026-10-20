@@ -1,0 +1,150 @@
+✔ TC-CONT-01: the six original content blocks are documented in order (5.6793ms)
+✔ TC-CONT-02: every content row has an owner (0.5088ms)
+✔ TC-CONT-03: every content row has a numeric limit (0.6122ms)
+✔ TC-CONT-04: hero limits match the validator (0.5539ms)
+✔ TC-CONT-05: trust-strip limit is four words per item (0.3763ms)
+✔ TC-CONT-06: concern cards are capped at ten words (0.3096ms)
+✔ TC-CONT-07: product names are capped at sixty characters (1.8193ms)
+✔ TC-CONT-08: review length is measured in lines (0.4706ms)
+✔ TC-CONT-09: FAQ answers are bounded on both sides (0.4389ms)
+✖ TC-CONT-10: all copy-bearing sections have a documented limit (2.5562ms)
+✔ TC-CONT-11: the asset plan lists every required group (1.3333ms)
+✔ TC-CONT-12: image dimensions are specified (0.5771ms)
+✖ TC-CONT-13: product photo volume matches the four-SKU launch (1.75ms)
+✖ TC-CONT-14: assets declare format and alt text (0.5193ms)
+✔ TC-CONT-15: word counting treats currency and hyphens as one word (0.8235ms)
+✔ TC-CONT-16: H1 boundary — 12 passes, 13 fails (1.3051ms)
+✔ TC-CONT-17: sub-headline boundary — 20 passes, 21 fails (0.2864ms)
+✔ TC-CONT-18: hero requires both fields (0.223ms)
+✖ TC-CONT-19: trust strip requires 4-5 items (1.1755ms)
+✖ TC-CONT-20: trust item boundary — 4 words pass, 5 fail (0.4251ms)
+✔ TC-CONT-21: concern card boundary — 10 passes, 11 fails (0.2952ms)
+✔ TC-CONT-22: product name boundary — 60 chars pass, 61 fail (0.3375ms)
+✔ TC-CONT-23: ingredient line is capped at eight words (0.2327ms)
+✔ TC-CONT-24: reviews must be 2-3 lines (0.3683ms)
+✔ TC-CONT-25: FAQ boundary — 60 and 120 pass, outside fails (0.5104ms)
+✔ TC-CONT-26: empty content is rejected, not silently accepted (0.1882ms)
+✔ TC-CONT-27: the executable asset plan covers all required groups (0.3997ms)
+✔ TC-CONT-28: product photo range allows 2-3 angles for four SKUs (0.2033ms)
+✔ TC-CONT-29: every asset declares a format and a size (0.2054ms)
+✔ TC-CONT-30: asset validator catches an incomplete plan (0.3131ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 25
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 361.1837
+
+✖ failing tests:
+
+test at tests\content.test.mjs:110:1
+✖ TC-CONT-10: all copy-bearing sections have a documented limit (2.5562ms)
+  AssertionError [ERR_ASSERTION]: no limit defined for "Announcement bar"
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/content.test.mjs:113:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\content.test.mjs:138:1
+✖ TC-CONT-13: product photo volume matches the four-SKU launch (1.75ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /2–3 angles/i. Input:
+  
+  '\n' +
+    '\n' +
+    '| Section | Content owner | Word count / limit |\n' +
+    '|---|---|---|\n' +
+    '| Hero H1 + sub | Marketing | H1 ≤ 12 words, sub ≤ 20 words |\n' +
+    '| Trust strip | Compliance + Marketing | ≤ 4 words per item |\n' +
+    '| Concern cards | Category manager | ≤ 10 words each |\n' +
+    '| Product cards | Catalog team | Name ≤ 60 chars |\n' +
+    '| Reviews | Community manager | 2–3 lines each |\n' +
+    '| FAQ | Support + Compliance | 60–120 words per answer |\n' +
+    '\n' +
+    '**Assets needed before build:** 1 hero image (desktop 2400×1200, mobile 1080×1350), 8 concern images, 8–12 product photos (white bg + lifestyle), 5 trust icons (SVG), 3 review photos, 1 founder photo, 1 label close-up, OG image (1200×630).\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/content.test.mjs:140:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n| Section | Content owner | Word count / limit |\n|---|---|---|\n| Hero H1 + sub | Marketing | H1 ≤ 12 words, sub ≤ 20 words |\n| Trust strip | Compliance + Marketing | ≤ 4 words per item |\n| Concern cards | Category manager | ≤ 10 words each |\n| Product cards | Catalog team | Name ≤ 60 chars |\n| Reviews | Community manager | 2–3 lines each |\n| FAQ | Support + Compliance | 60–120 words per answer |\n\n**Assets needed before build:** 1 hero image (desktop 2400×1200, mobile 1080×1350), 8 concern images, 8–12 product photos (white bg + lifestyle), 5 trust icons (SVG), 3 review photos, 1 founder photo, 1 label close-up, OG image (1200×630).\n',
+    expected: /2–3 angles/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\content.test.mjs:144:1
+✖ TC-CONT-14: assets declare format and alt text (0.5193ms)
+  AssertionError [ERR_ASSERTION]: modern image format not required
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/content.test.mjs:145:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n| Section | Content owner | Word count / limit |\n|---|---|---|\n| Hero H1 + sub | Marketing | H1 ≤ 12 words, sub ≤ 20 words |\n| Trust strip | Compliance + Marketing | ≤ 4 words per item |\n| Concern cards | Category manager | ≤ 10 words each |\n| Product cards | Catalog team | Name ≤ 60 chars |\n| Reviews | Community manager | 2–3 lines each |\n| FAQ | Support + Compliance | 60–120 words per answer |\n\n**Assets needed before build:** 1 hero image (desktop 2400×1200, mobile 1080×1350), 8 concern images, 8–12 product photos (white bg + lifestyle), 5 trust icons (SVG), 3 review photos, 1 founder photo, 1 label close-up, OG image (1200×630).\n',
+    expected: /AVIF|WebP/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\content.test.mjs:176:1
+✖ TC-CONT-19: trust strip requires 4-5 items (1.1755ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/content.test.mjs:180:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\content.test.mjs:183:1
+✖ TC-CONT-20: trust item boundary — 4 words pass, 5 fail (0.4251ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/content.test.mjs:184:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

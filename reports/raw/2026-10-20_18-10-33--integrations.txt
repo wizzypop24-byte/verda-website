@@ -1,0 +1,38 @@
+✔ TC-INTG-01: eight integration needs are documented (6.1644ms)
+✔ TC-INTG-02: every need suggests at least one vendor (0.353ms)
+✔ TC-INTG-03: payments cover UPI, cards, netbanking and COD (0.4357ms)
+✔ TC-INTG-04: email and WhatsApp are both covered (0.2949ms)
+✔ TC-INTG-05: analytics stack includes GA4, GTM and Meta CAPI (0.306ms)
+✔ TC-INTG-06: CMS options cover both Shopify and headless (0.5243ms)
+✔ TC-INTG-07: support stack includes WhatsApp and a helpdesk (0.3231ms)
+✔ TC-INTG-08: webhook security is required (0.3995ms)
+✔ TC-INTG-09: secrets must stay server-side (0.6248ms)
+✔ TC-INTG-10: critical integrations need a fallback (0.9035ms)
+✔ TC-INTG-11: registry covers all eight categories exactly once (0.5215ms)
+✔ TC-INTG-12: duplicate categories are rejected (0.3404ms)
+✔ TC-INTG-13: payments capability set is complete (0.2814ms)
+✔ TC-INTG-14: shipping supports serviceability, COD remittance and RTO (0.2197ms)
+✔ TC-INTG-15: a vendor missing a capability is rejected (0.4226ms)
+✔ TC-INTG-16: a complete vendor capability set passes (0.3049ms)
+✔ TC-INTG-17: unknown categories are rejected (0.2646ms)
+✔ TC-INTG-18: required capabilities are covered by the stack (1.4876ms)
+✔ TC-INTG-19: uncovered capabilities are reported (0.3687ms)
+✔ TC-INTG-20: a valid webhook signature passes (3.736ms)
+✔ TC-INTG-21: a tampered payload fails (0.5442ms)
+✔ TC-INTG-22: a missing secret fails closed (0.2312ms)
+✔ TC-INTG-23: replayed webhooks are ignored (0.3766ms)
+✔ TC-INTG-24: retries back off and cap at 30s (1.5971ms)
+✔ TC-INTG-25: live payment secrets are detected (0.6645ms)
+✔ TC-INTG-26: public keys are not treated as secrets (0.2194ms)
+✔ TC-INTG-27: a fully configured stack passes the audit (0.4638ms)
+✔ TC-INTG-28: a missing critical service is reported (0.3191ms)
+✔ TC-INTG-29: unverified webhooks and leaked secrets both fail (0.3456ms)
+✔ TC-INTG-30: the registry documents a fallback for every critical service (0.245ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 324.512

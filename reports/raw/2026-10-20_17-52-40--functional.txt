@@ -1,0 +1,46 @@
+✔ TC-FR-01: fifteen functional requirements with sequential ids (7.3147ms)
+✔ TC-FR-02: every requirement has a valid priority (1.1308ms)
+✔ TC-FR-03: descriptions are specific (at least four words) (0.9728ms)
+✔ TC-FR-04: INR-only scope is explicit (0.3465ms)
+✔ TC-FR-05: sticky add-to-cart is product-page only (0.3368ms)
+✔ TC-FR-06: locale plan is English now, Hindi later (0.5339ms)
+✔ TC-FR-07: server-side rendering is mandatory for SEO (0.4979ms)
+✔ TC-FR-08: CMS covers the five editable blocks (0.53ms)
+✔ TC-FR-09: returns are restricted to sealed products (0.5621ms)
+✔ TC-FR-10: consent banner has granular categories (0.643ms)
+✔ TC-FR-11: a single commerce-constants table exists (0.3256ms)
+✔ TC-FR-12: constants table documents all money rules (0.3764ms)
+✔ TC-FR-13: model constants match the document (48.4279ms)
+✔ TC-FR-14: free-shipping number is identical in every section that uses it (0.5806ms)
+✔ TC-FR-15: cart shows the remaining amount below the threshold (0.3873ms)
+✔ TC-FR-16: cart qualifies exactly at the threshold (0.1912ms)
+✔ TC-FR-17: empty cart sits at zero without dividing by zero (0.166ms)
+✔ TC-FR-18: cart rejects invalid subtotals (0.8607ms)
+✔ TC-FR-19: COD is available under the cap with a valid address (0.3685ms)
+✔ TC-FR-20: COD is blocked above ₹2,000 (0.2355ms)
+✔ TC-FR-21: high-risk pincodes are blocked (0.1798ms)
+✔ TC-FR-22: unverified addresses are blocked (0.1717ms)
+✔ TC-FR-23: invalid pincodes are rejected before anything else (0.1774ms)
+✔ TC-FR-24: invalid totals cannot reach COD (0.1623ms)
+✔ TC-FR-25: COD can be switched off globally (0.1684ms)
+✔ TC-FR-26: search matches product names (0.4537ms)
+✔ TC-FR-27: search matches tags, case-insensitively (8.4687ms)
+✔ TC-FR-28: one-character queries do not trigger suggestions (0.3207ms)
+✔ TC-FR-29: search results are capped (0.6792ms)
+✔ TC-FR-30: the zero-result state is specified in the document (0.4098ms)
+✔ TC-FR-31: guest wishlist merges into the account without duplicates (0.9949ms)
+✔ TC-FR-32: account order is preserved, guest items appended (0.3454ms)
+✔ TC-FR-33: analytics is blocked until explicitly allowed (0.2643ms)
+✔ TC-FR-34: marketing and analytics are independent toggles (0.1882ms)
+✔ TC-FR-35: unknown categories never default to allowed (0.1714ms)
+✔ TC-FR-36: per-day cost maths (0.2007ms)
+✔ TC-FR-37: per-day cost rejects impossible inputs (0.272ms)
+✔ TC-FR-38: quick-view content is defined (not just "a modal") (0.2962ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 352.5502

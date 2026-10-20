@@ -1,0 +1,56 @@
+✔ TC-STRUCT-01: the document defines exactly 16 sections (5.5741ms)
+✔ TC-STRUCT-02: section ids are sequential and unique (2.5673ms)
+✔ TC-STRUCT-03: the model matches the document (ids, names, count) (1.7992ms)
+✔ TC-STRUCT-04: render order follows the mobile flow diagram (1.7808ms)
+✔ TC-STRUCT-05: every section has at least two concrete rules (1.0834ms)
+✔ TC-STRUCT-06: component names are unique (0.544ms)
+✔ TC-HM01: announcement bar is quantified and dismissible (9.61ms)
+✔ TC-HM02: header nav, mega-menu and drawer behaviour are defined (0.8093ms)
+✔ TC-HM03: hero requires H1, two CTAs, trust line and LCP rules (1.4849ms)
+✔ TC-HM04: trust strip is static, verifiable and import-safe (1.1142ms)
+✔ TC-HM05: concern grid size, destination and interaction are specified (0.5434ms)
+✔ TC-HM06: bestsellers rail defines layout, card data and quick-add states (0.91ms)
+✔ TC-HM07: differentiation shows 3-4 props and links lab reports (0.6308ms)
+✔ TC-HM08: ingredient table exposes dose, form and evidence (6.0263ms)
+✔ TC-HM09: reviews show aggregate proof and are moderation-safe (0.6553ms)
+✔ TC-HM10: quiz captures email only after results (0.7283ms)
+✔ TC-HM11: bundles and subscription terms are explicit (0.5619ms)
+✔ TC-HM12: expert block requires qualification and a real bio (0.4897ms)
+✔ TC-HM13: blog teaser is capped at three posts and cannot bury the CTA (0.4073ms)
+✔ TC-HM14: FAQ size, topics and schema parity are defined (0.5201ms)
+✔ TC-HM15: newsletter has consent, double opt-in and honest incentive (0.5778ms)
+✔ TC-HM16: footer carries the legal importer block (0.5858ms)
+✖ TC-STRUCT-07: mega-menu and concern grid share one taxonomy (4.9608ms)
+✔ TC-STRUCT-08: every core section between hero and expert is present (0.6693ms)
+✔ TC-STRUCT-09: validator rejects duplicate ids (1.524ms)
+✔ TC-STRUCT-10: validator rejects out-of-order sections (1.5869ms)
+✔ TC-STRUCT-11: validator rejects sections without required elements (0.6046ms)
+✔ TC-STRUCT-12: validator detects model/document drift (0.7645ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 27
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 329.2795
+
+✖ failing tests:
+
+test at tests\structure.test.mjs:263:1
+✖ TC-STRUCT-07: mega-menu and concern grid share one taxonomy (4.9608ms)
+  AssertionError [ERR_ASSERTION]: HM-05 must declare that it reuses the HM-02 taxonomy
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/structure.test.mjs:269:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '\n- Grid of 6–8 concern cards: image/icon, concern name, 1-line benefit, product count ("12 products").\n- Click → filtered collection page with that concern preselected.\n- Hover: subtle lift + arrow. Focus ring visible.\n',
+    expected: /same .*concern taxonomy|same taxonomy/i,
+    operator: 'match',
+    diff: 'simple'
+  }

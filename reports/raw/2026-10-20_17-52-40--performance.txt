@@ -1,0 +1,38 @@
+✔ TC-PERF-01: the core seven budget rows exist (3.4866ms)
+✔ TC-PERF-02: LCP / INP / CLS values match the model (0.5831ms)
+✔ TC-PERF-03: JS budget is 200 KB gzipped (0.3316ms)
+✔ TC-PERF-04: hero image budget and formats (0.3642ms)
+✔ TC-PERF-05: font rules are complete (1.6786ms)
+✔ TC-PERF-06: third-party scripts are capped and deferred (0.3096ms)
+✔ TC-PERF-07: supporting delivery rules are stated (0.4793ms)
+✔ TC-PERF-08: TTFB has a budget (LCP depends on it) (0.4736ms)
+✔ TC-PERF-09: CSS has its own budget (0.4628ms)
+✔ TC-PERF-10: the "4G" profile is reproducible (0.6299ms)
+✔ TC-PERF-11: a healthy page passes every budget (3.2156ms)
+✔ TC-PERF-12: LCP passes at 2500 and fails at 2501 (1.2549ms)
+✔ TC-PERF-13: INP passes at 200 and fails at 201 (0.4946ms)
+✔ TC-PERF-14: CLS passes at 0.1 and fails at 0.11 (0.5026ms)
+✔ TC-PERF-15: TTFB passes at 800 and fails at 801 (0.3811ms)
+✔ TC-PERF-16: JS passes at 200 KB and fails one byte over (0.6182ms)
+✔ TC-PERF-17: CSS passes at 50 KB and fails above (0.3325ms)
+✔ TC-PERF-18: hero image passes at 180 KB and fails above (0.2613ms)
+✔ TC-PERF-19: a third font family fails (0.2896ms)
+✔ TC-PERF-20: a fifth font file fails (0.2694ms)
+✔ TC-PERF-21: font-display and self-hosting are enforced (0.2898ms)
+✔ TC-PERF-22: seven third-party scripts fail, six pass (0.2722ms)
+✔ TC-PERF-23: blocking third-party scripts fail even under the cap (0.2565ms)
+✔ TC-PERF-24: multiple breaches are all reported (0.2431ms)
+✔ TC-PERF-25: a compliant delivery setup passes (0.4203ms)
+✔ TC-PERF-26: below-the-fold images must lazy-load (0.3772ms)
+✔ TC-PERF-27: the hero must not be lazy-loaded (0.2295ms)
+✔ TC-PERF-28: images need explicit dimensions (0.2124ms)
+✔ TC-PERF-29: critical CSS must be inlined (0.2194ms)
+✔ TC-PERF-30: combined audit reports performance and delivery issues together (0.298ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 269.7119

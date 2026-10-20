@@ -1,0 +1,141 @@
+﻿Γ£ö TC-SPEC-01: all five KPIs from Section 1.1 are defined (3.2087ms)
+Γ£ö TC-SPEC-02: every KPI has a numeric target (0.8635ms)
+Γ£û TC-SPEC-03: KPI engine targets match the document values (2.395ms)
+Γ£û TC-SPEC-04: every KPI is backed by tracked events listed in Section 12 (8.6478ms)
+Γ£ö TC-SPEC-05: measurement window and owner are stated (0.9596ms)
+Γ£ö TC-SPEC-06: targets are internally consistent (funnel sanity) (0.6467ms)
+Γ£ö TC-SPEC-07: guard against impossible or duplicate targets (0.4228ms)
+Γ£ö TC-G1-01: home -> PDP CTR is unique sessions with a product click / sessions (16.9951ms)
+Γ£ö TC-G1-02: repeated clicks in one session count once (0.9283ms)
+Γ£û TC-G1-03: every PDP entry point counts (hero CTA, concern card, quick add) (1.2652ms)
+Γ£ö TC-G2-01: conversion rate counts orders once per session (0.4285ms)
+Γ£ö TC-G2-02: guests and COD orders are included (0.4028ms)
+Γ£ö TC-G3-01: signup rate includes email and WhatsApp channels (0.4296ms)
+Γ£ö TC-G4-01: bounce = single page view, <10s, no engagement (0.324ms)
+Γ£ö TC-G4-02: a 60%+ scroll is engagement, 25% is not (0.3699ms)
+Γ£ö TC-G5-01: LCP p75 is computed in seconds (4.5925ms)
+Γ£ö TC-G5-02: non-LCP vitals (CLS, INP) are ignored (0.5169ms)
+Γ£û TC-THR-01: exactly-on-target values PASS (>= / <= boundaries) (2.4312ms)
+Γ£ö TC-THR-02: below-target values FAIL and are reported (0.5066ms)
+Γ£ö TC-THR-03: healthy traffic meets or beats all five targets (12.8198ms)
+Γ£ö TC-SAFE-01: zero sessions produces zeros, not NaN (0.6882ms)
+Γ£ö TC-SAFE-02: bot traffic is excluded from all KPIs (0.885ms)
+Γ£ö TC-SAFE-03: malformed events do not corrupt the math (0.5693ms)
+Γ£ö TC-SIM-01: 10k simulated sessions reproduce known probabilities (72.4793ms)
+Γ£ö TC-SIM-02: the same seed always yields the same numbers (56.8279ms)
+Γ£ö TC-SIM-03: simulated LCP p75 stays within budget (18.0487ms)
+Γ£ö TC-REPORT-01: funnel projection is ordered and adds up (11.2952ms)
+Γ£ö TC-REPORT-02: formatting is human readable (0.2345ms)
+Γ£ö TC-SESSION-01: session grouping is stable across interleaved events (0.374ms)
+∩╣ú TC-LIVE-01: live home page measurement (0.3621ms) # set HOME_URL to run against a deployed page
+Γä╣ tests 30
+Γä╣ suites 0
+Γä╣ pass 25
+Γä╣ fail 4
+Γä╣ cancelled 0
+Γä╣ skipped 1
+Γä╣ todo 0
+Γä╣ duration_ms 520.1756
+
+Γ£û failing tests:
+
+test at tests\kpi.test.mjs:65:1
+Γ£û TC-SPEC-03: KPI engine targets match the document values (2.395ms)
+  AssertionError [ERR_ASSERTION]: G2 drift between doc and engine
+  + actual - expected
+  
+  + 0.018
+  - 0.018000000000000002
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/kpi.test.mjs:77:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 0.018,
+    expected: 0.018000000000000002,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\kpi.test.mjs:81:1
+Γ£û TC-SPEC-04: every KPI is backed by tracked events listed in Section 12 (8.6478ms)
+  AssertionError [ERR_ASSERTION]: untracked KPI inputs:
+    - G2 needs event "purchase"
+    - G5 needs event "web_vitals"
+  + actual - expected
+  
+  + [
+  +   'G2 needs event "purchase"',
+  +   'G5 needs event "web_vitals"'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/kpi.test.mjs:93:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'G2 needs event "purchase"', 'G5 needs event "web_vitals"' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\kpi.test.mjs:159:1
+Γ£û TC-G1-03: every PDP entry point counts (hero CTA, concern card, quick add) (1.2652ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0.5 !== 0.75
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/kpi.test.mjs:170:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0.5,
+    expected: 0.75,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\kpi.test.mjs:252:1
+Γ£û TC-THR-01: exactly-on-target values PASS (>= / <= boundaries) (2.4312ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'G1:PASS',
+      'G2:PASS',
+      'G3:PASS',
+  +   'G4:FAIL',
+  -   'G4:PASS',
+      'G5:PASS'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/kpi.test.mjs:262:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'G1:PASS', 'G2:PASS', 'G3:PASS', 'G4:FAIL', 'G5:PASS' ],
+    expected: [ 'G1:PASS', 'G2:PASS', 'G3:PASS', 'G4:PASS', 'G5:PASS' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

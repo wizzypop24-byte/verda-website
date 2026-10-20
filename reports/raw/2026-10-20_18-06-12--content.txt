@@ -1,0 +1,38 @@
+✔ TC-CONT-01: the six original content blocks are documented in order (3.5248ms)
+✔ TC-CONT-02: every content row has an owner (0.5392ms)
+✔ TC-CONT-03: every content row has a numeric limit (2.7766ms)
+✔ TC-CONT-04: hero limits match the validator (1.0801ms)
+✔ TC-CONT-05: trust-strip limit is four words per item (0.4027ms)
+✔ TC-CONT-06: concern cards are capped at ten words (0.289ms)
+✔ TC-CONT-07: product names are capped at sixty characters (1.8394ms)
+✔ TC-CONT-08: review length is measured in lines (0.4429ms)
+✔ TC-CONT-09: FAQ answers are bounded on both sides (0.3972ms)
+✔ TC-CONT-10: all copy-bearing sections have a documented limit (0.5828ms)
+✔ TC-CONT-11: the asset plan lists every required group (0.9969ms)
+✔ TC-CONT-12: image dimensions are specified (0.3202ms)
+✔ TC-CONT-13: product photo volume matches the four-SKU launch (0.3606ms)
+✔ TC-CONT-14: assets declare format and alt text (0.2441ms)
+✔ TC-CONT-15: word counting treats currency and hyphens as one word (0.4257ms)
+✔ TC-CONT-16: H1 boundary — 12 passes, 13 fails (0.603ms)
+✔ TC-CONT-17: sub-headline boundary — 20 passes, 21 fails (0.3291ms)
+✔ TC-CONT-18: hero requires both fields (0.1873ms)
+✔ TC-CONT-19: trust strip requires 4-5 items (0.3673ms)
+✔ TC-CONT-20: trust item boundary — 4 words pass, 5 fail (0.2549ms)
+✔ TC-CONT-21: concern card boundary — 10 passes, 11 fails (0.2634ms)
+✔ TC-CONT-22: product name boundary — 60 chars pass, 61 fail (0.3414ms)
+✔ TC-CONT-23: ingredient line is capped at eight words (0.2121ms)
+✔ TC-CONT-24: reviews must be 2-3 lines (2.1741ms)
+✔ TC-CONT-25: FAQ boundary — 60 and 120 pass, outside fails (1.0675ms)
+✔ TC-CONT-26: empty content is rejected, not silently accepted (0.4355ms)
+✔ TC-CONT-27: the executable asset plan covers all required groups (1.0883ms)
+✔ TC-CONT-28: product photo range allows 2-3 angles for four SKUs (0.2957ms)
+✔ TC-CONT-29: every asset declares a format and a size (0.2348ms)
+✔ TC-CONT-30: asset validator catches an incomplete plan (0.3041ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 285.7134

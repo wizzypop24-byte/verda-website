@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Biotin product placeholder">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#efe3ee"/><stop offset="1" stop-color="#d9c2d8"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b4c85"/><stop offset="1" stop-color="#63335f"/></linearGradient></defs>
+  <rect width="600" height="600" fill="url(#g)"/>
+  <circle cx="130" cy="140" r="58" fill="#fff" opacity="0.4"/>
+  <rect x="215" y="170" width="170" height="300" rx="26" fill="url(#b)"/>
+  <rect x="245" y="132" width="110" height="52" rx="14" fill="#63335f"/>
+  <rect x="215" y="280" width="170" height="100" fill="#fbf7fa" opacity="0.95"/>
+  <rect x="240" y="310" width="120" height="10" rx="5" fill="#8b4c85"/>
+  <path d="M470 430l12 26 28 4-20 20 5 28-25-14-25 14 5-28-20-20 28-4z" fill="#c9a3c6" opacity="0.8"/>
+</svg>

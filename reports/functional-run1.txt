@@ -1,0 +1,159 @@
+✔ TC-FR-01: fifteen functional requirements with sequential ids (4.3826ms)
+✔ TC-FR-02: every requirement has a valid priority (0.8764ms)
+✖ TC-FR-03: descriptions are specific (at least six words) (1.5639ms)
+✔ TC-FR-04: INR-only scope is explicit (0.3652ms)
+✔ TC-FR-05: sticky add-to-cart is product-page only (0.4096ms)
+✔ TC-FR-06: locale plan is English now, Hindi later (0.4046ms)
+✔ TC-FR-07: server-side rendering is mandatory for SEO (0.4012ms)
+✔ TC-FR-08: CMS covers the five editable blocks (0.3905ms)
+✔ TC-FR-09: returns are restricted to sealed products (0.6402ms)
+✔ TC-FR-10: consent banner has granular categories (0.5977ms)
+✖ TC-FR-11: a single commerce-constants table exists (0.3946ms)
+✖ TC-FR-12: constants table documents all money rules (0.3549ms)
+✖ TC-FR-13: model constants match the document (20.5596ms)
+✔ TC-FR-14: free-shipping number is identical in every section that uses it (2.7886ms)
+✔ TC-FR-15: cart shows the remaining amount below the threshold (1.5898ms)
+✔ TC-FR-16: cart qualifies exactly at the threshold (0.7388ms)
+✔ TC-FR-17: empty cart sits at zero without dividing by zero (0.3381ms)
+✔ TC-FR-18: cart rejects invalid subtotals (1.4439ms)
+✔ TC-FR-19: COD is available under the cap with a valid address (0.3911ms)
+✔ TC-FR-20: COD is blocked above ₹2,000 (0.2274ms)
+✔ TC-FR-21: high-risk pincodes are blocked (0.1778ms)
+✔ TC-FR-22: unverified addresses are blocked (0.198ms)
+✔ TC-FR-23: invalid pincodes are rejected before anything else (0.1819ms)
+✔ TC-FR-24: invalid totals cannot reach COD (0.1606ms)
+✔ TC-FR-25: COD can be switched off globally (0.178ms)
+✔ TC-FR-26: search matches product names (0.445ms)
+✔ TC-FR-27: search matches tags, case-insensitively (28.9349ms)
+✔ TC-FR-28: one-character queries do not trigger suggestions (0.3832ms)
+✔ TC-FR-29: search results are capped (0.5339ms)
+✖ TC-FR-30: the zero-result state is specified in the document (0.4357ms)
+✔ TC-FR-31: guest wishlist merges into the account without duplicates (0.2607ms)
+✔ TC-FR-32: account order is preserved, guest items appended (0.1801ms)
+✔ TC-FR-33: analytics is blocked until explicitly allowed (0.1855ms)
+✔ TC-FR-34: marketing and analytics are independent toggles (0.1647ms)
+✔ TC-FR-35: unknown categories never default to allowed (0.15ms)
+✔ TC-FR-36: per-day cost maths (0.2907ms)
+✔ TC-FR-37: per-day cost rejects impossible inputs (0.3231ms)
+✖ TC-FR-38: quick-view content is defined (not just "a modal") (0.3571ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 32
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 350.94
+
+✖ failing tests:
+
+test at tests\functional.test.mjs:69:1
+✖ TC-FR-03: descriptions are specific (at least six words) (1.5639ms)
+  AssertionError [ERR_ASSERTION]: FR-04 is too vague: "Product quick-view modal"
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/functional.test.mjs:71:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\functional.test.mjs:115:1
+✖ TC-FR-11: a single commerce-constants table exists (0.3946ms)
+  AssertionError [ERR_ASSERTION]: missing "### 5.1" commerce constants table
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/functional.test.mjs:116:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\functional.test.mjs:119:1
+✖ TC-FR-12: constants table documents all money rules (0.3549ms)
+  AssertionError [ERR_ASSERTION]: constants table missing ₹999
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/functional.test.mjs:121:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\functional.test.mjs:125:1
+✖ TC-FR-13: model constants match the document (20.5596ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(constantsText.includes(`₹${COMMERCE.freeShippingThreshold}`))
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/functional.test.mjs:132:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\functional.test.mjs:236:1
+✖ TC-FR-30: the zero-result state is specified in the document (0.4357ms)
+  AssertionError [ERR_ASSERTION]: FR-01 must define what happens when nothing matches
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/functional.test.mjs:237:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'Global search with instant suggestions (products, concerns, articles)',
+    expected: /no results|zero.result|empty state/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\functional.test.mjs:280:1
+✖ TC-FR-38: quick-view content is defined (not just "a modal") (0.3571ms)
+  AssertionError [ERR_ASSERTION]: FR-04 must state what the modal shows
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/functional.test.mjs:281:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'Product quick-view modal',
+    expected: /spec|ingredient|price|add to cart/i,
+    operator: 'match',
+    diff: 'simple'
+  }

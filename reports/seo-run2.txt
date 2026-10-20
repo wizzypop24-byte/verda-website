@@ -1,0 +1,40 @@
+✔ TC-SEO-01: all seven SEO rule groups are present (6.333ms)
+✔ TC-SEO-02: title, description and canonical limits (0.602ms)
+✔ TC-SEO-03: canonical rules are complete (absolute, self, no params) (0.43ms)
+✔ TC-SEO-04: all five structured-data types are listed (0.3649ms)
+✔ TC-SEO-05: Product schema fields are specified (0.4751ms)
+✔ TC-SEO-06: structured data format is JSON-LD (0.3227ms)
+✔ TC-SEO-07: robots and sitemap requirements are stated (1.843ms)
+✔ TC-SEO-08: non-indexable URL patterns are named (0.388ms)
+✔ TC-SEO-09: alt-text policy distinguishes content and decorative (0.7632ms)
+✔ TC-SEO-10: title passes at 60 chars and fails at 61 (0.6559ms)
+✔ TC-SEO-11: empty title is rejected (0.3747ms)
+✔ TC-SEO-12: description passes at 155 and fails at 156 (0.4414ms)
+✔ TC-SEO-13: one H1 with a clean hierarchy passes (0.3573ms)
+✔ TC-SEO-14: zero or two H1 tags fail (0.1961ms)
+✔ TC-SEO-15: skipped heading levels fail (0.2357ms)
+✔ TC-SEO-16: complete Open Graph tags pass (2.2474ms)
+✔ TC-SEO-17: missing or relative OG image fails (0.5499ms)
+✔ TC-SEO-18: Twitter card must be a large image card (0.6855ms)
+✔ TC-SEO-19: canonical must be absolute, clean and self-referencing (0.5962ms)
+✔ TC-SEO-20: all required schema blocks pass (0.4672ms)
+✔ TC-SEO-21: missing schema types are reported (0.3901ms)
+✔ TC-SEO-22: incomplete Product schema is rejected (0.7722ms)
+✔ TC-SEO-23: non-JSON-LD blocks are rejected (0.4637ms)
+✔ TC-SEO-24: FAQ parity passes when visible and schema match (0.4071ms)
+✔ TC-SEO-25: FAQ parity fails on count or content mismatch (0.1989ms)
+✔ TC-SEO-26: a correct robots.txt passes (0.578ms)
+✔ TC-SEO-27: robots.txt must block cart, search, filters and link the sitemap (0.6644ms)
+✔ TC-SEO-28: sitemap must include the home page with absolute URLs (0.3837ms)
+✔ TC-SEO-29: cart, checkout and search are not indexable (0.3551ms)
+✔ TC-SEO-30: filtered collections are not indexable, clean ones are (0.2035ms)
+✔ TC-SEO-31: home and product pages are indexable (0.1629ms)
+✔ TC-SEO-32: alt-text policy works both ways (0.2773ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 271.6474

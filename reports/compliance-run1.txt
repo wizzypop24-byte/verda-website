@@ -1,0 +1,80 @@
+✔ TC-COMP-01: claims policy covers all six prohibitions (2.4993ms)
+✔ TC-COMP-02: FSSAI number and status link are required in the footer (0.5603ms)
+✔ TC-COMP-03: the exact disclaimer is written in the document (0.2822ms)
+✔ TC-COMP-04: product pages must show ingredients, allergens, dosage and storage (1.1629ms)
+✔ TC-COMP-05: testimonials are labelled as individual experiences (0.4908ms)
+✔ TC-COMP-06: privacy requirements name DPDP and consent (0.6842ms)
+✔ TC-COMP-07: importer checklist has ten sequential items (2.4387ms)
+✔ TC-COMP-08: every importer item explains why it matters (0.3343ms)
+✖ TC-COMP-09: the label spec includes batch number and best-before (1.5267ms)
+✖ TC-COMP-10: marketing consent requires stored proof (0.6365ms)
+✔ TC-COMP-11: the licence type is Central (importer), not State (0.4532ms)
+✔ TC-COMP-12: shelf-life threshold is 60% or 3 months (0.3059ms)
+✔ TC-COMP-13: the full disclaimer passes (0.4913ms)
+✔ TC-COMP-14: a partial disclaimer fails on each missing clause (0.4755ms)
+✔ TC-COMP-15: a complete label passes (0.4045ms)
+✔ TC-COMP-16: every missing label field is reported (0.3315ms)
+✔ TC-COMP-17: licence number must be 14 digits (0.246ms)
+✔ TC-COMP-18: shelf life passes at 60% or at 3 months (0.257ms)
+✔ TC-COMP-19: shelf life fails below both thresholds (0.2419ms)
+✔ TC-COMP-20: supplier clause must promise 18 months (0.3534ms)
+✔ TC-COMP-21: only designated ports are accepted (0.2458ms)
+✔ TC-COMP-22: PIF needs all five documents (0.2781ms)
+✔ TC-COMP-23: GST must be 5% (0.2219ms)
+✔ TC-COMP-24: origin must say Imported, never Made in India (0.4389ms)
+✔ TC-COMP-25: testimonials need the individual-experience label (0.3178ms)
+✔ TC-COMP-26: incentivized reviews must disclose the incentive (0.1657ms)
+✔ TC-COMP-27: age gate requires 18+ (0.1967ms)
+✔ TC-COMP-28: product page must show all four safety blocks (0.2942ms)
+✔ TC-COMP-29: privacy needs banner, policy, DPDP basis and proven opt-in (0.3189ms)
+✔ TC-COMP-30: footer importer block requires six legal facts (0.7721ms)
+✔ TC-COMP-31: a fully compliant page passes the combined audit (1.5399ms)
+✔ TC-COMP-32: the combined audit surfaces every breach at once (0.4788ms)
+✔ TC-COMP-33: every banned claim in this section is blocked by the copy linter (5.911ms)
+✔ TC-COMP-34: compliant structure-function copy passes the linter (0.291ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 32
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 291.5261
+
+✖ failing tests:
+
+test at tests\compliance.test.mjs:133:1
+✖ TC-COMP-09: the label spec includes batch number and best-before (1.5267ms)
+  AssertionError [ERR_ASSERTION]: label field missing from IMP-07: batch number
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/compliance.test.mjs:135:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\compliance.test.mjs:139:1
+✖ TC-COMP-10: marketing consent requires stored proof (0.6365ms)
+  AssertionError [ERR_ASSERTION]: DPDP marketing proof-of-consent is not required
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/compliance.test.mjs:140:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: ' (critical)\n\n> Supplements are a regulated category. Non-compliance is a legal risk, not a design preference.\n\n- Display **FSSAI license number** in footer; link to license status page.\n- No disease/cure/treatment claims. Use structure-function language only ("supports", "helps maintain").\n- Mandatory disclaimer near claims and in footer: *"This product is not intended to diagnose, treat, cure, or prevent any disease. Not for medicinal use. Consult a qualified healthcare professional before use, especially if pregnant, nursing, or on medication."*\n- No before/after body transformations; no weight-loss guarantees.\n- Age note: "For adults 18+".\n- Each product page: full ingredient list, allergen info, dosage, storage.\n- Testimonials labeled as individual experiences, not typical results.\n- Data privacy: consent banner, privacy policy, DPDP Act 2023 compliant data collection.\n\n### 11.1 Importer checklist — LOCKED (own-brand import model)\n\n| # | Requirement | Why it matters |\n|---|---|---|\n| IMP-01 | **FSSAI Central License (Importer)** at head office; number displayed in footer | State license is invalid for imports |\n| IMP-02 | **IEC** (DGFT) + **AD code** with bank | Customs cannot clear without these |\n| IMP-03 | Consignment shelf life **≥ 60% (or 3 months, whichever is less)** at import | FSS (Import) Regulations 2017 — top cause of port rejection |\n| IMP-04 | Supplier contract: **≥ 18 months remaining shelf life at dispatch** | Protects IMP-03 |\n| IMP-05 | Import only via **designated ports** (high-risk food category) | Non-designated port = refused consignment |\n| IMP-06 | **PIF (Product Information File)** per SKU: formulation, ingredients per Schedule IV, CoA, shelf-life data, test methods | Nutra Regulations 2022 requirement |\n| IMP-07 | Label: "Imported by" + registered address, country of origin, FSSAI logo + license no., "HEALTH SUPPLEMENT", "NOT FOR MEDICINAL USE", dosage, allergen, veg/non-veg mark, MRP, net qty, consumer care | Legal Metrology + FSSAI labelling |\n| IMP-08 | NABL lab test + FSSAI **NOC** per consignment before sale | Clearance gate |\n| IMP-09 | GST **5%** applied and shown on invoice | Rate change effective 22 Sep 2025 |\n| IMP-10 | **No "Made in India"** claim; "Imported" disclosure in footer and product page | Consumer protection / false claim risk |\n',
+    expected: /opt-in.*proof|proof.*opt-in/i,
+    operator: 'match',
+    diff: 'simple'
+  }

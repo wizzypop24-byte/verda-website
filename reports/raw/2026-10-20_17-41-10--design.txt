@@ -1,0 +1,32 @@
+✔ TC-DSGN-01: all eight design rules are present (3.4928ms)
+✔ TC-DSGN-02: breakpoint list matches the model (1.6896ms)
+✔ TC-DSGN-03: grid columns are defined per device (0.3363ms)
+✔ TC-DSGN-04: gutters are 24 / 16 / 16 (0.3536ms)
+✔ TC-DSGN-05: max content width is 1280px (0.3911ms)
+✔ TC-DSGN-06: type scale is quantified (0.5204ms)
+✔ TC-DSGN-07: tap target is at least 44x44 (0.3163ms)
+✔ TC-DSGN-08: contrast covers body text AND large text / UI (0.3212ms)
+✔ TC-DSGN-09: motion duration and reduced-motion support are stated (0.3103ms)
+✔ TC-DSGN-10: no-text-in-images applies to every image (3.2264ms)
+✔ TC-DSGN-11: breakpoint mapping at the boundaries (1.1658ms)
+✔ TC-DSGN-12: columns follow the device (0.5901ms)
+✔ TC-DSGN-13: container is capped at 1280 but never overflows small screens (0.594ms)
+✔ TC-DSGN-14: invalid viewports are rejected (1.6493ms)
+✔ TC-DSGN-15: tap targets pass at 44x44 and fail at 43 (0.5607ms)
+✔ TC-DSGN-16: motion durations inside the window pass, outside fail (0.294ms)
+✔ TC-DSGN-17: contrast maths is correct at the extremes (0.7123ms)
+✔ TC-DSGN-18: brand ink on white passes body-text contrast (0.3815ms)
+✔ TC-DSGN-19: light grey on white fails body-text contrast (0.2846ms)
+✔ TC-DSGN-20: large text uses a 3:1 threshold (0.2494ms)
+✔ TC-DSGN-21: invalid hex colours are rejected (0.2878ms)
+✔ TC-DSGN-22: baked-in text is rejected (0.2671ms)
+✔ TC-DSGN-23: content images require alt text (0.1914ms)
+✔ TC-DSGN-24: decorative images must use empty alt (0.175ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 253.0443

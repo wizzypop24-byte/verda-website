@@ -1,0 +1,97 @@
+✔ TC-ACPT-01: twelve checklist items are present (2.7408ms)
+✔ TC-ACPT-02: every item is a checkbox, i.e. verifiable (0.3239ms)
+✖ TC-ACPT-03: render item covers all five breakpoints (1.4497ms)
+✔ TC-ACPT-04: Lighthouse thresholds match the gate (1.9368ms)
+✖ TC-ACPT-05: the vitals item covers LCP, CLS and INP (0.5726ms)
+✔ TC-ACPT-06: footer item requires disclaimer and FSSAI (4.417ms)
+✔ TC-ACPT-07: consent gate is part of acceptance (0.8174ms)
+✔ TC-ACPT-08: structured data validation is part of acceptance (0.7876ms)
+✔ TC-ACPT-09: screen-reader item covers labels and heading order (0.6331ms)
+✔ TC-ACPT-10: CMS editability is measured without a developer (0.7551ms)
+✔ TC-ACPT-11: no 404s and every claim sourced (0.7025ms)
+✔ TC-ACPT-12: a fully passing run is approved (0.7935ms)
+✔ TC-ACPT-13: one missing section at one breakpoint blocks release (1.2409ms)
+✔ TC-ACPT-14: horizontal scroll blocks release (0.242ms)
+✔ TC-ACPT-15: Lighthouse boundaries — 85/95 pass, one point below fails (0.424ms)
+✖ TC-ACPT-16: LCP 2500 passes, 2501 fails (1.0686ms)
+✔ TC-ACPT-17: CLS 0.1 passes, 0.11 fails (0.2477ms)
+✔ TC-ACPT-18: INP 200 passes, 201 fails (0.2314ms)
+✔ TC-ACPT-19: cart badge or keyboard drawer failure blocks release (0.3201ms)
+✔ TC-ACPT-20: a broken link blocks release and is named (0.2502ms)
+✔ TC-ACPT-21: an unsourced claim blocks release (0.2028ms)
+✔ TC-ACPT-22: missing disclaimer or FSSAI blocks release (0.2245ms)
+✔ TC-ACPT-23: analytics firing before consent blocks release (0.1931ms)
+✔ TC-ACPT-24: invalid structured data blocks release (0.1849ms)
+✔ TC-ACPT-25: unlabeled buttons or broken heading order block release (0.2114ms)
+✔ TC-ACPT-26: fewer than five CMS blocks blocks release (0.1917ms)
+✔ TC-ACPT-27: unhealthy defaults fail closed (0.2767ms)
+✔ TC-ACPT-28: multiple failures are all reported (0.2954ms)
+✔ TC-ACPT-29: passed list and summary are accurate (0.2374ms)
+✔ TC-ACPT-30: every failure names a criterion and a measurement (0.3734ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 27
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 273.6669
+
+✖ failing tests:
+
+test at tests\acceptance.test.mjs:47:1
+✖ TC-ACPT-03: render item covers all five breakpoints (1.4497ms)
+  AssertionError [ERR_ASSERTION]: acceptance is missing 1024px
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/acceptance.test.mjs:50:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\acceptance.test.mjs:62:1
+✖ TC-ACPT-05: the vitals item covers LCP, CLS and INP (0.5726ms)
+  AssertionError [ERR_ASSERTION]: CLS is not part of acceptance
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/acceptance.test.mjs:65:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'LCP element is the hero image/text and loads < 2.5 s on throttled 4G.',
+    expected: /CLS/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\acceptance.test.mjs:130:1
+✖ TC-ACPT-16: LCP 2500 passes, 2501 fails (1.0686ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/acceptance.test.mjs:131:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

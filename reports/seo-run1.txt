@@ -1,0 +1,133 @@
+✔ TC-SEO-01: all seven SEO rule groups are present (2.8281ms)
+✔ TC-SEO-02: title, description and canonical limits (1.3282ms)
+✖ TC-SEO-03: canonical rules are complete (absolute, self, no params) (1.8559ms)
+✔ TC-SEO-04: all five structured-data types are listed (0.3905ms)
+✖ TC-SEO-05: Product schema fields are specified (0.4802ms)
+✖ TC-SEO-06: structured data format is JSON-LD (2.4497ms)
+✔ TC-SEO-07: robots and sitemap requirements are stated (0.3773ms)
+✔ TC-SEO-08: non-indexable URL patterns are named (0.3142ms)
+✔ TC-SEO-09: alt-text policy distinguishes content and decorative (0.4927ms)
+✔ TC-SEO-10: title passes at 60 chars and fails at 61 (0.9739ms)
+✔ TC-SEO-11: empty title is rejected (0.564ms)
+✔ TC-SEO-12: description passes at 155 and fails at 156 (0.3268ms)
+✔ TC-SEO-13: one H1 with a clean hierarchy passes (0.4235ms)
+✔ TC-SEO-14: zero or two H1 tags fail (0.211ms)
+✔ TC-SEO-15: skipped heading levels fail (0.2424ms)
+✔ TC-SEO-16: complete Open Graph tags pass (0.5351ms)
+✔ TC-SEO-17: missing or relative OG image fails (0.5161ms)
+✔ TC-SEO-18: Twitter card must be a large image card (2.2785ms)
+✔ TC-SEO-19: canonical must be absolute, clean and self-referencing (0.9395ms)
+✔ TC-SEO-20: all required schema blocks pass (0.5026ms)
+✔ TC-SEO-21: missing schema types are reported (0.3889ms)
+✔ TC-SEO-22: incomplete Product schema is rejected (0.5484ms)
+✔ TC-SEO-23: non-JSON-LD blocks are rejected (0.6857ms)
+✔ TC-SEO-24: FAQ parity passes when visible and schema match (0.5633ms)
+✔ TC-SEO-25: FAQ parity fails on count or content mismatch (0.2033ms)
+✔ TC-SEO-26: a correct robots.txt passes (0.531ms)
+✖ TC-SEO-27: robots.txt must block cart, search, filters and link the sitemap (14.1345ms)
+✔ TC-SEO-28: sitemap must include the home page with absolute URLs (0.5583ms)
+✔ TC-SEO-29: cart, checkout and search are not indexable (0.4188ms)
+✔ TC-SEO-30: filtered collections are not indexable, clean ones are (0.2246ms)
+✔ TC-SEO-31: home and product pages are indexable (0.1629ms)
+✔ TC-SEO-32: alt-text policy works both ways (0.3082ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 28
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 311.0541
+
+✖ failing tests:
+
+test at tests\seo.test.mjs:84:1
+✖ TC-SEO-03: canonical rules are complete (absolute, self, no params) (1.8559ms)
+  AssertionError [ERR_ASSERTION]: canonical must be absolute
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/seo.test.mjs:85:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n- One `<h1>`; logical H2/H3 hierarchy.\n- Title ≤ 60 chars, meta description ≤ 155 chars, canonical URL.\n- Open Graph + Twitter card tags.\n- Structured data:\n  - `Organization` (logo, social, contact)\n  - `WebSite` + `SearchAction`\n  - `ItemList` for bestsellers\n  - `Product` + `AggregateRating` on cards where valid\n  - `FAQPage` matching visible FAQ\n- `robots.txt` + XML sitemap; home included.\n- No indexation of cart/search/filter URLs.\n- Clean URLs, semantic HTML, descriptive alt text (empty alt for decorative).\n',
+    expected: /absolute/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\seo.test.mjs:96:1
+✖ TC-SEO-05: Product schema fields are specified (0.4802ms)
+  AssertionError [ERR_ASSERTION]: Product schema field missing: name
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/seo.test.mjs:98:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\seo.test.mjs:102:1
+✖ TC-SEO-06: structured data format is JSON-LD (2.4497ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /JSON-LD/i. Input:
+  
+  '\n' +
+    '\n' +
+    '- One `<h1>`; logical H2/H3 hierarchy.\n' +
+    '- Title ≤ 60 chars, meta description ≤ 155 chars, canonical URL.\n' +
+    '- Open Graph + Twitter card tags.\n' +
+    '- Structured data:\n' +
+    '  - `Organization` (logo, social, contact)\n' +
+    '  - `WebSite` + `SearchAction`\n' +
+    '  - `ItemList` for bestsellers\n' +
+    '  - `Product` + `AggregateRating` on cards where valid\n' +
+    '  - `FAQPage` matching visible FAQ\n' +
+    '- `robots.txt` + XML sitemap; home included.\n' +
+    '- No indexation of cart/search/filter URLs.\n' +
+    '- Clean URLs, semantic HTML, descriptive alt text (empty alt for decorative).\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/seo.test.mjs:103:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\n\n- One `<h1>`; logical H2/H3 hierarchy.\n- Title ≤ 60 chars, meta description ≤ 155 chars, canonical URL.\n- Open Graph + Twitter card tags.\n- Structured data:\n  - `Organization` (logo, social, contact)\n  - `WebSite` + `SearchAction`\n  - `ItemList` for bestsellers\n  - `Product` + `AggregateRating` on cards where valid\n  - `FAQPage` matching visible FAQ\n- `robots.txt` + XML sitemap; home included.\n- No indexation of cart/search/filter URLs.\n- Clean URLs, semantic HTML, descriptive alt text (empty alt for decorative).\n',
+    expected: /JSON-LD/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\seo.test.mjs:230:1
+✖ TC-SEO-27: robots.txt must block cart, search, filters and link the sitemap (14.1345ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(result.issues.some((issue) => /Sitemap/.test(issue)))
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/seo.test.mjs:236:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

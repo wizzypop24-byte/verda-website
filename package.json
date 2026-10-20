@@ -1,0 +1,13 @@
+{
+  "name": "supplements-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Home page requirements, Firebase login and requirement test proofs",
+  "scripts": {
+    "test": "node scripts/run-all-tests.mjs",
+    "proof": "node scripts/run-all-tests.mjs",
+    "serve": "node scripts/dev-server.mjs",
+    "deploy": "firebase deploy --only hosting"
+  }
+}
