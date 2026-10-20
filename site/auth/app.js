@@ -15,6 +15,13 @@ import {
   signInWithPopup,
   signOut,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  serverTimestamp,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB3Pa0TylDXPswxiAWSj4im9ZApkr6EHOo",
@@ -26,6 +33,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
 
@@ -126,8 +134,30 @@ setPersistence(auth, browserLocalPersistence).catch((error) => {
   console.warn("[auth] persistence fallback", error?.code);
 });
 
+async function syncProfile(user) {
+  try {
+    const ref = doc(db, "users", user.uid);
+    const snapshot = await getDoc(ref);
+    const profile = {
+      displayName: user.displayName ?? null,
+      email: user.email ?? null,
+      photoURL: user.photoURL ?? null,
+      providerId: user.providerData[0]?.providerId ?? "google.com",
+      lastLoginAt: serverTimestamp(),
+    };
+    if (snapshot.exists()) {
+      await setDoc(ref, profile, { merge: true });
+    } else {
+      await setDoc(ref, { ...profile, createdAt: serverTimestamp() });
+    }
+  } catch (error) {
+    console.warn("[firestore] profile not saved", error?.code ?? error);
+  }
+}
+
 onAuthStateChanged(auth, (user) => {
   renderUser(user);
+  if (user) syncProfile(user);
   document.body.dataset.authReady = "true";
 });
 

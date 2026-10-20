@@ -12,6 +12,61 @@
   };
 
   const FREE_SHIPPING = 999;
+
+  /* ---------------- Firestore (loaded on demand) ---------------- */
+
+  const firestoreReady = import("./firestore-client.js").catch((error) => {
+    console.warn("[firestore] unavailable", error?.message ?? error);
+    return null;
+  });
+
+  function clientId() {
+    try {
+      let id = localStorage.getItem("verda_client_id");
+      if (!id) {
+        id = crypto.randomUUID();
+        localStorage.setItem("verda_client_id", id);
+      }
+      return id;
+    } catch {
+      return "anonymous";
+    }
+  }
+
+  async function recordConsent(next) {
+    const fs = await firestoreReady;
+    if (!fs) return;
+    try {
+      await fs.setDoc(fs.doc(fs.db, "consent", clientId()), {
+        analytics: next.analytics,
+        marketing: next.marketing,
+        ts: fs.serverTimestamp(),
+        source: "home",
+        uid: null,
+      });
+    } catch (error) {
+      console.warn("[firestore] consent not saved", error?.code ?? error);
+    }
+  }
+
+  async function saveLead(email, source, productInterest = null) {
+    const fs = await firestoreReady;
+    if (!fs) return false;
+    try {
+      await fs.addDoc(fs.collection(fs.db, "newsletter"), {
+        email,
+        consent: true,
+        source,
+        productInterest,
+        createdAt: fs.serverTimestamp(),
+      });
+      return true;
+    } catch (error) {
+      console.warn("[firestore] lead not saved", error?.code ?? error);
+      return false;
+    }
+  }
+
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
@@ -349,6 +404,10 @@
               <input id="quiz-email-input" type="email" placeholder="you@example.com" autocomplete="email" />
               <button class="btn btn--ghost btn--small" type="submit">Send</button>
             </div>
+            <label class="checkbox" style="margin-top:8px">
+              <input type="checkbox" id="quiz-consent" />
+              <span>Email me this plan and occasional formula updates.</span>
+            </label>
             <p class="help" id="quiz-email-status" role="status" aria-live="polite"></p>
           </form>
         </div>`;
@@ -360,7 +419,7 @@
         closeDialog("quiz-modal");
       });
 
-      $("#quiz-email")?.addEventListener("submit", (event) => {
+      $("#quiz-email")?.addEventListener("submit", async (event) => {
         event.preventDefault();
         const value = $("#quiz-email-input").value.trim();
         const status = $("#quiz-email-status");
@@ -369,8 +428,18 @@
           status.dataset.kind = "error";
           return;
         }
-        status.textContent = "Saved on this device — email delivery connects at launch.";
+        if (!$("#quiz-consent").checked) {
+          status.textContent = "Please tick the consent box so we can email you.";
+          status.dataset.kind = "error";
+          return;
+        }
+        status.textContent = "Saving your plan…";
         status.dataset.kind = "info";
+        const saved = await saveLead(value, "quiz", picks.join(","));
+        status.textContent = saved
+          ? "Saved. Check your inbox for the plan."
+          : "Could not reach the server. Please try again.";
+        status.dataset.kind = saved ? "info" : "error";
         track("newsletter_submit", { channel: "email" });
       });
     };
@@ -439,7 +508,7 @@
   function initNewsletter() {
     const form = $("#newsletter-form");
     if (!form) return;
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const email = $("#email").value.trim();
       const status = $("#newsletter-status");
@@ -449,11 +518,21 @@
         $("#email").setAttribute("aria-invalid", "true");
         return;
       }
+      if (!$("#marketing-consent").checked) {
+        status.textContent = "Please tick the consent box so we can email your code.";
+        status.dataset.kind = "error";
+        return;
+      }
       $("#email").removeAttribute("aria-invalid");
-      status.textContent = "Check your inbox — confirm the email to activate your ₹100 code.";
+      status.textContent = "Saving…";
       status.dataset.kind = "info";
+      const saved = await saveLead(email, "home");
+      status.textContent = saved
+        ? "Check your inbox — confirm the email to activate your ₹100 code."
+        : "Could not reach the server. Please try again.";
+      status.dataset.kind = saved ? "info" : "error";
       track("newsletter_submit", { channel: "email" });
-      form.reset();
+      if (saved) form.reset();
     });
   }
 
@@ -463,6 +542,7 @@
     consent = { ...next, ts: Date.now() };
     localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
     $("#consent").hidden = true;
+    recordConsent(consent);
     if (consent.analytics) track("view_home", { referrer: document.referrer || "direct" });
   }
 

@@ -1,0 +1,42 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Profile document — only the owner can read or write it.
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 200;
+      allow update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 200;
+      allow delete: if false;
+    }
+
+    // Consent receipt — write once, never readable from the client.
+    match /consent/{docId} {
+      allow create: if request.resource.data.keys().hasOnly(['analytics', 'marketing', 'ts', 'source', 'uid'])
+        && request.resource.data.analytics is bool
+        && request.resource.data.marketing is bool;
+      allow read, update, delete: if false;
+    }
+
+    // Newsletter / quiz leads — append only.
+    match /newsletter/{docId} {
+      allow create: if request.resource.data.keys().hasOnly(['email', 'consent', 'source', 'productInterest', 'createdAt'])
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 200
+        && request.resource.data.email.matches('.*@.*\\..*')
+        && request.resource.data.consent == true;
+      allow read, update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
