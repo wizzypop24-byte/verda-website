@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout — Verda</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="Confirm your address and place a cash-on-delivery order." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./checkout.css" />
+  </head>
+  <body class="checkout">
+    <header class="checkout__top">
+      <div class="container checkout__top-inner">
+        <a class="logo" href="/" aria-label="Verda home">verda<span class="logo__dot" aria-hidden="true">.</span></a>
+        <a class="checkout__back" href="/">← Back to store</a>
+      </div>
+    </header>
+
+    <main class="container checkout__grid" id="main">
+      <section class="checkout__form" aria-labelledby="checkout-title">
+        <h1 id="checkout-title">Checkout</h1>
+        <p class="checkout__lead">Cash on delivery only for now. UPI and cards launch soon.</p>
+
+        <div id="empty-cart" hidden>
+          <p class="checkout__empty">Your cart is empty.</p>
+          <a class="btn btn--primary" href="/#bestsellers">Browse bestsellers</a>
+        </div>
+
+        <form id="checkout-form" novalidate>
+          <fieldset>
+            <legend>Contact</legend>
+            <label for="name">Full name</label>
+            <input id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
+            <p class="field-error" id="name-error"></p>
+
+            <label for="phone">Mobile number</label>
+            <div class="phone-row">
+              <span class="prefix">+91</span>
+              <input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="98765 43210" required aria-describedby="phone-error" />
+            </div>
+            <p class="field-error" id="phone-error"></p>
+
+            <label for="email">Email (for the invoice)</label>
+            <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" />
+            <p class="field-error" id="email-error"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Delivery address</legend>
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" autocomplete="street-address" required aria-describedby="address-error"></textarea>
+            <p class="field-error" id="address-error"></p>
+
+            <div class="two-col">
+              <div>
+                <label for="city">City</label>
+                <input id="city" name="city" autocomplete="address-level2" required aria-describedby="city-error" />
+                <p class="field-error" id="city-error"></p>
+              </div>
+              <div>
+                <label for="pincode">PIN code</label>
+                <input id="pincode" name="pincode" inputmode="numeric" maxlength="6" autocomplete="postal-code" required aria-describedby="pincode-error" />
+                <p class="field-error" id="pincode-error"></p>
+              </div>
+            </div>
+
+            <label for="state">State</label>
+            <select id="state" name="state" autocomplete="address-level1" required aria-describedby="state-error"></select>
+            <p class="field-error" id="state-error"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Payment</legend>
+            <label class="pay-option">
+              <input type="radio" name="payment" value="cod" checked />
+              <span><strong>Cash on delivery</strong><small>₹29 handling fee · verify by OTP before dispatch</small></span>
+            </label>
+            <label class="pay-option pay-option--disabled">
+              <input type="radio" name="payment" value="online" disabled />
+              <span><strong>UPI / cards</strong><small>Launching soon</small></span>
+            </label>
+          </fieldset>
+
+          <label class="checkbox terms">
+            <input type="checkbox" id="terms" required />
+            <span>I agree to the <a href="#">Terms</a> and the <a href="#">Returns policy</a> (sealed products only).</span>
+          </label>
+
+          <p class="form-status" id="order-status" role="status" aria-live="polite"></p>
+          <button class="btn btn--primary checkout__submit" type="submit" id="place-order">Place order</button>
+          <p class="help">For adults 18+. Orders ship in 24–48 hours.</p>
+        </form>
+      </section>
+
+      <aside class="checkout__summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Order summary</h2>
+        <ul class="summary-list" id="summary-list"></ul>
+        <dl class="summary-totals">
+          <div><dt>Subtotal</dt><dd id="sum-subtotal">₹0</dd></div>
+          <div><dt>Shipping</dt><dd id="sum-shipping">₹0</dd></div>
+          <div><dt>COD fee</dt><dd id="sum-cod">₹0</dd></div>
+          <div class="summary-total"><dt>Total</dt><dd id="sum-total">₹0</dd></div>
+        </dl>
+        <p class="help" id="tax-note">Prices include 5% GST.</p>
+        <p class="summary-note" id="cod-note" hidden>Orders above ₹2,000 cannot use cash on delivery. Remove an item or split the order.</p>
+      </aside>
+    </main>
+
+    <section class="container confirmation" id="confirmation" hidden aria-labelledby="confirm-title">
+      <h2 id="confirm-title">Order placed</h2>
+      <p>Thank you. Your order ID is <strong id="order-id"></strong>.</p>
+      <p>We will send a confirmation on WhatsApp before dispatch. Payment is collected on delivery.</p>
+      <a class="btn btn--primary" href="/">Continue shopping</a>
+    </section>
+
+    <footer class="checkout__foot">
+      <div class="container">
+        <p>Imported by Verda Nutrition Pvt Ltd (placeholder) · FSSAI Lic. No. 10024055000123</p>
+        <p class="footer__disclaimer">This product is not intended to diagnose, treat, cure, or prevent any disease. Not for medicinal use. Consult a qualified healthcare professional before use, especially if pregnant, nursing, or on medication.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./checkout.js"></script>
+  </body>
+</html>
