@@ -1,13 +1,15 @@
 /**
- * Firestore client for the storefront.
+ * Firestore + Auth client for the storefront.
  * Loaded on demand so a CDN hiccup cannot block the page.
  */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
   getFirestore,
   addDoc,
   collection,
   doc,
+  getDoc,
   serverTimestamp,
   setDoc,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
@@ -22,5 +24,6 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+export const auth = getAuth(app);
 
-export { addDoc, collection, doc, serverTimestamp, setDoc };
+export { addDoc, collection, doc, getDoc, onAuthStateChanged, serverTimestamp, setDoc };

@@ -7,7 +7,7 @@ import {
   readCart,
   totals,
 } from "../catalog.js";
-import { addDoc, collection, db, serverTimestamp } from "../firestore-client.js";
+import { addDoc, auth, collection, db, doc, getDoc, onAuthStateChanged, serverTimestamp, setDoc } from "../firestore-client.js";
 
 const STATES = [
   "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat",
@@ -22,6 +22,7 @@ const STATES = [
 const $ = (selector) => document.querySelector(selector);
 const cart = readCart();
 const money = totals(cart);
+let currentUid = null;
 
 /* ---------- Consent-gated purchase event ---------- */
 
@@ -44,6 +45,32 @@ STATES.forEach((state) => {
   option.value = state;
   option.textContent = state;
   stateSelect.append(option);
+});
+
+/* ---------- Prefill for signed-in shoppers ---------- */
+
+onAuthStateChanged(auth, async (user) => {
+  currentUid = user?.uid ?? null;
+  if (!user) return;
+  try {
+    const snapshot = await getDoc(doc(db, "users", user.uid));
+    if (!snapshot.exists()) return;
+    const data = snapshot.data();
+
+    if (!$("#name").value) $("#name").value = data.displayName ?? "";
+    if (!$("#email").value) $("#email").value = data.email ?? "";
+    if (!$("#phone").value) $("#phone").value = data.phone ?? "";
+
+    const last = data.lastAddress;
+    if (last) {
+      if (!$("#address").value) $("#address").value = last.address ?? "";
+      if (!$("#city").value) $("#city").value = last.city ?? "";
+      if (!$("#pincode").value) $("#pincode").value = last.pincode ?? "";
+      if (last.state && STATES.includes(last.state)) $("#state").value = last.state;
+    }
+  } catch (error) {
+    console.warn("[checkout] prefill failed", error?.code ?? error);
+  }
 });
 
 function renderSummary() {
@@ -171,13 +198,37 @@ $("#checkout-form").addEventListener("submit", async (event) => {
       state: $("#state").value,
       pincode: $("#pincode").value.trim(),
     },
-    uid: null,
+    uid: currentUid,
     source: "web",
     createdAt: serverTimestamp(),
   };
 
   try {
     const ref = await addDoc(collection(db, "orders"), order);
+
+    if (currentUid && order.customer.email) {
+      try {
+        await setDoc(
+          doc(db, "users", currentUid),
+          {
+            displayName: order.customer.name,
+            email: order.customer.email,
+            phone: order.customer.phone,
+            lastAddress: {
+              address: order.customer.address,
+              city: order.customer.city,
+              state: order.customer.state,
+              pincode: order.customer.pincode,
+            },
+            updatedAt: serverTimestamp(),
+          },
+          { merge: true },
+        );
+      } catch (error) {
+        console.warn("[checkout] profile not updated", error?.code ?? error);
+      }
+    }
+
     clearCart();
     track("purchase", {
       order_id: ref.id,

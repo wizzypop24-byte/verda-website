@@ -67,6 +67,66 @@
     }
   }
 
+  let currentUid = null;
+
+  firestoreReady.then((fs) => {
+    if (!fs) return;
+    fs.onAuthStateChanged(fs.auth, (user) => {
+      currentUid = user?.uid ?? null;
+      if (user) syncCart(user.uid);
+    });
+  });
+
+  async function syncCart(uid) {
+    const fs = await firestoreReady;
+    if (!fs) return;
+    try {
+      const ref = fs.doc(fs.db, "carts", uid);
+      const snapshot = await fs.getDoc(ref);
+      const remote = snapshot.exists() ? (snapshot.data().items ?? []) : [];
+      const merged = new Map();
+      for (const line of [...remote, ...cart]) {
+        if (!CATALOG[line.id]) continue;
+        merged.set(line.id, Math.max(merged.get(line.id) ?? 0, Number(line.qty || 0)));
+      }
+      cart = [...merged].map(([id, qty]) => ({ id, qty })).filter((line) => line.qty > 0);
+      saveCart();
+      renderCart();
+      await persistCart();
+    } catch (error) {
+      console.warn("[firestore] cart sync failed", error?.code ?? error);
+    }
+  }
+
+  async function persistCart() {
+    if (!currentUid) return;
+    const fs = await firestoreReady;
+    if (!fs) return;
+    try {
+      await fs.setDoc(fs.doc(fs.db, "carts", currentUid), {
+        items: cart.map((line) => ({ id: line.id, qty: line.qty })),
+        updatedAt: fs.serverTimestamp(),
+      });
+    } catch (error) {
+      console.warn("[firestore] cart not saved", error?.code ?? error);
+    }
+  }
+
+  async function saveQuizResult(scores, picks) {
+    const fs = await firestoreReady;
+    if (!fs) return;
+    try {
+      await fs.addDoc(fs.collection(fs.db, "quiz_results"), {
+        answers: scores,
+        picks,
+        uid: currentUid,
+        createdAt: fs.serverTimestamp(),
+      });
+    } catch (error) {
+      console.warn("[firestore] quiz result not saved", error?.code ?? error);
+    }
+  }
+
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
@@ -159,6 +219,7 @@
     else cart.push({ id, qty: 1 });
     saveCart();
     renderCart();
+    persistCart();
     if (!silent) toast(`${CATALOG[id].name} added to cart`);
   }
 
@@ -280,6 +341,7 @@
           cart = cart.filter((line) => line.id !== remove.dataset.remove);
           saveCart();
           renderCart();
+          persistCart();
           return;
         }
         const qty = event.target.closest("[data-qty]");
@@ -290,6 +352,7 @@
           if (line.qty <= 0) cart = cart.filter((item) => item.id !== line.id);
           saveCart();
           renderCart();
+          persistCart();
         }
       }),
     );
@@ -412,6 +475,7 @@
           </form>
         </div>`;
       track("quiz_complete", { result_products: picks.join(",") });
+      saveQuizResult({ ...scores }, [...picks]);
 
       $("#quiz-add")?.addEventListener("click", () => {
         picks.forEach((id) => addToCart(id, { silent: true }));
