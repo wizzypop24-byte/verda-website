@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your account — Verda</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="View your orders, addresses and profile." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./account.css" />
+  </head>
+  <body class="account">
+    <header class="account__top">
+      <div class="container account__top-inner">
+        <a class="logo" href="/" aria-label="Verda home">verda<span class="logo__dot" aria-hidden="true">.</span></a>
+        <div class="account__top-actions">
+          <a class="account__back" href="/">← Store</a>
+          <button class="btn btn--ghost btn--small" type="button" id="signout" hidden>Sign out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container account__main" id="main">
+      <h1>Your account</h1>
+
+      <!-- Signed out -->
+      <section class="account__card" id="signed-out" hidden>
+        <h2>Sign in to see your orders</h2>
+        <p>Use the same Google account you ordered with. Guest orders cannot be shown here.</p>
+        <a class="btn btn--primary" href="/auth/?next=/account/">Continue with Google</a>
+      </section>
+
+      <!-- Signed in -->
+      <div id="signed-in" hidden>
+        <section class="account__card profile" aria-labelledby="profile-title">
+          <div class="profile__head">
+            <img id="avatar" class="profile__avatar" alt="" width="64" height="64" referrerpolicy="no-referrer" />
+            <div>
+              <h2 id="profile-title">Profile</h2>
+              <p class="profile__name" id="profile-name"></p>
+              <p class="profile__email" id="profile-email"></p>
+              <p class="profile__meta" id="profile-meta"></p>
+            </div>
+          </div>
+
+          <form id="phone-form" class="profile__phone">
+            <label for="phone">Mobile number (for delivery updates)</label>
+            <div class="phone-row">
+              <span class="prefix">+91</span>
+              <input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="98765 43210" />
+              <button class="btn btn--ghost btn--small" type="submit">Save</button>
+            </div>
+            <p class="form-status" id="phone-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="account__card" aria-labelledby="address-title" id="address-card" hidden>
+          <h2 id="address-title">Delivery address</h2>
+          <address id="address-text"></address>
+        </section>
+
+        <section aria-labelledby="orders-title">
+          <div class="orders__head">
+            <h2 id="orders-title">Orders</h2>
+            <p class="muted" id="orders-count"></p>
+          </div>
+          <div id="orders-loading" class="muted">Loading your orders…</div>
+          <div id="orders-empty" class="account__card" hidden>
+            <p>No orders yet.</p>
+            <a class="btn btn--primary" href="/#bestsellers">Browse bestsellers</a>
+          </div>
+          <ul class="orders" id="orders-list"></ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="account__foot">
+      <div class="container">
+        <p>Imported by Verda Nutrition Pvt Ltd (placeholder) · FSSAI Lic. No. 10024055000123</p>
+        <p class="footer__disclaimer">This product is not intended to diagnose, treat, cure, or prevent any disease. Not for medicinal use. Consult a qualified healthcare professional before use, especially if pregnant, nursing, or on medication.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./account.js"></script>
+  </body>
+</html>

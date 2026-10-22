@@ -3,15 +3,18 @@
  * Loaded on demand so a CDN hiccup cannot block the page.
  */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {
   getFirestore,
   addDoc,
   collection,
   doc,
   getDoc,
+  getDocs,
+  query,
   serverTimestamp,
   setDoc,
+  where,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -26,4 +29,4 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 
-export { addDoc, collection, doc, getDoc, onAuthStateChanged, serverTimestamp, setDoc };
+export { addDoc, collection, doc, getDoc, getDocs, onAuthStateChanged, query, serverTimestamp, setDoc, signOut, where };
