@@ -40,6 +40,13 @@ function track(name, params = {}) {
 /* ---------- Summary ---------- */
 
 const stateSelect = $("#state");
+const placeholder = document.createElement("option");
+placeholder.value = "";
+placeholder.textContent = "Select state";
+placeholder.disabled = true;
+placeholder.selected = true;
+stateSelect.append(placeholder);
+
 STATES.forEach((state) => {
   const option = document.createElement("option");
   option.value = state;
@@ -93,6 +100,7 @@ function renderSummary() {
   $("#sum-shipping").textContent = money.shipping === 0 ? "Free" : inr(money.shipping);
   $("#sum-cod").textContent = inr(money.codFee);
   $("#sum-total").textContent = inr(money.total);
+  $("#mobile-total").textContent = inr(money.total);
   $("#tax-note").textContent = `Prices include ${(GST_RATE * 100).toFixed(0)}% GST.`;
 
   const overCap = money.total > COD_CAP;
@@ -103,6 +111,7 @@ function renderSummary() {
 if (!cart.length) {
   $("#empty-cart").hidden = false;
   $("#checkout-form").hidden = true;
+  $(".checkout__summary").hidden = true;
   $("#summary-list").innerHTML = `<li class="summary-item__meta">No items yet.</li>`;
 } else {
   renderSummary();
