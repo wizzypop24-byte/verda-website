@@ -262,6 +262,7 @@ img, svg { max-width: 100%; }
   gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
   scrollbar-width: thin;
 }
+.product-rail:focus-visible { outline: 3px solid #9fd0b4; outline-offset: 3px; }
 .product-card {
   scroll-snap-align: start;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
@@ -598,10 +599,16 @@ img, svg { max-width: 100%; }
   .header__inner { height: 64px; gap: 8px; }
   .section { padding: 48px 0; }
   .hero { padding: 16px 0 28px; }
-  .section__head--row { flex-direction: column; align-items: flex-start; }
+  .section__head--row { flex-direction: column; align-items: flex-start; gap: 12px; }
   .concern-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .concern-card { padding: 16px; }
-  .product-rail { grid-auto-columns: 82%; }
+  .rail__nav { display: none; }
+  .product-rail { grid-auto-columns: 78%; gap: 12px; }
+  .product-card__media { height: 190px; padding: 10px; }
+  .product-card__body { padding: 14px; }
+  .product-card h3 { font-size: 16px; }
+  .product-card__spec { font-size: 12.5px; }
+  .product-card .btn { min-height: 44px; }
   .value-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; gap: 24px; }
