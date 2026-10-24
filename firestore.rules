@@ -3,9 +3,13 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Profile document — only the owner can read or write it.
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'wizzypop24@gmail.com';
+    }
+
+    // Profile document — only the owner (or an admin) can read or write it.
     match /users/{uid} {
-      allow read: if request.auth != null && request.auth.uid == uid;
+      allow read: if (request.auth != null && request.auth.uid == uid) || isAdmin();
       allow create: if request.auth != null
         && request.auth.uid == uid
         && request.resource.data.email is string
@@ -17,22 +21,24 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-    // Consent receipt — write once, never readable from the client.
+    // Consent receipt — write once; readable by an admin only.
     match /consent/{docId} {
       allow create: if request.resource.data.keys().hasOnly(['analytics', 'marketing', 'ts', 'source', 'uid'])
         && request.resource.data.analytics is bool
         && request.resource.data.marketing is bool;
-      allow read, update, delete: if false;
+      allow read: if isAdmin();
+      allow update, delete: if false;
     }
 
-    // Newsletter / quiz leads — append only.
+    // Newsletter / quiz leads — append only; admins can read.
     match /newsletter/{docId} {
       allow create: if request.resource.data.keys().hasOnly(['email', 'consent', 'source', 'productInterest', 'createdAt'])
         && request.resource.data.email is string
         && request.resource.data.email.size() <= 200
         && request.resource.data.email.matches('.*@.*\\..*')
         && request.resource.data.consent == true;
-      allow read, update, delete: if false;
+      allow read: if isAdmin();
+      allow update, delete: if false;
     }
 
     // Orders — append only; a guest may create one, only the owner can read it.
@@ -56,8 +62,11 @@ service cloud.firestore {
         && request.resource.data.customer.phone.size() == 10
         && request.resource.data.customer.pincode is string
         && request.resource.data.customer.pincode.size() == 6;
-      allow read: if request.auth != null && resource.data.uid == request.auth.uid;
-      allow update, delete: if false;
+      allow read: if (request.auth != null && resource.data.uid == request.auth.uid) || isAdmin();
+      allow update: if isAdmin()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'updatedAt'])
+        && request.resource.data.status in ['placed', 'packed', 'shipped', 'delivered', 'cancelled'];
+      allow delete: if false;
     }
 
     // Cart — private per user, mirrored from localStorage once signed in.
@@ -71,7 +80,7 @@ service cloud.firestore {
         && request.resource.data.picks.size() > 0
         && request.resource.data.picks.size() <= 3
         && (request.resource.data.uid == null || request.resource.data.uid == request.auth.uid);
-      allow read: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow read: if isAdmin() || (request.auth != null && resource.data.uid == request.auth.uid);
       allow update, delete: if false;
     }
 

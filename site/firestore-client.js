@@ -14,6 +14,7 @@ import {
   query,
   serverTimestamp,
   setDoc,
+  updateDoc,
   where,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
@@ -29,4 +30,4 @@ export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 
-export { addDoc, collection, doc, getDoc, getDocs, onAuthStateChanged, query, serverTimestamp, setDoc, signOut, where };
+export { addDoc, collection, doc, getDoc, getDocs, onAuthStateChanged, query, serverTimestamp, setDoc, signOut, updateDoc, where };

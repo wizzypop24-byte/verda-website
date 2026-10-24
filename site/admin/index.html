@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin — Verda</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body class="admin">
+    <header class="admin__top">
+      <div class="container admin__top-inner">
+        <div class="admin__brand">
+          <a class="logo" href="/" aria-label="Verda home">verda<span class="logo__dot" aria-hidden="true">.</span></a>
+          <span class="admin__badge">Admin</span>
+        </div>
+        <div class="admin__actions">
+          <button class="btn btn--ghost btn--small" type="button" id="refresh" hidden>Refresh</button>
+          <button class="btn btn--ghost btn--small" type="button" id="signout" hidden>Sign out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container admin__main" id="main">
+      <h1>Store admin</h1>
+
+      <section class="admin__card" id="signed-out" hidden>
+        <h2>Sign in required</h2>
+        <p>This area is limited to store administrators.</p>
+        <a class="btn btn--primary" href="/auth/?next=/admin/">Sign in with Google</a>
+      </section>
+
+      <section class="admin__card" id="denied" hidden>
+        <h2>Access denied</h2>
+        <p>This account does not have admin access. Sign in with the store owner account.</p>
+        <button class="btn btn--ghost" type="button" id="denied-signout">Sign out and try another account</button>
+      </section>
+
+      <div id="app" hidden>
+        <div class="stats" id="stats">
+          <article class="stat"><span>Orders</span><strong id="stat-orders">0</strong></article>
+          <article class="stat"><span>Revenue</span><strong id="stat-revenue">₹0</strong></article>
+          <article class="stat"><span>COD orders</span><strong id="stat-cod">0</strong></article>
+          <article class="stat"><span>Leads</span><strong id="stat-leads">0</strong></article>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Admin sections">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-orders" id="tab-orders" type="button">Orders</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="panel-leads" id="tab-leads" type="button">Leads</button>
+        </div>
+
+        <p class="admin__status" id="admin-status" role="status" aria-live="polite"></p>
+
+        <section id="panel-orders" role="tabpanel" aria-labelledby="tab-orders">
+          <p class="muted" id="orders-empty" hidden>No orders yet.</p>
+          <div class="orders" id="orders-list"></div>
+        </section>
+
+        <section id="panel-leads" role="tabpanel" aria-labelledby="tab-leads" hidden>
+          <p class="muted" id="leads-empty" hidden>No leads yet.</p>
+          <div class="table-wrap">
+            <table class="leads" id="leads-table" hidden>
+              <thead>
+                <tr><th scope="col">Email</th><th scope="col">Source</th><th scope="col">Interest</th><th scope="col">Date</th></tr>
+              </thead>
+              <tbody id="leads-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="./admin.js"></script>
+  </body>
+</html>
