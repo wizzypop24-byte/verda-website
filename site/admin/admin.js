@@ -43,6 +43,10 @@ onAuthStateChanged(auth, async (user) => {
   const app = $("#app");
   const signout = $("#signout");
   const refresh = $("#refresh");
+  const booting = $("#booting");
+
+  booting.hidden = true;
+  document.body.dataset.adminReady = "true";
 
   if (!user) {
     signedOut.hidden = false;
@@ -50,6 +54,7 @@ onAuthStateChanged(auth, async (user) => {
     app.hidden = true;
     signout.hidden = true;
     refresh.hidden = true;
+    $("#admin-who").textContent = "Not signed in.";
     return;
   }
 
@@ -59,6 +64,7 @@ onAuthStateChanged(auth, async (user) => {
     app.hidden = true;
     signout.hidden = false;
     refresh.hidden = true;
+    $("#admin-who").textContent = `Signed in as ${user.email ?? "unknown account"} — not an admin.`;
     return;
   }
 
@@ -67,6 +73,7 @@ onAuthStateChanged(auth, async (user) => {
   app.hidden = false;
   signout.hidden = false;
   refresh.hidden = false;
+  $("#admin-who").textContent = `Signed in as ${user.email}.`;
   await loadAll();
 });
 

@@ -1,0 +1,6 @@
+Page	URL	Access
+Home	https://fir-479b9.web.app/	Public
+Login / Sign up	https://fir-479b9.web.app/auth/	Public
+Checkout	https://fir-479b9.web.app/checkout/	Public (cart me item ho)
+Account	https://fir-479b9.web.app/account/	Login zaroori
+Admin	https://fir-479b9.web.app/admin/	Sirf wizzypop24@gmail.com

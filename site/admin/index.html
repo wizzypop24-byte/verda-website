@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex,nofollow" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="./admin.css" />
+    <link rel="stylesheet" href="./admin.css?v=2" />
   </head>
   <body class="admin">
     <header class="admin__top">
@@ -25,6 +25,12 @@
 
     <main class="container admin__main" id="main">
       <h1>Store admin</h1>
+      <p class="admin__who" id="admin-who"></p>
+
+      <div class="admin__card" id="booting">
+        <h2>Loading admin…</h2>
+        <p>Checking your sign-in and loading orders.</p>
+      </div>
 
       <section class="admin__card" id="signed-out" hidden>
         <h2>Sign in required</h2>
@@ -72,6 +78,17 @@
       </div>
     </main>
 
-    <script type="module" src="./admin.js"></script>
+    <script type="module" src="./admin.js?v=2"></script>
+    <script>
+      window.setTimeout(function () {
+        if (document.body.dataset.adminReady === "true") return;
+        var boot = document.getElementById("booting");
+        if (!boot) return;
+        boot.innerHTML =
+          '<h2>Admin did not load</h2>' +
+          '<p>Firebase could not be reached. Check your connection, disable any blocker for this site, then hard refresh (Ctrl + Shift + R).</p>' +
+          '<p><a class="btn btn--primary" href="/auth/?next=/admin/">Try signing in again</a></p>';
+      }, 8000);
+    </script>
   </body>
 </html>

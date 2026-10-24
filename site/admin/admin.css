@@ -15,7 +15,8 @@ body.admin { display: block; background: var(--bg); min-height: 100vh; }
 .admin__actions { display: flex; gap: 8px; }
 
 .admin__main { padding: 32px 0 60px; max-width: 1080px; }
-.admin__main h1 { font-size: clamp(26px, 4vw, 36px); margin-bottom: 20px; }
+.admin__main h1 { font-size: clamp(26px, 4vw, 36px); margin-bottom: 6px; }
+.admin__who { color: var(--muted); font-size: 13.5px; margin: 0 0 20px; }
 
 .admin__card {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
