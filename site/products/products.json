@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "magnesium",
+    "id": "magnesium",
+    "name": "Magnesium Glycinate 200 mg",
+    "concern": "Sleep",
+    "tagline": "200 mg elemental magnesium in the gentler glycinate form.",
+    "price": 899,
+    "mrp": 1199,
+    "rating": 4.8,
+    "reviews": 312,
+    "badge": "Bestseller",
+    "image": "/assets/images/product-magnesium.webp",
+    "servings": 60,
+    "servingLabel": "60 capsules",
+    "description": "A single-ingredient magnesium formula with vitamin B6 in its active form. No proprietary blends, no fillers — every number is printed on the label.",
+    "benefits": [
+      { "title": "Muscle and nerve support", "text": "Magnesium supports normal muscle function and normal nerve transmission." },
+      { "title": "Energy metabolism", "text": "Supports the processes that turn food into usable energy." },
+      { "title": "Gentle on the stomach", "text": "The glycinate form is chelated, which many people tolerate better than oxide." }
+    ],
+    "ingredients": [
+      { "name": "Magnesium", "dose": "200 mg", "form": "Glycinate (chelated)", "why": "Supports normal muscle and nerve function" },
+      { "name": "Vitamin B6", "dose": "1.4 mg", "form": "P5P (active)", "why": "Supports magnesium absorption" }
+    ],
+    "use": "Take one capsule daily with food, or as directed by your healthcare professional. Do not exceed the stated dose.",
+    "storage": "Store below 30°C in a cool, dry place, away from direct sunlight. Keep out of reach of children.",
+    "allergens": "No known allergens. Free from added sugar, gluten and artificial colours.",
+    "faq": [
+      { "q": "Can I take magnesium at night?", "a": "Yes. Many people prefer it in the evening because it supports normal muscle relaxation. Take it with food to reduce the chance of loose stools, and keep to the stated dose." },
+      { "q": "Why glycinate instead of oxide?", "a": "Glycinate is a chelated form, which is generally gentler on the digestive system. Oxide is cheaper but has lower absorption and is more likely to cause loose stools at higher doses." },
+      { "q": "Is this safe with other medication?", "a": "Check with your doctor or pharmacist first. Magnesium can affect how certain antibiotics and thyroid medicines are absorbed, so timing may need to be adjusted." }
+    ],
+    "related": ["probiotic", "d3k2", "biotin"]
+  },
+  {
+    "slug": "probiotic",
+    "id": "probiotic",
+    "name": "Probiotic 10B CFU",
+    "concern": "Gut",
+    "tagline": "Ten billion CFU across six documented strains.",
+    "price": 1099,
+    "mrp": 1399,
+    "rating": 4.7,
+    "reviews": 198,
+    "badge": "New",
+    "image": "/assets/images/product-probiotic.webp",
+    "servings": 30,
+    "servingLabel": "30 capsules",
+    "description": "A six-strain probiotic with 10 billion CFU per capsule and a small prebiotic base. Strain names and counts are printed, not hidden behind a blend.",
+    "benefits": [
+      { "title": "Digestive comfort", "text": "Supports normal digestion and day-to-day gut comfort." },
+      { "title": "Gut flora balance", "text": "Supports a balanced mix of bacteria in the gut." },
+      { "title": "Shelf-stable strains", "text": "Selected for stability at room temperature when stored as directed." }
+    ],
+    "ingredients": [
+      { "name": "Probiotic blend", "dose": "10 billion CFU", "form": "6 documented strains", "why": "Supports normal gut flora" },
+      { "name": "Inulin", "dose": "100 mg", "form": "Chicory root fibre", "why": "Prebiotic fibre that feeds gut bacteria" }
+    ],
+    "use": "Take one capsule daily with water, preferably before a meal. Refrigeration is not required, but keep the bottle closed and dry.",
+    "storage": "Store below 25°C in a dry place. Avoid humidity and direct sunlight. Keep out of reach of children.",
+    "allergens": "Contains no dairy, gluten or soy. Do not use if the seal is broken.",
+    "faq": [
+      { "q": "Do I need to refrigerate it?", "a": "No. The strains were selected for room-temperature stability, but keep the bottle closed and away from humidity. If your home gets very hot, a cool cupboard is better than a kitchen counter." },
+      { "q": "When will I notice a difference?", "a": "Digestion varies from person to person. Give it a few weeks of consistent use, and speak to your doctor if symptoms persist or worsen." },
+      { "q": "Can I take it with antibiotics?", "a": "Ask your doctor. Many people space probiotics a few hours away from antibiotic doses, but the timing should be confirmed by your clinician." }
+    ],
+    "related": ["magnesium", "d3k2", "biotin"]
+  },
+  {
+    "slug": "d3k2",
+    "id": "d3k2",
+    "name": "Vitamin D3 + K2",
+    "concern": "Immunity",
+    "tagline": "2000 IU D3 with 100 mcg K2 as MK-7.",
+    "price": 649,
+    "mrp": 849,
+    "rating": 4.9,
+    "reviews": 521,
+    "badge": "Subscribe & save",
+    "image": "/assets/images/product-d3k2.webp",
+    "servings": 60,
+    "servingLabel": "60 tablets",
+    "description": "A daily D3 and K2 pair for people who spend most of the day indoors. Both doses are printed on the front of the label.",
+    "benefits": [
+      { "title": "Immune function", "text": "Vitamin D supports normal immune system function." },
+      { "title": "Bone health", "text": "Supports normal bone maintenance alongside calcium." },
+      { "title": "Calcium absorption", "text": "Vitamin K2 supports normal calcium metabolism." }
+    ],
+    "ingredients": [
+      { "name": "Vitamin D3", "dose": "2000 IU", "form": "Cholecalciferol", "why": "Supports normal immune function and bone health" },
+      { "name": "Vitamin K2", "dose": "100 mcg", "form": "MK-7", "why": "Supports normal calcium metabolism" }
+    ],
+    "use": "Take one tablet daily with a meal that contains fat, or as directed by your healthcare professional.",
+    "storage": "Store below 30°C in a cool, dry place. Keep the bottle tightly closed.",
+    "allergens": "Contains no gluten, dairy or added sugar. Check with your doctor if you take blood thinners.",
+    "faq": [
+      { "q": "Why combine D3 with K2?", "a": "Vitamin D supports calcium absorption, and vitamin K2 supports normal calcium metabolism. Pairing them is common in daily formulas aimed at bone and immune support." },
+      { "q": "Do I need a blood test first?", "a": "It is worth asking your doctor. Vitamin D status is easy to test, and the right dose depends on your current level rather than a guess." },
+      { "q": "Can I take it with calcium?", "a": "Many people do, but confirm the total daily amount with your clinician so you stay within safe limits." }
+    ],
+    "related": ["magnesium", "probiotic", "biotin"]
+  },
+  {
+    "slug": "biotin",
+    "id": "biotin",
+    "name": "Biotin 10,000 mcg",
+    "concern": "Hair & Skin",
+    "tagline": "A single high-strength biotin tablet, nothing else added.",
+    "price": 749,
+    "mrp": 999,
+    "rating": 4.6,
+    "reviews": 143,
+    "badge": "Bestseller",
+    "image": "/assets/images/product-biotin.webp",
+    "servings": 60,
+    "servingLabel": "60 tablets",
+    "description": "One ingredient, one dose, one tablet a day. Biotin supports normal hair and skin maintenance as part of a balanced diet.",
+    "benefits": [
+      { "title": "Hair and skin support", "text": "Biotin supports normal hair and skin maintenance." },
+      { "title": "Energy metabolism", "text": "Supports normal macronutrient metabolism." },
+      { "title": "No fillers", "text": "No added sugar, no artificial colours, no unnecessary excipients." }
+    ],
+    "ingredients": [
+      { "name": "Biotin", "dose": "10,000 mcg", "form": "D-biotin", "why": "Supports normal hair and skin maintenance" }
+    ],
+    "use": "Take one tablet daily with food. Do not exceed the stated dose.",
+    "storage": "Store below 30°C in a cool, dry place, away from moisture.",
+    "allergens": "Free from gluten, dairy and soy. Suitable for adults 18+.",
+    "faq": [
+      { "q": "How long does biotin take?", "a": "Hair grows slowly, so give it at least two to three months of consistent use. Results vary, and a balanced diet matters more than any single supplement." },
+      { "q": "Does biotin affect blood tests?", "a": "Yes. High-dose biotin can interfere with some thyroid and hormone tests. Tell your doctor that you take it, and stop a few days before a blood test if advised." },
+      { "q": "Can I take it with a multivitamin?", "a": "Check the total biotin across products to avoid doubling up. If you already take a multivitamin, compare labels before adding this." }
+    ],
+    "related": ["magnesium", "d3k2", "probiotic"]
+  }
+]
