@@ -65,6 +65,7 @@ onAuthStateChanged(auth, async (user) => {
     signout.hidden = false;
     refresh.hidden = true;
     $("#admin-who").textContent = `Signed in as ${user.email ?? "unknown account"} — not an admin.`;
+    $("#denied-email").textContent = `You are signed in as ${user.email ?? "an account without an email"}. Admin access is limited to ${ADMIN_EMAIL}.`;
     return;
   }
 
@@ -135,7 +136,7 @@ async function loadAll() {
     setStatus(
       error?.code === "permission-denied"
         ? "Permission denied. Sign in with the owner account."
-        : "Could not load data. Check your connection and refresh.",
+        : `Could not load data (${error?.code ?? "unknown"}). Check your connection and refresh.`,
       "error",
     );
   }
