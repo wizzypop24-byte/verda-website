@@ -8,6 +8,7 @@
     "test": "node scripts/run-all-tests.mjs",
     "proof": "node scripts/run-all-tests.mjs",
     "build:products": "node scripts/build-products.mjs",
+    "build:policies": "node scripts/build-policies.mjs",
     "serve": "node scripts/dev-server.mjs",
     "deploy": "firebase deploy --only hosting"
   }

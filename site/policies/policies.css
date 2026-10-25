@@ -1,0 +1,54 @@
+/* Policy pages */
+body.policy { display: block; background: var(--bg); min-height: 100vh; }
+
+.policy-head {
+  background: rgba(246, 247, 244, 0.96);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 20;
+  backdrop-filter: blur(8px);
+}
+.policy-head__inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.policy-head__back { font-size: 14px; color: var(--muted); text-decoration: none; }
+.policy-head__back:hover { color: var(--ink); }
+
+.policy-main { max-width: 820px; padding-top: 20px; padding-bottom: 56px; }
+
+.crumbs { font-size: 12.5px; color: var(--muted); margin-bottom: 18px; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; }
+.crumbs li + li::before { content: "/"; margin-right: 6px; color: #a9b6ad; }
+.crumbs a { color: inherit; text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+
+.policy-main h1 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 6px; }
+.policy-updated { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+.policy-intro { font-size: 17px; color: var(--ink); max-width: 70ch; }
+
+.policy-main section { margin-top: 28px; }
+.policy-main h2 { font-size: clamp(19px, 2.4vw, 23px); margin-bottom: 8px; }
+.policy-main p { color: var(--muted); max-width: 72ch; }
+
+.policy-contact {
+  margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.policy-links {
+  margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line);
+}
+.policy-links h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.policy-links p { font-size: 14px; line-height: 2; }
+.policy-links a { color: var(--green-dark); }
+
+.policy-foot {
+  border-top: 1px solid var(--line);
+  padding: 22px 0 40px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.policy-foot p { margin: 0 0 8px; }
+
+@media (max-width: 600px) {
+  .policy-main { padding-top: 14px; }
+  .policy-intro { font-size: 16px; }
+  .policy-main section { margin-top: 22px; }
+}

@@ -1,0 +1,324 @@
+{
+  "updated": "25 October 2026",
+  "policies": [
+    {
+      "slug": "shipping",
+      "title": "Shipping policy",
+      "description": "Dispatch times, delivery estimates, shipping charges and cash-on-delivery rules for Verda orders.",
+      "intro": "This policy explains how Verda ships orders within India, what delivery costs, and how cash on delivery works.",
+      "sections": [
+        {
+          "heading": "Where we ship",
+          "body": [
+            "We currently ship within India only. International shipping is not available at launch.",
+            "If your PIN code is not serviceable, checkout will tell you before payment. We do not accept orders for addresses we cannot reach."
+          ]
+        },
+        {
+          "heading": "Dispatch time",
+          "body": [
+            "Orders placed before 2:00 pm on a working day are packed and handed to the courier the same day. Orders placed after 2:00 pm, on Sundays, or on public holidays are dispatched the next working day.",
+            "You will receive a tracking link by email and WhatsApp once the courier scans the parcel."
+          ]
+        },
+        {
+          "heading": "Delivery estimates",
+          "body": [
+            "Metro cities: usually 2 to 4 working days.",
+            "Rest of India: usually 4 to 7 working days.",
+            "Remote PIN codes and the festive season can add a few days. These are estimates, not guarantees, because the final leg is operated by third-party couriers."
+          ]
+        },
+        {
+          "heading": "Shipping charges",
+          "body": [
+            "Free shipping on orders of ₹999 and above.",
+            "Orders below ₹999 carry a flat shipping fee of ₹59.",
+            "Prices include 5% GST. The shipping fee is shown at checkout before you place the order."
+          ]
+        },
+        {
+          "heading": "Cash on delivery",
+          "body": [
+            "Cash on delivery is available on orders up to ₹2,000, with a ₹29 handling fee.",
+            "COD orders are confirmed by WhatsApp or OTP before dispatch. Unconfirmed orders are held for 24 hours and then cancelled.",
+            "COD may be unavailable for some PIN codes based on courier risk. If COD is not available for your address, prepaid payment will be the only option."
+          ]
+        },
+        {
+          "heading": "Failed delivery",
+          "body": [
+            "The courier will attempt delivery twice. If both attempts fail, the parcel returns to our warehouse.",
+            "Prepaid orders that return to us are refunded minus the actual forward and return shipping cost. COD orders that return to us are not charged, but repeated refusals may lead to COD being disabled for that phone number."
+          ]
+        },
+        {
+          "heading": "Address changes",
+          "body": [
+            "Contact care@verda.in as soon as possible. We can change the address only before the parcel is handed to the courier. Once dispatched, the address cannot be changed."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "returns",
+      "title": "Returns and refunds",
+      "description": "How to return a sealed Verda product, report damage, and when refunds are processed.",
+      "intro": "Supplements cannot be resold once a seal is broken, so returns are limited to unopened products and damaged deliveries.",
+      "sections": [
+        {
+          "heading": "Return window",
+          "body": [
+            "You may request a return within 30 days of delivery, provided the seal is unopened and the packaging is undamaged.",
+            "Opened products cannot be returned for safety and hygiene reasons, even if most of the capsules remain."
+          ]
+        },
+        {
+          "heading": "Damaged or wrong item",
+          "body": [
+            "If your parcel arrives damaged, leaking, or with the wrong product, email care@verda.in within 48 hours of delivery with your order ID and clear photos of the parcel and the product.",
+            "We will arrange a free replacement or a full refund, including shipping. You do not need to return the damaged item unless we ask for it."
+          ]
+        },
+        {
+          "heading": "How to start a return",
+          "body": [
+            "Email care@verda.in with your order ID and the reason for the return.",
+            "We will confirm within one working day and share a pickup slot. Keep the product sealed and in its original carton until pickup.",
+            "Do not ship anything back without confirmation, because unclaimed parcels cannot be matched to an order."
+          ]
+        },
+        {
+          "heading": "Refunds",
+          "body": [
+            "Once the returned product reaches our warehouse and passes inspection, the refund is initiated within 2 working days and usually reaches you within 5 working days.",
+            "Prepaid refunds go back to the original payment method. COD refunds are made by UPI or bank transfer to an account in the buyer's name.",
+            "Shipping fees are refunded only when the return is due to damage, a wrong item, or a manufacturing defect."
+          ]
+        },
+        {
+          "heading": "Cancellations",
+          "body": [
+            "You can cancel an order before it is handed to the courier and receive a full refund.",
+            "Once dispatched, cancellation is treated as a return under this policy."
+          ]
+        },
+        {
+          "heading": "Non-returnable cases",
+          "body": [
+            "Opened or used products, products without the original seal, and items damaged after delivery cannot be returned.",
+            "Orders flagged for repeated abuse of the returns process may be refused at our discretion."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "privacy",
+      "title": "Privacy policy",
+      "description": "What personal data Verda collects, why, how long it is kept, and your rights under India's DPDP Act.",
+      "intro": "This policy explains what we collect when you browse or order, why we need it, and the choices you have. We follow the Digital Personal Data Protection Act, 2023.",
+      "sections": [
+        {
+          "heading": "What we collect",
+          "body": [
+            "Account data: name, email address, profile photo and account identifier from Google sign-in.",
+            "Order data: phone number, delivery address, items ordered, order value and payment method.",
+            "Support data: messages you send to care@verda.in or on WhatsApp.",
+            "Consent data: your cookie choices, the time you made them, and the source of the request.",
+            "Technical data: only if you allow analytics, we record pages viewed, scroll depth, device type and approximate performance metrics. We do not record keystrokes or form contents."
+          ]
+        },
+        {
+          "heading": "Why we use it",
+          "body": [
+            "To accept and deliver orders, send invoices, and handle returns.",
+            "To provide support and respond to your questions.",
+            "To prevent fraud and misuse of cash on delivery.",
+            "To send marketing messages only if you opt in. You can withdraw consent at any time."
+          ]
+        },
+        {
+          "heading": "Legal basis",
+          "body": [
+            "We process order data to perform the contract you enter when you buy from us.",
+            "Analytics, marketing messages and optional cookies are based on your consent. Consent is not bundled with the terms of sale."
+          ]
+        },
+        {
+          "heading": "Who we share it with",
+          "body": [
+            "Payment providers, to process prepaid payments and refunds.",
+            "Courier partners, to deliver your order and provide tracking.",
+            "Email and WhatsApp providers, to send order updates and, if you opt in, marketing.",
+            "Cloud infrastructure providers, including Google Firebase, which hosts our store and database.",
+            "We do not sell personal data. We disclose it to authorities only when required by law."
+          ]
+        },
+        {
+          "heading": "How long we keep it",
+          "body": [
+            "Order and invoice records are kept for 3 years to meet tax and accounting requirements.",
+            "Marketing consent records are kept until you withdraw consent, plus a short period to demonstrate compliance.",
+            "Support conversations are kept for 12 months.",
+            "Analytics data is retained in aggregate and cannot be used to identify you after 14 months."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "body": [
+            "You can request access to your data, correction of inaccurate data, or deletion of data we no longer need.",
+            "You can withdraw marketing consent at any time using the unsubscribe link or by writing to us.",
+            "We respond to requests within 30 days.",
+            "Grievance officer: care@verda.in, Verda Nutrition Pvt Ltd, Mumbai."
+          ]
+        },
+        {
+          "heading": "Cookies and analytics",
+          "body": [
+            "Analytics and marketing tags are off until you accept them in the cookie banner.",
+            "You can change your choice at any time by clearing site data for this domain and choosing again."
+          ]
+        },
+        {
+          "heading": "Children",
+          "body": [
+            "Our products and store are intended for adults aged 18 and over. We do not knowingly collect data from children."
+          ]
+        },
+        {
+          "heading": "Changes",
+          "body": [
+            "If this policy changes materially, we will update the date at the top of this page and, where appropriate, notify you by email."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "terms",
+      "title": "Terms of service",
+      "description": "The rules for using the Verda store, placing orders and resolving disputes.",
+      "intro": "By using this website you agree to these terms. Please read them before placing an order.",
+      "sections": [
+        {
+          "heading": "Who can use the store",
+          "body": [
+            "You must be 18 or older to buy from Verda. By placing an order you confirm that the details you provide are accurate and that you are authorised to use the payment method."
+          ]
+        },
+        {
+          "heading": "What we sell",
+          "body": [
+            "Verda sells imported food supplements. They are foods, not medicines, and are not intended to diagnose, treat, cure or prevent any disease.",
+            "Product images are for illustration. Labels, packaging and capsule colours may change between batches. The ingredient list on the delivered label is the authoritative version."
+          ]
+        },
+        {
+          "heading": "Prices and availability",
+          "body": [
+            "All prices are in Indian Rupees and include 5% GST unless stated otherwise.",
+            "We may correct pricing errors and cancel affected orders with a full refund.",
+            "Stock is limited because products are imported in batches. If an item becomes unavailable after you order, we will contact you and offer a replacement or refund."
+          ]
+        },
+        {
+          "heading": "Orders and payment",
+          "body": [
+            "An order is accepted when we confirm it by email or WhatsApp, not when you click Place order.",
+            "Cash on delivery is available up to ₹2,000 with a ₹29 fee. Online payments are processed by our payment partner; we never store full card details.",
+            "We may refuse or cancel orders that appear fraudulent, abusive, or placed for resale."
+          ]
+        },
+        {
+          "heading": "Delivery and returns",
+          "body": [
+            "Delivery timelines are estimates. Our shipping policy and returns policy form part of these terms."
+          ]
+        },
+        {
+          "heading": "Your account",
+          "body": [
+            "You are responsible for activity under your account. Tell us immediately if you suspect unauthorised access.",
+            "We may suspend accounts that misuse the store, scrape content, or attempt to interfere with security."
+          ]
+        },
+        {
+          "heading": "Intellectual property",
+          "body": [
+            "The Verda name, logo, copy and photography on this site belong to us or our licensors. You may not copy or reuse them for commercial purposes without written permission."
+          ]
+        },
+        {
+          "heading": "Liability",
+          "body": [
+            "To the extent permitted by law, our liability for any order is limited to the amount you paid for that order.",
+            "We are not liable for indirect losses, or for outcomes caused by using a product against its label or without professional advice."
+          ]
+        },
+        {
+          "heading": "Governing law",
+          "body": [
+            "These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of the courts in Mumbai, Maharashtra."
+          ]
+        },
+        {
+          "heading": "Contact",
+          "body": [
+            "Questions about these terms: care@verda.in, Verda Nutrition Pvt Ltd, Mumbai 400069."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "disclaimer",
+      "title": "Product disclaimer",
+      "description": "Important safety information about Verda food supplements and health claims.",
+      "intro": "Please read this before using any Verda product. It explains what our products are, and what they are not.",
+      "sections": [
+        {
+          "heading": "Not a medicine",
+          "body": [
+            "Verda products are food supplements. They are not intended to diagnose, treat, cure or prevent any disease, and they are not a substitute for a varied diet or prescribed medication."
+          ]
+        },
+        {
+          "heading": "Speak to a professional",
+          "body": [
+            "Consult a qualified healthcare professional before use if you are pregnant, nursing, under 18, taking prescription medication, or managing a medical condition.",
+            "Do not stop or change prescribed treatment in favour of a supplement."
+          ]
+        },
+        {
+          "heading": "Dose and storage",
+          "body": [
+            "Do not exceed the stated dose. More is not better and may be harmful.",
+            "Keep all products out of reach of children. Store below 30°C in a dry place, away from direct sunlight."
+          ]
+        },
+        {
+          "heading": "Allergens",
+          "body": [
+            "Check the allergen line on every label before use. If you have a known allergy, contact care@verda.in for the full ingredient list of the current batch."
+          ]
+        },
+        {
+          "heading": "Individual results",
+          "body": [
+            "Nutrition affects people differently. Reviews and testimonials describe individual experiences, not typical or guaranteed outcomes."
+          ]
+        },
+        {
+          "heading": "Imported products",
+          "body": [
+            "Verda products are imported and sold under an FSSAI Central Licence (Importer). The importer details, country of origin and licence number are printed on the pack and listed in the footer of this site."
+          ]
+        },
+        {
+          "heading": "Reporting a problem",
+          "body": [
+            "If you experience an adverse reaction, stop using the product and seek medical advice. Please also report it to care@verda.in so we can investigate the batch."
+          ]
+        }
+      ]
+    }
+  ]
+}
