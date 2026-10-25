@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
 const products = JSON.parse(readFileSync("site/products/products.json", "utf8"));
+const CONCERN_SLUGS = { Sleep: "sleep", Gut: "gut", Immunity: "immunity", "Hair & Skin": "hair-skin" };
 const SITE = "https://fir-479b9.web.app";
 
 const esc = (value) =>
@@ -49,7 +50,7 @@ function renderProduct(p) {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-          { "@type": "ListItem", position: 2, name: p.concern, item: `${SITE}/#concerns` },
+          { "@type": "ListItem", position: 2, name: p.concern, item: `${SITE}/collections/${CONCERN_SLUGS[p.concern] ?? "sleep"}/` },
           { "@type": "ListItem", position: 3, name: p.name, item: url },
         ],
       },
@@ -105,7 +106,7 @@ function renderProduct(p) {
       <nav class="crumbs container" aria-label="Breadcrumb">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/#concerns">${esc(p.concern)}</a></li>
+          <li><a href="/collections/${CONCERN_SLUGS[p.concern] ?? "sleep"}/">${esc(p.concern)}</a></li>
           <li aria-current="page">${esc(p.name)}</li>
         </ol>
       </nav>
