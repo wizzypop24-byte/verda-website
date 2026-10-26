@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found | Verda</title>
+    <meta name="description" content="The page you were looking for does not exist. Browse bestsellers or go back to the Verda home page." />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body { display: grid; place-items: center; min-height: 100vh; padding: 24px; }
+      .notfound { width: 100%; max-width: 640px; text-align: center; }
+      .notfound__art {
+        width: 120px; height: 120px; margin: 0 auto 18px;
+        border-radius: 28px; display: grid; place-items: center;
+        background: radial-gradient(120% 120% at 20% 10%, #e7f1e9, #c3dbcd);
+        color: var(--green-dark);
+      }
+      .notfound__code {
+        font-size: 13px; font-weight: 800; letter-spacing: 0.18em;
+        text-transform: uppercase; color: var(--green-dark); margin-bottom: 6px;
+      }
+      .notfound h1 { font-size: clamp(30px, 6vw, 46px); margin-bottom: 8px; }
+      .notfound p { color: var(--muted); max-width: 48ch; margin: 0 auto 18px; }
+      .notfound__where {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12.5px; background: #eef2ec; border-radius: 8px;
+        padding: 6px 10px; color: var(--muted); display: inline-block;
+        margin-bottom: 20px; word-break: break-all;
+      }
+      .notfound__actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 26px; }
+      .notfound__links { font-size: 14px; color: var(--muted); }
+      .notfound__links a { color: var(--green-dark); }
+      .notfound__foot { margin-top: 34px; font-size: 12px; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main class="notfound" id="main">
+      <div class="notfound__art" aria-hidden="true">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <path d="M20 44V20h6l6 10 6-10h6v24h-5V31l-7 11-7-11v13z" fill="currentColor" opacity="0.85" />
+          <circle cx="46" cy="18" r="5" fill="currentColor" opacity="0.35" />
+        </svg>
+      </div>
+
+      <p class="notfound__code">404</p>
+      <h1>This page took a rest day</h1>
+      <p>The link may be old, or the page may have moved. Nothing is broken on your side.</p>
+      <p class="notfound__where" id="where" hidden></p>
+
+      <div class="notfound__actions">
+        <a class="btn btn--primary" href="/">Back to home</a>
+        <a class="btn btn--ghost" href="/#bestsellers">Shop bestsellers</a>
+        <a class="btn btn--ghost" href="/account/">Your account</a>
+      </div>
+
+      <p class="notfound__links">
+        Looking for something specific? <a href="/#concerns">Browse by concern</a> ·
+        <a href="/policies/shipping/">Shipping</a> ·
+        <a href="/policies/returns/">Returns</a> ·
+        <a href="/#faq">FAQ</a>
+      </p>
+
+      <p class="notfound__foot">
+        Imported by Verda Nutrition Pvt Ltd (placeholder) · FSSAI Lic. No. 10024055000123
+      </p>
+    </main>
+
+    <script>
+      (function () {
+        try {
+          var where = document.getElementById("where");
+          where.textContent = "Requested: " + window.location.pathname;
+          where.hidden = false;
+        } catch (error) {
+          /* ignore */
+        }
+      })();
+    </script>
+  </body>
+</html>

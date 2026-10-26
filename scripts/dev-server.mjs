@@ -49,6 +49,13 @@ const server = createServer(async (req, res) => {
       info = await stat(filePath).catch(() => null);
     }
     if (!info) {
+      const notFound = join(root, "404.html");
+      const page = await readFile(notFound).catch(() => null);
+      if (page) {
+        res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+        res.end(page);
+        return;
+      }
       res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" }).end("Not found");
       return;
     }
