@@ -94,29 +94,40 @@ $("#refresh").addEventListener("click", () => loadAll());
 
 function selectTab(name) {
   const orders = name === "orders";
+  const leads = name === "leads";
+  const messages = name === "messages";
+
   $("#panel-orders").hidden = !orders;
-  $("#panel-leads").hidden = orders;
+  $("#panel-leads").hidden = !leads;
+  $("#panel-messages").hidden = !messages;
+
   $("#tab-orders").classList.toggle("is-active", orders);
-  $("#tab-leads").classList.toggle("is-active", !orders);
+  $("#tab-leads").classList.toggle("is-active", leads);
+  $("#tab-messages").classList.toggle("is-active", messages);
+
   $("#tab-orders").setAttribute("aria-selected", String(orders));
-  $("#tab-leads").setAttribute("aria-selected", String(!orders));
+  $("#tab-leads").setAttribute("aria-selected", String(leads));
+  $("#tab-messages").setAttribute("aria-selected", String(messages));
 }
 
 $("#tab-orders").addEventListener("click", () => selectTab("orders"));
 $("#tab-leads").addEventListener("click", () => selectTab("leads"));
+$("#tab-messages").addEventListener("click", () => selectTab("messages"));
 
 /* ---------------- Data ---------------- */
 
 let orders = [];
 let leads = [];
+let messages = [];
 
 async function loadAll() {
   setStatus("Loading…");
 
   try {
-    const [orderSnap, leadSnap] = await Promise.all([
+    const [orderSnap, leadSnap, msgSnap] = await Promise.all([
       getDocs(collection(db, "orders")),
       getDocs(collection(db, "newsletter")),
+      getDocs(collection(db, "messages")),
     ]);
 
     orders = orderSnap.docs
@@ -127,9 +138,14 @@ async function loadAll() {
       .map((entry) => ({ id: entry.id, ...entry.data() }))
       .sort((a, b) => (b.createdAt?.seconds ?? 0) - (a.createdAt?.seconds ?? 0));
 
+    messages = msgSnap.docs
+      .map((entry) => ({ id: entry.id, ...entry.data() }))
+      .sort((a, b) => (b.createdAt?.seconds ?? 0) - (a.createdAt?.seconds ?? 0));
+
     renderStats();
     renderOrders();
     renderLeads();
+    renderMessages();
     setStatus(`${orders.length} order(s) loaded`, "info");
   } catch (error) {
     console.error("[admin]", error?.code, error?.message);
@@ -205,6 +221,30 @@ function renderLeads() {
         <td>${escapeHtml(lead.productInterest ?? "—")}</td>
         <td>${formatDate(lead.createdAt)}</td>
       </tr>`,
+    )
+    .join("");
+}
+
+function renderMessages() {
+  const list = $("#messages-list");
+  const empty = $("#messages-empty");
+
+  empty.hidden = messages.length > 0;
+  list.innerHTML = messages
+    .map(
+      (message) => `
+      <article class="message-card">
+        <header>
+          <strong>${escapeHtml(message.name ?? "Unknown")}</strong>
+          <span class="message-topic">${escapeHtml(message.topic ?? "other")}</span>
+          <span class="message-date">${formatDate(message.createdAt)}</span>
+        </header>
+        <p class="message-contact">
+          <a href="mailto:${escapeHtml(message.email ?? "")}">${escapeHtml(message.email ?? "")}</a>
+          ${message.orderId ? ` · Order #${escapeHtml(message.orderId)}` : ""}
+        </p>
+        <p class="message-body">${escapeHtml(message.message ?? "")}</p>
+      </article>`,
     )
     .join("");
 }

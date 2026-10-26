@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Verda — Support and enquiries</title>
+    <meta name="description" content="Contact Verda about an order, a product question, returns or wholesale. We reply within one working day." />
+    <link rel="canonical" href="https://fir-479b9.web.app/contact/" />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/pages/pages.css" />
+  </head>
+  <body class="page">
+    <header class="page-head">
+      <div class="container page-head__inner">
+        <a class="logo" href="/" aria-label="Verda home">verda<span class="logo__dot" aria-hidden="true">.</span></a>
+        <div class="page-head__actions">
+          <a class="page-head__link" href="/#bestsellers">Shop</a>
+          <a class="page-head__link" href="/about/">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-main" id="main">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </nav>
+
+      <header class="page-hero">
+        <h1>Contact us</h1>
+        <p>Questions about an order, a formula, a return or wholesale? Send a message and we will reply within one working day.</p>
+      </header>
+
+      <div class="contact-grid">
+        <section class="contact-card" aria-labelledby="form-title">
+          <h2 id="form-title">Send a message</h2>
+          <form class="contact-form" id="contact-form" novalidate>
+            <label for="c-name">Your name</label>
+            <input id="c-name" name="name" autocomplete="name" required aria-describedby="name-error" />
+            <p class="field-error" id="name-error"></p>
+
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" />
+            <p class="field-error" id="email-error"></p>
+
+            <label for="c-topic">Topic</label>
+            <select id="c-topic" name="topic" required>
+              <option value="order">Order or delivery</option>
+              <option value="product">Product question</option>
+              <option value="returns">Return or refund</option>
+              <option value="wholesale">Wholesale</option>
+              <option value="other">Something else</option>
+            </select>
+
+            <label for="c-order">Order ID (optional)</label>
+            <input id="c-order" name="orderId" placeholder="e.g. orC2Z1TzF7" autocomplete="off" />
+
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" required minlength="10" maxlength="2000" aria-describedby="message-error"></textarea>
+            <p class="field-error" id="message-error"></p>
+
+            <label class="checkbox" style="margin-top:10px">
+              <input type="checkbox" id="c-consent" required />
+              <span>I agree to be contacted about this enquiry. See <a href="/policies/privacy/">Privacy Policy</a>.</span>
+            </label>
+
+            <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+            <button class="btn btn--primary" type="submit" id="contact-submit">Send message</button>
+          </form>
+        </section>
+
+        <aside class="contact-card" aria-labelledby="support-title">
+          <h2 id="support-title">Support</h2>
+          <ul class="contact-list">
+            <li><strong>Email</strong><a href="mailto:care@verda.in">care@verda.in</a></li>
+            <li><strong>WhatsApp</strong>+91 90000 00000 (order updates only)</li>
+            <li><strong>Hours</strong>Monday to Saturday, 10:00–18:00 IST</li>
+            <li><strong>Response time</strong>Within one working day</li>
+            <li><strong>Registered office</strong>Verda Nutrition Pvt Ltd (placeholder), 4th Floor, Andheri East, Mumbai 400069</li>
+            <li><strong>FSSAI licence</strong>10024055000123</li>
+          </ul>
+          <p style="margin-top:16px;font-size:13px;color:var(--muted)">For order status, keep your order ID ready. For product safety questions, tell us the batch number printed on the pack.</p>
+        </aside>
+      </div>
+
+      <section class="page-section" aria-labelledby="help-title">
+        <h2 id="help-title">Faster answers</h2>
+        <p>Shipping timelines, COD limits and returns are covered here: <a href="/policies/shipping/">shipping policy</a>, <a href="/policies/returns/">returns policy</a>, and the <a href="/#faq">FAQ</a>.</p>
+      </section>
+    </main>
+
+    <footer class="page-foot">
+      <div class="container">
+        <p>Imported by Verda Nutrition Pvt Ltd (placeholder), Mumbai 400069 · FSSAI Lic. No. 10024055000123</p>
+        <p><a href="/policies/shipping/">Shipping</a> · <a href="/policies/returns/">Returns</a> · <a href="/policies/privacy/">Privacy</a> · <a href="/policies/terms/">Terms</a> · <a href="/about/">About</a></p>
+      </div>
+    </footer>
+
+    <script type="module" src="./contact.js"></script>
+  </body>
+</html>

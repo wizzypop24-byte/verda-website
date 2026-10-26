@@ -84,6 +84,23 @@ service cloud.firestore {
       allow update, delete: if false;
     }
 
+    // Contact messages — append only; admins can read.
+    match /messages/{docId} {
+      allow create: if request.resource.data.keys().hasOnly(['name', 'email', 'topic', 'orderId', 'message', 'status', 'createdAt'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 2
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 200
+        && request.resource.data.email.matches('.*@.*\\..*')
+        && request.resource.data.message is string
+        && request.resource.data.message.size() >= 10
+        && request.resource.data.message.size() <= 2000
+        && request.resource.data.status == 'new';
+      allow read: if isAdmin();
+      allow update, delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }
