@@ -251,6 +251,7 @@ $("#checkout-form").addEventListener("submit", async (event) => {
     status.dataset.kind = "info";
     $("#confirmation").hidden = false;
     $("#order-id").textContent = ref.id;
+    $("#view-order").href = `/order/?id=${encodeURIComponent(ref.id)}`;
     $("#confirmation").scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (error) {
     console.error("[checkout]", error?.code, error?.message);

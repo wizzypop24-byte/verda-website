@@ -183,6 +183,7 @@ function renderOrder(order) {
             <p><strong>Subtotal</strong><br>${inr(order.subtotal)}</p>
             <p><strong>Shipping + COD</strong><br>${inr((order.shipping ?? 0) + (order.codFee ?? 0))}</p>
           </div>
+          <a class="order__link" href="/order/?id=${encodeURIComponent(order.id)}">View order details →</a>
         </div>
       </details>
     </li>`;

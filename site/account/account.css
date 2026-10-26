@@ -90,6 +90,7 @@ body.account { display: block; background: var(--bg); min-height: 100vh; }
 .order__meta strong { color: var(--ink); }
 .order__shipping { margin: 0; }
 .order__shipping strong { display: block; color: var(--ink); margin-bottom: 2px; }
+.order__link { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--green-dark); }
 
 .account__foot {
   border-top: 1px solid var(--line);

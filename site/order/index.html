@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order details — Verda</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./order.css" />
+  </head>
+  <body class="order-page">
+    <header class="order-head">
+      <div class="container order-head__inner">
+        <a class="logo" href="/" aria-label="Verda home">verda<span class="logo__dot" aria-hidden="true">.</span></a>
+        <div class="order-head__actions">
+          <a class="order-head__link" href="/account/">Account</a>
+          <a class="order-head__link" href="/">Store</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container order-main" id="main">
+      <div id="loading" class="order-card">
+        <p>Loading your order…</p>
+      </div>
+
+      <section class="order-card" id="signed-out" hidden>
+        <h1>Sign in to see this order</h1>
+        <p>Order details are private. Sign in with the Google account you used at checkout.</p>
+        <a class="btn btn--primary" id="signin-link" href="/auth/">Sign in with Google</a>
+      </section>
+
+      <section class="order-card" id="denied" hidden>
+        <h1>This order is not linked to your account</h1>
+        <p id="denied-copy">It may belong to another account, or it was placed as a guest.</p>
+        <p>If you checked out as a guest, email <a href="mailto:care@verda.in">care@verda.in</a> with your order ID and we will share the status.</p>
+        <a class="btn btn--ghost" href="/account/">Go to your account</a>
+      </section>
+
+      <section class="order-card" id="not-found" hidden>
+        <h1>Order not found</h1>
+        <p>Check the link, or open your account to see all orders.</p>
+        <a class="btn btn--primary" href="/account/">Open account</a>
+      </section>
+
+      <div id="order-view" hidden>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/account/">Account</a></li>
+            <li aria-current="page">Order</li>
+          </ol>
+        </nav>
+
+        <div class="order-title">
+          <div>
+            <p class="order-title__label">Order</p>
+            <h1 id="order-id">#—</h1>
+            <p class="order-title__date" id="order-date"></p>
+          </div>
+          <span class="status-pill" id="order-status">placed</span>
+        </div>
+
+        <ol class="timeline" id="timeline" aria-label="Order progress">
+          <li data-step="placed"><span class="timeline__dot" aria-hidden="true"></span><span>Placed</span></li>
+          <li data-step="packed"><span class="timeline__dot" aria-hidden="true"></span><span>Packed</span></li>
+          <li data-step="shipped"><span class="timeline__dot" aria-hidden="true"></span><span>Shipped</span></li>
+          <li data-step="delivered"><span class="timeline__dot" aria-hidden="true"></span><span>Delivered</span></li>
+        </ol>
+
+        <div class="order-grid">
+          <section class="order-card" aria-labelledby="items-title">
+            <h2 id="items-title">Items</h2>
+            <ul class="order-items" id="order-items"></ul>
+            <dl class="order-totals">
+              <div><dt>Subtotal</dt><dd id="sum-subtotal">₹0</dd></div>
+              <div><dt>Shipping</dt><dd id="sum-shipping">₹0</dd></div>
+              <div><dt>COD fee</dt><dd id="sum-cod">₹0</dd></div>
+              <div class="order-totals__total"><dt>Total</dt><dd id="sum-total">₹0</dd></div>
+            </dl>
+          </section>
+
+          <section class="order-card" aria-labelledby="delivery-title">
+            <h2 id="delivery-title">Delivery</h2>
+            <address id="order-address"></address>
+            <p class="order-meta" id="order-payment"></p>
+            <p class="order-meta" id="order-contact"></p>
+            <p class="order-note">Tracking is shared by email and WhatsApp once the courier scans the parcel.</p>
+          </section>
+        </div>
+
+        <div class="order-help">
+          <p><strong>Need help?</strong> Email <a href="mailto:care@verda.in" id="help-link">care@verda.in</a> with this order ID and we will reply within one working day.</p>
+          <a class="btn btn--ghost btn--small" href="/account/">All orders</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="order-foot">
+      <div class="container">
+        <p>Imported by Verda Nutrition Pvt Ltd (placeholder) · FSSAI Lic. No. 10024055000123</p>
+        <p>This product is not intended to diagnose, treat, cure, or prevent any disease. Not for medicinal use.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./order.js"></script>
+  </body>
+</html>
