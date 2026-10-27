@@ -1,0 +1,30 @@
+✔ cart starts empty (1947.6927ms)
+✔ add to cart updates badge and storage (2841.7252ms)
+✔ adding the same product increments quantity (1500.9274ms)
+✔ free shipping message below threshold (1562.7041ms)
+✔ free shipping unlocks at the threshold (1566.1392ms)
+✔ quantity controls update the subtotal (1592.0741ms)
+✔ removing the last item empties the cart (1921.6771ms)
+✔ cart survives a reload (1945.9527ms)
+✔ cart drawer closes with Escape (1448.3624ms)
+✔ add to cart from a collection page (1150.2931ms)
+✔ product page quantity stepper respects 1–10 (1892.2179ms)
+✔ Buy now adds the selected quantity and opens checkout (2146.3808ms)
+✔ empty checkout hides the form (1473.957ms)
+✔ totals: below threshold adds ₹59 shipping and ₹29 COD (2278.2068ms)
+✔ checkout blocks COD above ₹2,000 (1484.6117ms)
+✔ state select starts empty (1530.025ms)
+✔ empty submit shows field errors and focuses the first field (2221.8768ms)
+✔ invalid phone and PIN are rejected (1934.8196ms)
+✔ terms are required (2353.6322ms)
+✔ valid COD order is placed and the cart is cleared (4088.0908ms)
+✔ checkout has no horizontal overflow at 360px (2073.4376ms)
+✔ no console errors during the cart and checkout flow (2476.6134ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 44607.8058
