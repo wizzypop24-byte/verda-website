@@ -1,0 +1,47 @@
+✔ product magnesium: renders title, price and discount (1620.3995ms)
+✔ product magnesium: JSON-LD has Product, Offer and rating (968.6716ms)
+✔ product magnesium: breadcrumb links to its collection (945.3365ms)
+✔ product magnesium: add to cart works (1289.6381ms)
+✔ product probiotic: renders title, price and discount (1210.9385ms)
+✔ product probiotic: JSON-LD has Product, Offer and rating (1078.9297ms)
+✔ product probiotic: breadcrumb links to its collection (1139.8064ms)
+✔ product probiotic: add to cart works (1058.9172ms)
+✔ product d3k2: renders title, price and discount (888.8225ms)
+✔ product d3k2: JSON-LD has Product, Offer and rating (896.9793ms)
+✔ product d3k2: breadcrumb links to its collection (961.8217ms)
+✔ product d3k2: add to cart works (1317.6919ms)
+✔ product biotin: renders title, price and discount (1071.2433ms)
+✔ product biotin: JSON-LD has Product, Offer and rating (1105.3885ms)
+✔ product biotin: breadcrumb links to its collection (1189.7655ms)
+✔ product biotin: add to cart works (1018.2466ms)
+✔ product page: lab report link shows feedback (1553.3526ms)
+✔ product page: three related products (1009.8255ms)
+✔ product page: three FAQ items open (1352.6203ms)
+✔ product page: no overflow at 360px (861.3992ms)
+✔ product page: no console errors (871.3441ms)
+✔ collection sleep: renders heading and state (1120.9178ms)
+✔ collection sleep: no overflow at 360px (979.2159ms)
+✔ collection immunity: renders heading and state (1171.0051ms)
+✔ collection immunity: no overflow at 360px (852.5237ms)
+✔ collection gut: renders heading and state (970.3962ms)
+✔ collection gut: no overflow at 360px (865.9582ms)
+✔ collection hair-skin: renders heading and state (1092.8347ms)
+✔ collection hair-skin: no overflow at 360px (829.4039ms)
+✔ collection energy: renders heading and state (954.4998ms)
+✔ collection energy: no overflow at 360px (977.3374ms)
+✔ collection joints: renders heading and state (976.8864ms)
+✔ collection joints: no overflow at 360px (966.9467ms)
+✔ collection fitness: renders heading and state (1070.0448ms)
+✔ collection fitness: no overflow at 360px (849.6907ms)
+✔ live collection cards link to products and add to cart (1192.9041ms)
+✔ collection shows six other concerns (1001.4069ms)
+✔ coming-soon collection links to the newsletter (1055.9144ms)
+✔ collection pages have no console errors (6249.5626ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 47672.1907

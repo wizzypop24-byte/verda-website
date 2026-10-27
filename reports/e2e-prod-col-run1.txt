@@ -1,0 +1,74 @@
+✔ product magnesium: renders title, price and discount (1546.0326ms)
+✔ product magnesium: JSON-LD has Product, Offer and rating (963.177ms)
+✔ product magnesium: breadcrumb links to its collection (1242.4098ms)
+✔ product magnesium: add to cart works (1320.4828ms)
+✔ product probiotic: renders title, price and discount (948.3209ms)
+✔ product probiotic: JSON-LD has Product, Offer and rating (1092.2846ms)
+✔ product probiotic: breadcrumb links to its collection (1000.2193ms)
+✔ product probiotic: add to cart works (1057.2031ms)
+✔ product d3k2: renders title, price and discount (897.7276ms)
+✔ product d3k2: JSON-LD has Product, Offer and rating (1123.3563ms)
+✔ product d3k2: breadcrumb links to its collection (1177.0233ms)
+✔ product d3k2: add to cart works (1032.2024ms)
+✔ product biotin: renders title, price and discount (1026.2582ms)
+✔ product biotin: JSON-LD has Product, Offer and rating (1132.1208ms)
+✔ product biotin: breadcrumb links to its collection (922.1159ms)
+✔ product biotin: add to cart works (1067.8714ms)
+✖ product page: lab report link shows feedback (30838.005ms)
+✔ product page: three related products (1073.7181ms)
+✔ product page: three FAQ items open (1382.2094ms)
+✔ product page: no overflow at 360px (1087.7536ms)
+✔ product page: no console errors (837.328ms)
+✔ collection sleep: renders heading and state (1094.6517ms)
+✔ collection sleep: no overflow at 360px (872.0607ms)
+✔ collection immunity: renders heading and state (1036.585ms)
+✔ collection immunity: no overflow at 360px (968.3582ms)
+✔ collection gut: renders heading and state (965.1773ms)
+✔ collection gut: no overflow at 360px (1003.5345ms)
+✔ collection hair-skin: renders heading and state (960.8133ms)
+✔ collection hair-skin: no overflow at 360px (999.7868ms)
+✔ collection energy: renders heading and state (1132.5115ms)
+✔ collection energy: no overflow at 360px (885.6629ms)
+✔ collection joints: renders heading and state (1079.2753ms)
+✔ collection joints: no overflow at 360px (841.3455ms)
+✔ collection fitness: renders heading and state (1015.4829ms)
+✔ collection fitness: no overflow at 360px (971.4174ms)
+✔ live collection cards link to products and add to cart (972.685ms)
+✔ collection shows six other concerns (1044.877ms)
+✔ coming-soon collection links to the newsletter (1060.6164ms)
+✔ collection pages have no console errors (6229.6777ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 38
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76993.8604
+
+✖ failing tests:
+
+test at tests\e2e-products-collections.test.mjs:123:1
+✖ product page: lab report link shows feedback (30838.005ms)
+  page.click: Timeout 30000ms exceeded.
+  Call log:
+  [2m  - waiting for locator('[data-lab-report]')[22m
+  [2m    - locator resolved to <a href="#" class="link" data-lab-report="">View lab report (demo)</a>[22m
+  [2m  - attempting click action[22m
+  [2m    2 × waiting for element to be visible, enabled and stable[22m
+  [2m      - element is not visible[22m
+  [2m    - retrying click action[22m
+  [2m    - waiting 20ms[22m
+  [2m    2 × waiting for element to be visible, enabled and stable[22m
+  [2m      - element is not visible[22m
+  [2m    - retrying click action[22m
+  [2m      - waiting 100ms[22m
+  [2m    56 × waiting for element to be visible, enabled and stable[22m
+  [2m       - element is not visible[22m
+  [2m     - retrying click action[22m
+  [2m       - waiting 500ms[22m
+  
+      at TestContext.<anonymous> (C:\Users\dell\Desktop\again folder\tests\e2e-products-collections.test.mjs:125:14) {
+    name: 'TimeoutError',
+    log: [ "  - waiting for locator('[data-lab-report]')", '    - locator resolved to <a href="#" class="link" data-lab-report="">View lab report (demo)</a>', '  - attempting click action', '    2 × waiting for element to be visible, enabled and stable', '      - element is not visible', '    - retrying click action', '    - waiting 20ms', '    2 × waiting for element to be visible, enabled and stable', '      - element is not visible', '    - retrying click action', '      - waiting 100ms', '    56 × waiting for element to be visible, enabled and stable', '       - element is not visible', '     - retrying click action', '       - waiting 500ms' ]
+  }
