@@ -1,0 +1,39 @@
+✔ policy shipping: renders heading, date and sections (1301.2943ms)
+✔ policy shipping: canonical and all-policy links (926.3416ms)
+✔ policy shipping: no placeholder text and no console errors (884.3663ms)
+✔ policy shipping: no overflow at 360px (747.5314ms)
+✔ policy returns: renders heading, date and sections (809.4215ms)
+✔ policy returns: canonical and all-policy links (912.1131ms)
+✔ policy returns: no placeholder text and no console errors (872.9497ms)
+✔ policy returns: no overflow at 360px (734.3696ms)
+✔ policy privacy: renders heading, date and sections (906.1604ms)
+✔ policy privacy: canonical and all-policy links (902.7864ms)
+✔ policy privacy: no placeholder text and no console errors (816.2861ms)
+✔ policy privacy: no overflow at 360px (741.4897ms)
+✔ policy terms: renders heading, date and sections (899.3653ms)
+✔ policy terms: canonical and all-policy links (975.4348ms)
+✔ policy terms: no placeholder text and no console errors (874.87ms)
+✔ policy terms: no overflow at 360px (725.4211ms)
+✔ policy disclaimer: renders heading, date and sections (770.1142ms)
+✔ policy disclaimer: canonical and all-policy links (923.7309ms)
+✔ policy disclaimer: no placeholder text and no console errors (824.4489ms)
+✔ policy disclaimer: no overflow at 360px (752.0529ms)
+✔ policy pages link to each other and every link resolves (874.9772ms)
+✔ home footer links to all five policies (913.4404ms)
+✔ unknown URL returns a custom 404 page (2662.7709ms)
+✔ 404 page offers recovery links (967.9667ms)
+✔ 404 page has no unexpected console errors (695.1126ms)
+✔ 404 page has no overflow at 360px (839.9653ms)
+✔ about page tells the story with four rules (897.3746ms)
+✔ about page shows the verification checklist (822.9211ms)
+✔ about CTAs point to shop, concerns and contact (796.414ms)
+✔ about page has no overflow at 360px (727.9591ms)
+✔ about page has no console errors (706.8074ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29323.9254
