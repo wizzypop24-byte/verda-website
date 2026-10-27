@@ -1,0 +1,69 @@
+✔ smoke: home (/) (10302.9654ms)
+✖ smoke: auth (/auth/) (3065.8414ms)
+✖ smoke: account (signed out) (/account/) (2873.9116ms)
+✔ smoke: checkout (empty) (/checkout/) (3427.9705ms)
+✔ smoke: order detail (signed out) (/order/?id=orC2Z1TzF7uekZeQaY8h) (3840.7336ms)
+✔ smoke: admin (signed out) (/admin/) (3565.7457ms)
+✔ smoke: product magnesium (/products/magnesium/) (3963.6775ms)
+✔ smoke: product probiotic (/products/probiotic/) (3553.8308ms)
+✔ smoke: product d3k2 (/products/d3k2/) (3133.901ms)
+✔ smoke: product biotin (/products/biotin/) (3265.514ms)
+✔ smoke: collection sleep (/collections/sleep/) (3620.8233ms)
+✔ smoke: collection immunity (/collections/immunity/) (3263.2819ms)
+✔ smoke: collection gut (/collections/gut/) (2845.7577ms)
+✔ smoke: collection hair-skin (/collections/hair-skin/) (3225.394ms)
+✔ smoke: collection energy (soon) (/collections/energy/) (2887.4043ms)
+✔ smoke: collection joints (soon) (/collections/joints/) (3028.7034ms)
+✔ smoke: collection fitness (soon) (/collections/fitness/) (2792.9834ms)
+✔ smoke: policy shipping (/policies/shipping/) (2565.8719ms)
+✔ smoke: policy returns (/policies/returns/) (2648.7524ms)
+✔ smoke: policy privacy (/policies/privacy/) (2944.2262ms)
+✔ smoke: policy terms (/policies/terms/) (2867.5645ms)
+✔ smoke: policy disclaimer (/policies/disclaimer/) (2447.4259ms)
+✔ smoke: about (/about/) (2460.9559ms)
+✔ smoke: contact (/contact/) (3314.52ms)
+✔ smoke: 404 (/definitely-not-a-real-page) (2741.2919ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 23
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 87856.5817
+
+✖ failing tests:
+
+test at tests\smoke.test.mjs:75:3
+✖ smoke: auth (/auth/) (3065.8414ms)
+  AssertionError [ERR_ASSERTION]: auth: 1 broken image(s)
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/smoke.test.mjs:104:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\smoke.test.mjs:75:3
+✖ smoke: account (signed out) (/account/) (2873.9116ms)
+  AssertionError [ERR_ASSERTION]: account (signed out): 1 broken image(s)
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/smoke.test.mjs:104:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

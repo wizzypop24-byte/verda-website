@@ -1,0 +1,33 @@
+✔ smoke: home (/) (3889.0772ms)
+✔ smoke: auth (/auth/) (3302.1207ms)
+✔ smoke: account (signed out) (/account/) (3134.7619ms)
+✔ smoke: checkout (empty) (/checkout/) (3849.0505ms)
+✔ smoke: order detail (signed out) (/order/?id=orC2Z1TzF7uekZeQaY8h) (3174.7697ms)
+✔ smoke: admin (signed out) (/admin/) (3453.2448ms)
+✔ smoke: product magnesium (/products/magnesium/) (3280.138ms)
+✔ smoke: product probiotic (/products/probiotic/) (4464.6778ms)
+✔ smoke: product d3k2 (/products/d3k2/) (3186.9985ms)
+✔ smoke: product biotin (/products/biotin/) (2953.8683ms)
+✔ smoke: collection sleep (/collections/sleep/) (2742.9037ms)
+✔ smoke: collection immunity (/collections/immunity/) (2961.0726ms)
+✔ smoke: collection gut (/collections/gut/) (2761.3097ms)
+✔ smoke: collection hair-skin (/collections/hair-skin/) (2732.006ms)
+✔ smoke: collection energy (soon) (/collections/energy/) (2747.7764ms)
+✔ smoke: collection joints (soon) (/collections/joints/) (2820.6887ms)
+✔ smoke: collection fitness (soon) (/collections/fitness/) (3073.4551ms)
+✔ smoke: policy shipping (/policies/shipping/) (2699.7143ms)
+✔ smoke: policy returns (/policies/returns/) (3349.3071ms)
+✔ smoke: policy privacy (/policies/privacy/) (3480.6383ms)
+✔ smoke: policy terms (/policies/terms/) (2463.1118ms)
+✔ smoke: policy disclaimer (/policies/disclaimer/) (2197.2229ms)
+✔ smoke: about (/about/) (2451.1738ms)
+✔ smoke: contact (/contact/) (3330.2447ms)
+✔ smoke: 404 (/definitely-not-a-real-page) (2720.7002ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78403.7919

@@ -6,6 +6,7 @@
   "description": "Home page requirements, Firebase login and requirement test proofs",
   "scripts": {
     "test": "node scripts/run-all-tests.mjs",
+    "test:smoke": "node --test tests/smoke.test.mjs",
     "proof": "node scripts/run-all-tests.mjs",
     "build:products": "node scripts/build-products.mjs",
     "build:policies": "node scripts/build-policies.mjs",

@@ -39,6 +39,7 @@ const SUITE_META = {
   "integrations.test.mjs": { id: "13", name: "Integrations" },
   "acceptance.test.mjs": { id: "14", name: "Acceptance Criteria" },
   "auth.test.mjs": { id: "17", name: "Authentication" },
+  "checkout.test.mjs": { id: "18", name: "Checkout Page" },
 };
 
 const INTEGRITY_FILES = [
@@ -49,6 +50,7 @@ const INTEGRITY_FILES = [
   "tests/persona.test.mjs",
   "tests/tone.test.mjs",
   "tests/auth.test.mjs",
+  "tests/checkout.test.mjs",
   "homepage-requirements.md",
 ];
 
