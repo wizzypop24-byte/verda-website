@@ -1,0 +1,65 @@
+✔ home hero, CTAs and trust line render (1927.3374ms)
+✔ home has seven concern cards linking to collections (1589.9365ms)
+✔ mega menu opens with seven concerns (1170.3489ms)
+✔ mobile navigation drawer opens (1535.0192ms)
+✔ analytics stay empty before consent (1105.7378ms)
+✔ accepting consent unlocks analytics (1631.9824ms)
+✔ rejecting consent keeps analytics off (1528.2012ms)
+✔ quiz runs five steps and recommends products (2828.8354ms)
+✔ quiz add-all puts products in the cart (2736.744ms)
+✔ search returns a match and a zero-result state (2409.8517ms)
+✔ FAQ accordion opens and emits an event (1983.6543ms)
+✔ newsletter rejects an invalid email (3334.4148ms)
+✔ newsletter requires the consent checkbox (3184.5044ms)
+✔ newsletter saves a valid signup (3858.7255ms)
+✔ home has no overflow at 360px (1319.7889ms)
+✔ home has no console errors (2033.9005ms)
+✖ contact page renders support details (1508.0674ms)
+✔ contact form validates required fields (1553.1366ms)
+✔ contact form rejects a bad email and short message (1588.1911ms)
+✔ contact form requires consent (1662.446ms)
+✔ contact form saves a valid message (3342.7555ms)
+✔ contact has no overflow at 360px (1411.6313ms)
+✔ contact has no console errors (1398.4881ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 22
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 47810.5301
+
+✖ failing tests:
+
+test at tests\e2e-contact-home.test.mjs:237:1
+✖ contact page renders support details (1508.0674ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Send a message/i. Input:
+  
+  'Your name\n' +
+    '\n' +
+    'Email\n' +
+    '\n' +
+    'Topic\n' +
+    'Order or delivery\n' +
+    'Product question\n' +
+    'Return or refund\n' +
+    'Wholesale\n' +
+    'Something else\n' +
+    'Order ID (optional)\n' +
+    'Message\n' +
+    '\n' +
+    ' I agree to be contacted about this enquiry. See Privacy Policy.\n' +
+    '\n' +
+    'Send message'
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/e2e-contact-home.test.mjs:240:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Your name\n\nEmail\n\nTopic\nOrder or delivery\nProduct question\nReturn or refund\nWholesale\nSomething else\nOrder ID (optional)\nMessage\n\n I agree to be contacted about this enquiry. See Privacy Policy.\n\nSend message',
+    expected: /Send a message/i,
+    operator: 'match',
+    diff: 'simple'
+  }

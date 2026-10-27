@@ -1,0 +1,31 @@
+✔ home hero, CTAs and trust line render (1790.8001ms)
+✔ home has seven concern cards linking to collections (1548.8512ms)
+✔ mega menu opens with seven concerns (1253.9632ms)
+✔ mobile navigation drawer opens (1518.0263ms)
+✔ analytics stay empty before consent (1382.7373ms)
+✔ accepting consent unlocks analytics (1932.101ms)
+✔ rejecting consent keeps analytics off (1913.2007ms)
+✔ quiz runs five steps and recommends products (2803.4974ms)
+✔ quiz add-all puts products in the cart (3045.393ms)
+✔ search returns a match and a zero-result state (2054.3331ms)
+✔ FAQ accordion opens and emits an event (2026.7302ms)
+✔ newsletter rejects an invalid email (3217.8846ms)
+✔ newsletter requires the consent checkbox (3115.3824ms)
+✔ newsletter saves a valid signup (3687.6558ms)
+✔ home has no overflow at 360px (1317.0542ms)
+✔ home has no console errors (1963.1075ms)
+✔ contact page renders support details (1482.5394ms)
+✔ contact form validates required fields (1552.3079ms)
+✔ contact form rejects a bad email and short message (1458.5771ms)
+✔ contact form requires consent (1456.9376ms)
+✔ contact form saves a valid message (3546.7252ms)
+✔ contact has no overflow at 360px (1451.0681ms)
+✔ contact has no console errors (1246.8011ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 47838.8005

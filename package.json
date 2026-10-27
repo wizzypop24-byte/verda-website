@@ -10,6 +10,7 @@
     "test:e2e": "node --test tests/e2e-cart-checkout.test.mjs",
     "test:auth": "node --test tests/e2e-auth-account.test.mjs",
     "test:admin": "node --test tests/e2e-admin-order.test.mjs",
+    "test:home": "node --test tests/e2e-contact-home.test.mjs",
     "proof": "node scripts/run-all-tests.mjs",
     "build:products": "node scripts/build-products.mjs",
     "build:policies": "node scripts/build-policies.mjs",
