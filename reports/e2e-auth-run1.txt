@@ -1,0 +1,50 @@
+✔ auth page loads with Google button (4679.3653ms)
+✔ auth page has a working back-to-store link (1449.0984ms)
+✔ auth legal links point to the policy pages (1433.0616ms)
+✖ Google button opens the OAuth popup and handles cancellation (4604.3938ms)
+✔ auth page has no horizontal overflow at 360px (1375.5284ms)
+✔ account page shows the sign-in gate when signed out (1459.6626ms)
+✔ sign out button is hidden while signed out (1393.0853ms)
+✔ account sign-in link returns to the account page (1431.1542ms)
+✔ account page does not leak profile data when signed out (1406.1722ms)
+✔ account page has no horizontal overflow at 360px (1292.9528ms)
+✔ order page asks for sign-in when signed out (1450.2629ms)
+✔ order page rejects a malformed order id (1388.1396ms)
+✔ admin page shows the sign-in gate when signed out (1557.5239ms)
+✔ admin panel is not rendered without a session (1510.5188ms)
+✔ no console errors on auth, account, order and admin (5150.4602ms)
+﹣ Google login redirects to home (1.4835ms) # requires a Google test account (manual step)
+﹣ login with next=/account/ lands on the account page (1.6019ms) # requires a Google test account (manual step)
+﹣ account shows only the signed-in user's orders (0.58ms) # requires a Google test account (manual step)
+﹣ phone number saves to the user profile (0.4615ms) # requires a Google test account (manual step)
+﹣ saved address appears after an order (0.4251ms) # requires a Google test account (manual step)
+﹣ owner email opens the admin panel (0.4601ms) # requires a Google test account (manual step)
+﹣ a non-owner account is denied admin access (11.7111ms) # requires a Google test account (manual step)
+﹣ order detail opens for the owning account only (0.5057ms) # requires a Google test account (manual step)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 14
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 8
+ℹ todo 0
+ℹ duration_ms 32762.763
+
+✖ failing tests:
+
+test at tests\e2e-auth-account.test.mjs:83:1
+✖ Google button opens the OAuth popup and handles cancellation (4604.3938ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /accounts\.google\.com/. Input:
+  
+  'https://fir-479b9.firebaseapp.com/__/auth/handler?apiKey=AIzaSyB3Pa0TylDXPswxiAWSj4im9ZApkr6EHOo&appName=%5BDEFAULT%5D&authType=signInViaPopup&redirectUrl=http%3A%2F%2Flocalhost%3A5173%2Fauth%2F&v=10.12.2&eventId=4288056542&providerId=google.com&customParameters=%7B%22prompt%22%3A%22select_account%22%7D&scopes=profile'
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/e2e-auth-account.test.mjs:91:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'https://fir-479b9.firebaseapp.com/__/auth/handler?apiKey=AIzaSyB3Pa0TylDXPswxiAWSj4im9ZApkr6EHOo&appName=%5BDEFAULT%5D&authType=signInViaPopup&redirectUrl=http%3A%2F%2Flocalhost%3A5173%2Fauth%2F&v=10.12.2&eventId=4288056542&providerId=google.com&customParameters=%7B%22prompt%22%3A%22select_account%22%7D&scopes=profile',
+    expected: /accounts\.google\.com/,
+    operator: 'match',
+    diff: 'simple'
+  }
