@@ -1,0 +1,29 @@
+✔ order page shows the sign-in gate (2000.5714ms)
+✔ order sign-in link preserves the order id (1444.465ms)
+✔ missing or malformed order id shows the not-found state (1446.2563ms)
+✔ order page shows no order data before sign-in (1638.0986ms)
+✔ order page has no overflow at 360px (1351.521ms)
+✔ order page has no console errors while signed out (1341.416ms)
+✔ admin shows the sign-in gate (1449.1829ms)
+✔ admin hides the denied state for a fresh visitor (1512.713ms)
+✔ admin tabs and stats are not rendered (1486.7339ms)
+✔ admin refresh and sign-out stay hidden (1437.0337ms)
+✔ admin sign-in link returns to the admin page (1494.6221ms)
+✔ admin has no overflow at 360px (1376.0757ms)
+✔ admin has no console errors while signed out (1388.618ms)
+﹣ owner sees orders, stats and status controls (0.8135ms) # requires the owner Google session (manual step)
+﹣ status change persists to Firestore (0.4204ms) # requires the owner Google session (manual step)
+﹣ leads tab lists newsletter emails (0.2445ms) # requires the owner Google session (manual step)
+﹣ messages tab lists contact submissions (0.2831ms) # requires the owner Google session (manual step)
+﹣ non-owner account sees access denied (0.2613ms) # requires the owner Google session (manual step)
+﹣ owner can open their own order detail (0.227ms) # requires the owner Google session (manual step)
+﹣ another account cannot open someone else's order (0.2293ms) # requires the owner Google session (manual step)
+﹣ a guest order stays private (0.2501ms) # requires the owner Google session (manual step)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 8
+ℹ todo 0
+ℹ duration_ms 20468.9586
