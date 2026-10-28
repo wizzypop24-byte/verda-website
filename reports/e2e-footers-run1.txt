@@ -1,0 +1,22 @@
+✔ account footer links to all five policies (1571.4943ms)
+✔ account footer keeps policy order and readable labels (1036.327ms)
+✔ account footer links all resolve (1095.8504ms)
+✔ account footer link navigates to the policy page (1204.8535ms)
+✔ account footer is usable at 360px (1129.4297ms)
+✔ account footer has no console errors (966.3131ms)
+✔ checkout footer links to all five policies (1202.4411ms)
+✔ checkout footer keeps policy order and readable labels (1100.227ms)
+✔ checkout footer links all resolve (1255.6477ms)
+✔ checkout footer link navigates to the policy page (1308.174ms)
+✔ checkout footer is usable at 360px (1231.917ms)
+✔ checkout footer has no console errors (1096.5299ms)
+✔ account and checkout expose the same policy set (2113.5ms)
+✔ footer links are real anchors, not JavaScript handlers (2170.4111ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19533.1466
