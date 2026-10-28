@@ -1,0 +1,35 @@
+✔ blog index lists three articles (1404.7963ms)
+✔ blog index cards show images, tags and read time (972.2838ms)
+✔ blog index has Blog JSON-LD with three posts (778.0057ms)
+✔ blog index has no overflow at 360px (723.2577ms)
+✔ blog index has no console errors (734.1283ms)
+✔ blog magnesium-forms: renders heading, meta and seven sections (841.9241ms)
+✔ blog magnesium-forms: breadcrumb and canonical are correct (916.2941ms)
+✔ blog magnesium-forms: BlogPosting JSON-LD is complete (798.5834ms)
+✔ blog magnesium-forms: image and related posts render (886.1971ms)
+✔ blog magnesium-forms: no overflow at 360px (721.9749ms)
+✔ blog magnesium-forms: no console errors (695.071ms)
+✔ blog third-party-testing: renders heading, meta and seven sections (916.4617ms)
+✔ blog third-party-testing: breadcrumb and canonical are correct (889.0065ms)
+✔ blog third-party-testing: BlogPosting JSON-LD is complete (739.4271ms)
+✔ blog third-party-testing: image and related posts render (885.067ms)
+✔ blog third-party-testing: no overflow at 360px (726.5917ms)
+✔ blog third-party-testing: no console errors (688.0687ms)
+✔ blog supplement-label: renders heading, meta and seven sections (750.9385ms)
+✔ blog supplement-label: breadcrumb and canonical are correct (842.8702ms)
+✔ blog supplement-label: BlogPosting JSON-LD is complete (742.1303ms)
+✔ blog supplement-label: image and related posts render (893.844ms)
+✔ blog supplement-label: no overflow at 360px (740.0728ms)
+✔ blog supplement-label: no console errors (708.0545ms)
+✔ home blog cards link to the three articles (1117.9964ms)
+✔ footer links from an article resolve (862.8426ms)
+✔ related post links resolve (862.9306ms)
+✔ sitemap includes the blog index and articles (752.085ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23674.7461

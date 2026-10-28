@@ -1,0 +1,88 @@
+✔ blog index lists three articles (1473.4596ms)
+✔ blog index cards show images, tags and read time (1004.3638ms)
+✔ blog index has Blog JSON-LD with three posts (727.2591ms)
+✔ blog index has no overflow at 360px (729.307ms)
+✔ blog index has no console errors (755.9912ms)
+✖ blog magnesium-forms: renders heading, meta and seven sections (823.8944ms)
+✔ blog magnesium-forms: breadcrumb and canonical are correct (932.9394ms)
+✔ blog magnesium-forms: BlogPosting JSON-LD is complete (765.0358ms)
+✔ blog magnesium-forms: image and related posts render (904.415ms)
+✔ blog magnesium-forms: no overflow at 360px (735.9804ms)
+✔ blog magnesium-forms: no console errors (738.5942ms)
+✖ blog third-party-testing: renders heading, meta and seven sections (802.2479ms)
+✔ blog third-party-testing: breadcrumb and canonical are correct (826.3868ms)
+✔ blog third-party-testing: BlogPosting JSON-LD is complete (770.1192ms)
+✔ blog third-party-testing: image and related posts render (892.8004ms)
+✔ blog third-party-testing: no overflow at 360px (720.0877ms)
+✔ blog third-party-testing: no console errors (736.3009ms)
+✖ blog supplement-label: renders heading, meta and seven sections (855.2661ms)
+✔ blog supplement-label: breadcrumb and canonical are correct (883.8106ms)
+✔ blog supplement-label: BlogPosting JSON-LD is complete (744.6511ms)
+✔ blog supplement-label: image and related posts render (869.9036ms)
+✔ blog supplement-label: no overflow at 360px (755.6788ms)
+✔ blog supplement-label: no console errors (730.8841ms)
+✔ home blog cards link to the three articles (1238.3832ms)
+✔ footer links from an article resolve (2476.501ms)
+✔ related post links resolve (905.3844ms)
+✔ sitemap includes the blog index and articles (781.6483ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 24
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25677.6888
+
+✖ failing tests:
+
+test at tests\e2e-blog.test.mjs:112:3
+✖ blog magnesium-forms: renders heading, meta and seven sections (823.8944ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  6 !== 7
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/e2e-blog.test.mjs:119:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 6,
+    expected: 7,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\e2e-blog.test.mjs:112:3
+✖ blog third-party-testing: renders heading, meta and seven sections (802.2479ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  6 !== 7
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/e2e-blog.test.mjs:119:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 6,
+    expected: 7,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\e2e-blog.test.mjs:112:3
+✖ blog supplement-label: renders heading, meta and seven sections (855.2661ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  6 !== 7
+  
+      at TestContext.<anonymous> (file:///C:/Users/dell/Desktop/again%20folder/tests/e2e-blog.test.mjs:119:12)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 6,
+    expected: 7,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

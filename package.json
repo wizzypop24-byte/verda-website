@@ -15,6 +15,7 @@
     "test:legal": "node --test tests/e2e-policies-about.test.mjs",
     "test:search": "node --test tests/e2e-search.test.mjs",
     "test:footers": "node --test tests/e2e-footers.test.mjs",
+    "test:blog": "node --test tests/e2e-blog.test.mjs",
     "proof": "node scripts/run-all-tests.mjs",
     "build:products": "node scripts/build-products.mjs",
     "build:policies": "node scripts/build-policies.mjs",
