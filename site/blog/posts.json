@@ -1,0 +1,168 @@
+{
+  "posts": [
+    {
+      "slug": "magnesium-forms",
+      "title": "Magnesium forms, explained",
+      "tag": "Ingredients",
+      "date": "2026-10-28",
+      "readTime": "6 min read",
+      "image": "/assets/images/blog-1.webp",
+      "description": "Glycinate, citrate and oxide are not interchangeable. Here is what changes and what the label hides.",
+      "intro": "Two bottles can both say “magnesium” and behave completely differently. The form — the compound the mineral is bound to — decides how much you actually absorb and how your stomach reacts.",
+      "sections": [
+        {
+          "heading": "The label usually hides the important number",
+          "body": [
+            "A bottle that says “magnesium glycinate 1,000 mg” is not giving you 1,000 mg of magnesium. It is giving you 1,000 mg of the compound, of which only about 14% is elemental magnesium.",
+            "What matters is the elemental amount: the magnesium your body can actually use. A good label prints both, for example “magnesium glycinate providing 200 mg elemental magnesium”."
+          ]
+        },
+        {
+          "heading": "Glycinate: the gentle option",
+          "body": [
+            "Magnesium bound to glycine is chelated, which means the mineral is wrapped in an amino acid. Many people tolerate it better than oxide and report fewer loose stools.",
+            "Because the compound is bulky, you need a larger capsule to reach a meaningful dose. That is why glycinate products often look expensive per gram."
+          ]
+        },
+        {
+          "heading": "Citrate: absorbable and slightly laxative",
+          "body": [
+            "Magnesium citrate is well absorbed and is common in powders. At higher doses it draws water into the bowel, which is useful if you are constipated and unhelpful if you are not.",
+            "It is a reasonable choice for occasional use, but check the elemental dose before comparing prices."
+          ]
+        },
+        {
+          "heading": "Oxide: cheap, but mostly unabsorbed",
+          "body": [
+            "Magnesium oxide contains a high percentage of elemental magnesium by weight, which makes it cheap. The problem is absorption: much of it passes through the gut unabsorbed.",
+            "It is not useless — it is used as a short-term laxative — but it is a poor choice if the goal is a daily magnesium supplement."
+          ]
+        },
+        {
+          "heading": "How to compare two bottles",
+          "body": [
+            "1. Find the elemental magnesium per serving, not the compound weight.",
+            "2. Check the form: glycinate, citrate, malate, taurate, oxide.",
+            "3. Check the serving size: two capsules may be one serving.",
+            "4. Ignore “500 mg” on the front if the back says the serving is two capsules of a compound."
+          ]
+        },
+        {
+          "heading": "Bottom line",
+          "body": [
+            "Form changes absorption and tolerance. Glycinate is a sensible default for daily use; citrate suits people who want a looser stool; oxide is best avoided for supplementation.",
+            "Whichever you choose, compare the elemental dose and the number of capsules per serving."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "third-party-testing",
+      "title": "What third-party testing checks",
+      "tag": "Testing",
+      "date": "2026-10-28",
+      "readTime": "5 min read",
+      "image": "/assets/images/blog-2.webp",
+      "description": "A certificate of analysis is not a marketing badge. Here is what the numbers actually measure.",
+      "intro": "“Third-party tested” is printed on almost every supplement box. The useful question is: tested for what, by whom, and against which specification?",
+      "sections": [
+        {
+          "heading": "What a certificate of analysis is",
+          "body": [
+            "A certificate of analysis, or CoA, is the lab's record of a specific batch. It should name the product, the batch number, the laboratory, the test methods and the result of each test.",
+            "If a brand cannot show a CoA for the batch you bought, “tested” is a claim rather than a fact."
+          ]
+        },
+        {
+          "heading": "Identity and potency",
+          "body": [
+            "Identity testing checks that the ingredient in the bottle is the ingredient on the label. Potency testing measures how much is present compared with the declared amount.",
+            "A result within 90–110% of the label claim is common for vitamins and minerals. A result far below the claim suggests underdosing; far above suggests poor manufacturing control."
+          ]
+        },
+        {
+          "heading": "Heavy metals",
+          "body": [
+            "Botanical and mineral ingredients can carry lead, arsenic, cadmium or mercury from soil or processing. Testing compares the result with a permitted limit.",
+            "A useful CoA lists the measured value and the limit, not just a tick box."
+          ]
+        },
+        {
+          "heading": "Microbiology",
+          "body": [
+            "Capsules and powders can carry bacteria, yeast or mould. Microbial testing counts total aerobic bacteria, yeast and mould, and checks for specific pathogens such as E. coli and Salmonella.",
+            "This matters more for probiotics and botanicals than for a simple mineral tablet."
+          ]
+        },
+        {
+          "heading": "How to read the document",
+          "body": [
+            "Match the batch number on the CoA to the batch number on your pack. Check the lab name and the test methods. Look for a pass or fail against a stated limit, not an unexplained “compliant”.",
+            "A CoA proves the batch met a specification. It does not prove the product works, and it is not a substitute for clinical evidence."
+          ]
+        },
+        {
+          "heading": "Bottom line",
+          "body": [
+            "Ask for the batch-specific document. If the answer is a generic PDF with no batch number, keep asking.",
+            "Testing is a floor, not a finish line — but an untested product has no floor at all."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "supplement-label",
+      "title": "Reading a supplement label in 60 seconds",
+      "tag": "Labels",
+      "date": "2026-10-28",
+      "readTime": "4 min read",
+      "image": "/assets/images/blog-3.webp",
+      "description": "Five lines on the back of the bottle tell you more than the front ever will.",
+      "intro": "The front of a supplement bottle is advertising. The back is the part that has to be accurate. Here is the order to read it in.",
+      "sections": [
+        {
+          "heading": "1. Serving size",
+          "body": [
+            "Everything on the label is measured per serving, not per capsule. If the serving is two capsules and you take one, you are getting half of every number.",
+            "Check how many servings the bottle contains. It is the honest way to compare price."
+          ]
+        },
+        {
+          "heading": "2. Elemental amount vs compound",
+          "body": [
+            "For minerals, the label may show the compound weight rather than the elemental amount. “Magnesium citrate 500 mg” is not 500 mg of magnesium.",
+            "Look for the elemental value, or the percentage that the compound contributes."
+          ]
+        },
+        {
+          "heading": "3. The ingredient list order",
+          "body": [
+            "Ingredients are listed by weight. If a “blend” hides individual amounts, you cannot tell whether the studied ingredient is present at a meaningful dose.",
+            "Prefer labels that print every ingredient and every amount separately."
+          ]
+        },
+        {
+          "heading": "4. Other ingredients",
+          "body": [
+            "This line covers fillers, binders, anti-caking agents and sweeteners. A short list is not automatically better, but unnecessary additives are a sign of cost-cutting.",
+            "Watch for added sugar in gummies and large amounts of sugar alcohols in powders."
+          ]
+        },
+        {
+          "heading": "5. Claims and warnings",
+          "body": [
+            "A food supplement may describe structure or function — “supports normal muscle function” — but it may not claim to treat or cure a disease.",
+            "Read the warning line for age limits, pregnancy advice, allergen information and the “not for medicinal use” statement."
+          ]
+        },
+        {
+          "heading": "Bottom line",
+          "body": [
+            "Serving size, elemental dose, ingredient order, other ingredients, warnings. Sixty seconds, in that order, and most of the marketing disappears.",
+            "If a label makes that hard, that is information too."
+          ]
+        }
+      ]
+    }
+  ]
+}

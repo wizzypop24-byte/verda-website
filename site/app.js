@@ -399,7 +399,7 @@
         results.innerHTML = matches
           .map(
             ([id, item]) => `
-          <li><a href="#bestsellers" data-result="${id}">
+          <li><a href="/products/${id}/" data-result="${id}">
             <span>${item.name}</span><span class="muted">${inr(item.price)}</span>
           </a></li>`,
           )

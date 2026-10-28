@@ -17,6 +17,7 @@
     "build:products": "node scripts/build-products.mjs",
     "build:policies": "node scripts/build-policies.mjs",
     "build:collections": "node scripts/build-collections.mjs",
+    "build:blog": "node scripts/build-blog.mjs",
     "serve": "node scripts/dev-server.mjs",
     "deploy": "firebase deploy --only hosting"
   }
