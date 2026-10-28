@@ -1,0 +1,25 @@
+✔ search button opens the modal and focuses the input (4565.375ms)
+✔ search modal closes with Escape (3448.7963ms)
+✔ short queries show a hint instead of results (1618.5686ms)
+✔ typing 'sleep' finds the magnesium product (1853.214ms)
+✔ result links point to the product page (1903.9264ms)
+✔ matching is case-insensitive (1894.5763ms)
+✔ tag search finds a product by concern (1947.8347ms)
+✔ a broad query returns multiple valid product links (1819.7864ms)
+✔ no match shows the zero-result state (1843.5905ms)
+✔ bundles never appear in search results (1985.969ms)
+✔ results are capped at six (2263.3147ms)
+✔ clicking a result navigates to the product page (2148.2598ms)
+✔ clicking a result closes the modal (2502.7352ms)
+✔ no search event is sent before consent (1816.0031ms)
+✔ consent unlocks the search_submit event with a result count (1851.4357ms)
+✔ search modal fits a 360px viewport without overflow (2025.7219ms)
+✔ search produces no console errors (1818.4061ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38489.603

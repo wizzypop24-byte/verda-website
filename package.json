@@ -13,6 +13,7 @@
     "test:home": "node --test tests/e2e-contact-home.test.mjs",
     "test:catalog": "node --test tests/e2e-products-collections.test.mjs",
     "test:legal": "node --test tests/e2e-policies-about.test.mjs",
+    "test:search": "node --test tests/e2e-search.test.mjs",
     "proof": "node scripts/run-all-tests.mjs",
     "build:products": "node scripts/build-products.mjs",
     "build:policies": "node scripts/build-policies.mjs",
